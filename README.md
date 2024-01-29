@@ -1,5 +1,7 @@
 # FALKO-PV Education Quality Evaluation
 
+![image](docs/header.png)
+
 ## Installation
 
 ### Docker 

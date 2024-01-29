@@ -29,8 +29,8 @@ SECRET_KEY = os.getenv('AMADEUS_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1", "192.168.178.87", "192.168.178.90",
-        "161.97.174.133", "testamadeus.falko-pv.de"]
+ALLOWED_HOSTS = ['0.0.0.0', "127.0.0.1", "192.168.178.87", "192.168.178.90",
+                 "161.97.174.133", "testamadeus.falko-pv.de"]
 
 # Application definition
 
@@ -57,15 +57,14 @@ MIDDLEWARE = [
 
 INTERNAL_IPS = [
     '127.0.0.1', '161.97.174.133', 'testamadeus.falko-pv.de'
-        ]
-    
+]
+
 ROOT_URLCONF = 'eduQualityEval.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -91,7 +90,8 @@ DATABASES = {
     }
 }
 
-CSRF_TRUSTED_ORIGINS = ["https://161.97.174.133", "https://testamadeus.falko-pv.de"]
+CSRF_TRUSTED_ORIGINS = ["https://161.97.174.133",
+                        "https://testamadeus.falko-pv.de"]
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators

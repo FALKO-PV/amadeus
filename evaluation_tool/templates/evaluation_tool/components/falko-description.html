@@ -1,0 +1,9 @@
+{% load static %}
+<div class="falkopv-description section-list">
+  <div class="section-item section-item-accordion">
+    <span>Wie nutze ich AMADEUS?</span>
+    <div class="section-list-item-button"><img class="arrow-icon" src="{% static 'icons/long-accordion-arrow-blue.svg' %}" alt="Pfeil" /></div>
+  </div>
+  <div class="accordion-content">{% include 'evaluation_tool/components/usage-tutorial.html' %}</div>
+</div>
+<script src="{% static 'scripts/accordion.js' %}"></script>

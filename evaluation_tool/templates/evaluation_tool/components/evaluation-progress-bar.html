@@ -1,0 +1,76 @@
+<div class="evaluation-progress-bar">
+    <div class="evaluation-progress-bar-items">
+        {% for i in number_of_sub_pages_iterator %}
+        <div class="circle-white"  {% if i == current_site_index %} style="background-color: {{subject_color}}" {% endif %}></div>
+        {% endfor %}
+    </div>
+    <p class="evaluation-progress-bar-text">{{answered_questions_percentage}}% der Fragen beantworten</p>
+    <script>
+        
+        var form = document.querySelector(".question-list");
+        var answerCounterText = document.querySelector(".answer-counter-text");
+
+        // Action Buttons
+        var backButton = document.querySelector(".back-button");
+        var nextButton = document.querySelector(".next-button");
+        var submitButton = document.querySelector(".submit-button");
+
+        // Passed Variables
+        var numberOfQuestionsOnPage = parseInt("{{number_of_questions_on_page}}")
+        
+        function checkRadioButtons() {
+            var selected_radio_buttons = document.querySelectorAll(
+                'input[type="radio"]:checked'
+                );
+        
+                let num_selected = selected_radio_buttons.length;
+                answerCounterText.innerHTML = num_selected + "/"+numberOfQuestionsOnPage+" Antworten ausgefüllt";
+        
+                if (num_selected == numberOfQuestionsOnPage) {
+                    if (nextButton !== null) {
+                        nextButton.disabled = false;
+                    }
+                    if (submitButton !== null) {
+                        submitButton.disabled = false;
+                    }
+                    answerCounterText.style.color = "green";
+                } else {
+                    if (nextButton !== null) {
+                        nextButton.disabled = true;
+                    }
+                    if (submitButton !== null) {
+                        submitButton.disabled = true;
+                    }
+                    answerCounterText.style.color = "red";
+                }
+            }
+
+        // Update Statistics on page load
+        window.onload = function(){
+            checkRadioButtons();
+        }
+
+        // Check selected radio buttons on form change
+        form.addEventListener("change", function () {
+            checkRadioButtons();
+        });
+
+        // warn user if he wants to reload the page
+        // but: now warning when user wants to submit a post
+        window.onbeforeunload = function() {
+            return "Data will be lost if you leave the page, are you sure?";
+        };
+        
+        form.addEventListener("submit", () => {
+            window.onbeforeunload = null
+        });
+
+        var evaluationProgressBarText = document.querySelector(".evaluation-progress-bar-text");
+
+        var numberOfQuestions = {{number_of_questions}}
+        var numberOfAnsweredQuestions = {{number_of_answered_questions}}
+
+        var percentageOfQuestionsAnswered = Math.round(numberOfAnsweredQuestions / numberOfQuestions * 100)
+        evaluationProgressBarText.innerHTML = percentageOfQuestionsAnswered + "% der Fragen beantwortet";
+    </script>
+</div>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="en">
+
+<head>
+    {% include 'evaluation_tool/components/header-base.html' %}
+    <link rel="stylesheet" href="{% static 'styles/charts.min.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/card-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/logo-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/main-title-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/footer-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/status-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/flexible-card-style.css' %}" />
+</head>
+
+<body>
+    <script src="{% static 'scripts/createStatsCard.js' %}"></script>
+    <main class="flex-page">
+        {% include 'evaluation_tool/components/logo-header.html' %}
+        <div class="main-card">
+            {% include 'evaluation_tool/components/status-header.html' %}
+            <div class="status-card-inner">
+                {% if is_nwfg %}
+                <div class="current-evaluation">
+                    <p class="current-evaluation-title">Aktuelle Evaluation:</p>
+                    <p class="current-evaluation-text">Erhebungszeitpunkt {{current_erhebungszeitpunkt}},
+                        Befragungsrunde {{current_befragungsrunde}}</p>
+                </div>
+                <div class="evaluation-status-menu">
+                    {% for key, val in evaluation_data.items %}
+                    {% if key == 2 or key == 4 %}
+                    <div class="evaluation-completed-seperator"></div>
+                    {% endif %}
+                    {% if val.status == "started" %}
+                    <div class="evaluation-current-circle"><img class="evaluation-circle-icon"
+                            src="{% static 'icons/dots.svg' %}" alt="Dots Icon"></div>
+                    {% endif %}
+                    {% if val.status == "not_started" %}
+                    <div class="evaluation-not-completed-circle"></div>
+                    {% endif %}
+                    {% if val.status == "completed" %}
+                    <div class="evaluation-completed-circle"><img class="evaluation-circle-icon"
+                            src="{% static 'icons/done.svg' %}" alt="Done Icon"></div>
+                    {% endif %}
+                    {% endfor %}
+
+                </div>
+                {% endif %}
+                {% if not is_nwfg and not time_over and not completed %}
+                <div class="status-card-timer">
+                    <p class="status-card-timer-title"></p>
+                    <p class="status-card-timer-description">Verbleibende Zeit</p>
+                    <script>
+                        var seconds_left = parseInt("{{seconds_left}}")
+                        var timeTitle = document.querySelector(".status-card-timer-title");
+
+                        var formatDateString = (secs) => {
+                            var sec_num = parseInt(secs, 10)
+                            var days = Math.floor(sec_num / (3600 * 24))
+                            var hours = Math.floor(sec_num / 3600) % 24
+                            var minutes = Math.floor(sec_num / 60) % 60
+                            var seconds = sec_num % 60
+
+                            seconds = seconds.toString()
+                            if (seconds.length === 1) {
+                                seconds = "0" + seconds
+                            }
+
+                            minutes = minutes.toString()
+                            if (minutes.length === 1) {
+                                minutes = "0" + minutes
+                            }
+
+                            hours = hours.toString()
+                            if (hours.length === 1) {
+                                hours = "0" + hours
+                            }
+
+                            return days + " Tage, " + [hours, minutes, seconds]
+                                .map(v => v)
+                                .join(":")
+                        }
+
+                        var formatedDateString = formatDateString(seconds_left);
+                        timeTitle.innerHTML = formatedDateString;
+
+                        setInterval(function () {
+                            seconds_left -= 1;
+                            if (seconds_left < 0) {
+                                location.reload();
+                            }
+                            var formatedDateString = formatDateString(seconds_left);
+                            timeTitle.innerHTML = formatedDateString;
+                        }, 1000);
+                    </script>
+                </div>
+
+                {% endif %}
+                {% if is_nwfg %}
+                <select class="selector">
+                    {% for key, val in evaluation_data.items %}
+                    {% if val.status == "completed" or val.status == "started" %}
+                    <option value="{{val.erhebungszeitpunkt}}_{{val.befragungsrunde}}">EZ {{val.erhebungszeitpunkt}}, BR
+                        {{val.befragungsrunde}}</option>
+                    {% endif %}
+                    {% endfor %}
+                </select>
+                <div>
+                    <div class="participant-statistic">
+                        <div class="participant-statistic-card">
+                            <p class="participant-statistic-card-h1 evaluations-started-count"></p>
+                            <div class="participant-statistic-card-footer">
+                                <p class="participant-statistic-card-h2">Schüler:innen</p>
+                            </div>
+                        </div>
+                        <p class="participant-statistic-card-description">haben die Evaluation begonnen.</p>
+                    </div>
+                    <div class="participant-statistic">
+                        <div class="participant-statistic-card">
+                            <p class="participant-statistic-card-h1 evaluations-completed-count"></p>
+                            <div class="participant-statistic-card-footer">
+                                <p class="participant-statistic-card-h2">Schüler:innen</p>
+                            </div>
+                        </div>
+                        <p class="participant-statistic-card-description">haben die Evaluation beendet.</p>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    // Get evaluation data
+                    var evaluationData = {{ evaluation_data| safe}};
+
+                    // Get last element in selector / select this
+                    var selector = document.querySelector(".selector");
+                    selector.selectedIndex = selector.childElementCount - 1
+
+                    // Get elements for counter
+                    var evaluationsStartedCountElement = document.querySelector(".evaluations-started-count");
+                    var evaluationsCompletedCountElement = document.querySelector(".evaluations-completed-count");
+
+                    function updateParticipantStatistic() {
+                        let selected_erhebungszeitpunkt = parseInt(selector.value[0])
+                        let selected_befragungsrunde = parseInt(selector.value[2])
+                        let dataIndex = (selected_erhebungszeitpunkt - 1) * 2 + selected_befragungsrunde - 1
+                        evaluationsStartedCountElement.innerHTML = evaluationData[dataIndex].evaluations_started
+                        evaluationsCompletedCountElement.innerHTML = evaluationData[dataIndex].evaluations_completed
+                    }
+
+                    updateParticipantStatistic();
+
+                    selector.addEventListener("change", () => {
+                        updateParticipantStatistic();
+                    });
+                </script>
+                {% endif %}
+                {% if is_nwfg == False %}
+                <div class="start-end-statistics">
+                    <div class="start-end-statistics-card">
+                        <p class="start-end-statistics-card-date-string">{{evaluation_start}}</p>
+                        <p class="start-end-statistics-card-title">Verfügbar ab</p>
+                    </div>
+                    <div class="start-end-statistics-card">
+                        <p class="start-end-statistics-card-date-string">{{evaluation_end}}</p>
+                        <p class="start-end-statistics-card-title">Verfügbar bis</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="participant-statistic">
+                        <div class="participant-statistic-card">
+                            <p class="participant-statistic-card-h1 evaluations-started-count">4</p>
+                            <div class="participant-statistic-card-footer">
+                                <p class="participant-statistic-card-h2">Schüler:innen</p>
+                            </div>
+                        </div>
+                        <p class="participant-statistic-card-description">haben die Evaluation begonnen</p>
+                    </div>
+                    <div class="participant-statistic">
+                        <div class="participant-statistic-card">
+                            <p class="participant-statistic-card-h1 evaluations-completed-count">3</p>
+                            <div class="participant-statistic-card-footer">
+                                <p class="participant-statistic-card-h2">Schüler:innen</p>
+                            </div>
+                        </div>
+                        <p class="participant-statistic-card-description">haben die Evaluation beendet</p>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    // Get evaluation data
+                    var evaluationData = {{ evaluation_data| safe}};
+
+                    // Get elements for counter
+                    var evaluationsStartedCountElement = document.querySelector(".evaluations-started-count");
+                    var evaluationsCompletedCountElement = document.querySelector(".evaluations-completed-count");
+
+                    function updateParticipantStatistic() {
+                        evaluationsStartedCountElement.innerHTML = evaluationData.evaluations_started
+                        evaluationsCompletedCountElement.innerHTML = evaluationData.evaluations_completed
+                    }
+
+                    updateParticipantStatistic();
+                </script>
+                {% endif %}
+            </div>
+        </div>
+        <script>
+            function clickedStopEvaluation(e) {
+                if (!confirm('Sind Sie sich sicher, dass Sie diese Evaluation stoppen wollen? Bitte vergewissern Sie sich, dass Sie Ihren Schüler:innen genug Zeit gegeben haben, um an der Evaluation teilzunehmen!')) {
+                    e.preventDefault();
+                }
+            }
+            function clickedStartNextEvaluation(e) {
+                let currentPartStatus = "{{current_part_status}}"
+
+                var additionalText = ""
+                if (currentPartStatus === "started") {
+                    additionalText = " Falls Sie die nächste Evaluation starten, wird automatisch die aktuelle Evaluation beendet! Bitte vergewissern Sie sich, dass Sie Ihren Schüler:innen genug Zeit gegeben haben, um an der Evaluation teilzunehmen!"
+                }
+
+                if (!confirm("Sind Sie sich sicher, dass Sie die nächste Evaluation starten wollen?" + additionalText)) {
+                    e.preventDefault();
+                }
+            }
+
+            function clickedDeleteEvaluation(e) {
+                if (!confirm("Sind Sie sich sicher, dass Sie diese Evaluation löschen wollen? Diese Aktion kann nicht rückgängig gemacht werden. Alle Daten dieser Evaluation werden dadurch gelöscht!")) {
+                    e.preventDefault();
+                }
+            }
+        </script>
+
+        <form class="controler" action='' method='POST'>
+            {% csrf_token %}
+            {% if is_nwfg and current_part_status == "started" %}
+            <button class="control-button cb-white" type="button" onclick="window.open('{{share_url}}','_blank')">
+                <img class="control-button-img" src="{% static 'icons/status-page-controler/qr-code.svg' %}"
+                    alt="QR-Code Icon">
+                <div class="control-button-text">
+                    <p class="control-button-title">QR-Code für Schüler:innen</p>
+                    <p class="control-button-description">EZ {{current_erhebungszeitpunkt}}, BR
+                        {{current_befragungsrunde}}</p>
+                </div>
+            </button>
+            {% endif %}
+            {% if is_nwfg and current_part_status == "started" %}
+            <button class="control-button cb-red" type="submit" onclick="clickedStopEvaluation(event)" name="action"
+                value="stop">
+                <img class="control-button-img" src="{% static 'icons/status-page-controler/close.svg' %}"
+                    alt="Close Icon">
+                <div class="control-button-text">
+                    <p class="control-button-title">Evaluation Beenden</p>
+                    <p class="control-button-description">EZ {{current_erhebungszeitpunkt}}, BR
+                        {{current_befragungsrunde}}</p>
+                </div>
+            </button>
+            {% endif %}
+            {% if is_nwfg and not is_last_evaluation %}
+            <button class="control-button cb-blue" type="submit" onclick="clickedStartNextEvaluation(event)"
+                name="action" value="next_evaluation">
+                <img class="control-button-img" src="{% static 'icons/status-page-controler/arrow.svg' %}"
+                    alt="Arrow Icon">
+                <div class="control-button-text">
+                    <p class="control-button-title">Nächste Evaluation Starten</p>
+                    <p class="control-button-description">EZ {{next_erhebungszeitpunkt}}, BR {{next_befragungsrunde}}
+                    </p>
+                </div>
+            </button>
+            {% endif %}
+
+
+            {% if is_nwfg == False and completed == False and time_over == False %}
+            <button class="control-button cb-white" type="button" onclick="window.open('{{share_url}}','_blank')">
+                <img class="control-button-img" src="{% static 'icons/status-page-controler/qr-code.svg' %}"
+                    alt="QR-Code Icon">
+                <div class="control-button-text">
+                    <p class="control-button-title">QR-Code für Schüler:innen</p>
+                </div>
+            </button>
+            {% endif %}
+            <!-- and having higher precedence than or in Django: https://stackoverflow.com/questions/27486913/parentheses-in-django-if-statement-->
+            {% if is_nwfg == False and completed == False and time_over == False %}
+            <button class="control-button cb-red" onclick="clickedStopEvaluation(event)" type="submit" name="action"
+                value="stop">
+                <img class="control-button-img" src="{% static 'icons/status-page-controler/close.svg' %}"
+                    alt="Close Icon">
+                <div class="control-button-text">
+                    <p class="control-button-title">Evaluation Beenden</p>
+                </div>
+            </button>
+            {% endif %}
+
+            {% if is_nwfg == False %}
+            <button class="control-button cb-red" type="submit" name="action" value="delete_evaluation"
+                onclick="clickedDeleteEvaluation(event)">
+                <img class="control-button-img" src="{% static 'icons/status-page-controler/bin.svg' %}"
+                    alt="Close Icon">
+                <div class="control-button-text">
+                    <p class="control-button-title">Evaluation Löschen</p>
+                </div>
+            </button>
+            {% endif %}
+            {% if error_action != None %}
+            <p>{{error_action}}</p>
+            {% endif %}
+        </form>
+        {% if evaluation_completed and is_nwfg or not is_nwfg %}
+        <div class="main-card result-card">
+            <div class="result-card-inner">
+                <div class="result-header">
+                    <div class="result-header-title">
+                        <h1 class="result-header-title-text">Evaluationsübersicht</h1>
+                        <span class="result-header-title-description">{{ num_responses_included }}
+                          Schüler:innen beantworteten mindestens 25 % der
+                          Evaluation. Nur diese werden in der Auswertung
+                          berücksichtigt (weitere Informationen zur Auswertung erhalten Sie im Evaluationsbericht,
+                            den Sie als PDF-Datei am Ende der Seite herunterladen können).</span>
+                    </div>
+                    {% if is_nwfg %}
+                    <select class="selector se-header" id="part-selection">
+                        {% for key in evaluation_stats_data.keys %}
+                            <option value="{{ key }}">Befragungszeitraum: {{ key }}</option>
+                        {% endfor %}
+                    </select>
+                    {% endif %}
+                </div>
+                <div class="download-results">
+                <p class="download-results-title">Dimensionen von Unterrichtsqualität:</p>
+                </div>
+                <select class="selector se-results" id="dim-selection">
+                    {% if is_nwfg %}
+                        <!-- Generate the dimensions dynamically by selected erhebungszeitpunkt -->
+                        <script>
+                            const thisSelection = document.querySelector("#dim-selection")
+                            const partSelection = document.querySelector("#part-selection")
+                            let part = partSelection.value
+                            if (part === undefined) {
+                                part = 1
+                            }
+                            const evaluationStats = {{ evaluation_stats_data_json|safe }};
+                            for (const [key, val] of Object.entries(evaluationStats[part])) {
+                                const o = document.createElement('option')
+                                o.value = key
+                                o.textContent = val.name
+                                thisSelection.append(o)
+                            }
+                        </script>
+                    {% else %}
+                        {% for key, value in evaluation_stats_data.items %}
+                            <option value="{{ key }}">{{ value.name }}</option>
+                        {% endfor %}
+                    {% endif %}
+                </select>
+                <div class="evaluation-result">
+                    <!-- !! don't change ID !! -->
+                    <div class="evaluation-result-title" id="evaluation-result-title"></div>
+                    <table id="bar-example"
+                        class="charts-css bar show-heading data-spacing-4 show-labels labels-align-center">
+                        {% comment %}
+                        caption, tbody generated by js script at the end of template
+                        {% endcomment %}
+                    </table>
+                    <div class="evaluation-result-footnote" id="evaluation-result-footnote">
+                        <em>Anmerkung:</em> Die Zahlen in den Balken repräsentieren die prozentualen Anteile aller Bewertungen,
+                        die auf die jeweilige Antwortkategorie entfallen.
+                    </div>
+                    <div class="descriptive-statistics">
+                        <div class="descriptive-statistics-card">
+                            <p class="descriptive-statistics-description">MITTELWERT</p>
+                            {#<p class="descriptive-statistics-value"> generated by js script</p>#}
+                        </div>
+                        <div class="descriptive-statistics-card">
+                            <p class="descriptive-statistics-description">STANDARDABWEICHUNG</p>
+                            {#<p class="descriptive-statistics-value"> generated by js script</p>#}
+                        </div>
+                        <div class="descriptive-statistics-card">
+                            <p class="descriptive-statistics-description">MEDIAN</p>
+                            {#<p class="descriptive-statistics-value"> generated by js script</p>#}
+                        </div>
+                    </div>
+                </div>
+                <div class="download-results">
+                    <div class="download-results-header">
+                        <p class="download-results-title">Individuellen Evaluationsbericht (PDF) oder vollständigen
+                            Datensatz (Excel) Ihrer Evaluation herunterladen</p>
+                        <span class="download-results-description">(Download kann etwas zeitverzögert erfolgen)</span>
+                    </div>
+                    <div class="download-results-buttons">
+                        <a class="download-results-button"
+                           href="{% url 'get_pdf' evaluation_id_str status_code %}">
+                            <p class="download-results-button-text">.PDF</p>
+                            <img class="download-results-button-icon" src="{% static 'icons/download.svg' %}"
+                                 alt="Download Icon">
+                        </a>
+                        <a class="download-results-button"
+                           href="{% url 'download_excel' evaluation_id_str status_code %}">
+                            <p class="download-results-button-text">.XLSX</p>
+                            <img class="download-results-button-icon" src="{% static 'icons/download.svg' %}"
+                                 alt="Download Icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </main>
+    {% if is_nwfg %}
+        <script>
+            createStatsCard({{ evaluation_stats_data_json|safe }}[1], '{{ subject }}')
+        </script>
+    {% else %}
+        <script>createStatsCard({{ evaluation_stats_data_json|safe }}, '{{ subject }}')</script>
+    {% endif %}
+    {% include 'evaluation_tool/components/default-footer.html' %}
+</body>
+
+</html>

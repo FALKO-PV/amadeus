@@ -1,0 +1,1 @@
+Es ist nicht ratsam, die SVG-Version zu verwenden, da diese nur dann korrekt angezeigt wird, wenn der Benutzer die Schriftart Montserrat auf dem Gerät installiert hat. Daher sollte nach Möglichkeit immer die PNG-Version verwendet werden.

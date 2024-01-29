@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="en">
+
+<head>
+    {% include 'evaluation_tool/components/header-base.html' %}
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/card-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/main-title-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/footer-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/single-evaluation-page-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/flexible-card-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/logo-style.css' %}" />
+</head>
+
+<body>
+    <main class="flex-page">
+        <div style="pointer-events:none;">{% include 'evaluation_tool/components/logo-header.html' %}</div>
+        <p class="intro-text">Bitte beantworte immer <b>alle</b> Fragen!</p>
+        <div class="main-card">
+            <form id="question-list" class="question-list" action="" method="POST">
+                {% csrf_token %}
+                {% for key, question_data in five_questions.items %}
+                <div class="question">
+                    <legend class="question-title">{{forloop.counter|add:question_label_start_index}}. {{question_data.question_text}}</legend>
+                    <!--fskzw14 is just an example for now.-->
+                    <input type="radio" id="q{{forloop.counter}}_5" name="q{{forloop.counter}}" value="5" {% if question_data.selected_likert_item == 5 %} checked {% endif %} /><label for="q{{forloop.counter}}_5">Trifft zu.</label>
+                    <input type="radio" id="q{{forloop.counter}}_4" name="q{{forloop.counter}}" value="4" {% if question_data.selected_likert_item == 4 %} checked {% endif %} /><label for="q{{forloop.counter}}_4">Trifft eher zu.</label>
+                    <input type="radio" id="q{{forloop.counter}}_3" name="q{{forloop.counter}}" value="3" {% if question_data.selected_likert_item == 3 %} checked {% endif %} /><label for="q{{forloop.counter}}_3">Teils/teils.</label>
+                    <input type="radio" id="q{{forloop.counter}}_2" name="q{{forloop.counter}}" value="2" {% if question_data.selected_likert_item == 2 %} checked {% endif %} /><label for="q{{forloop.counter}}_2">Trifft eher nicht zu.</label>
+                    <input type="radio" id="q{{forloop.counter}}_1" name="q{{forloop.counter}}" value="1" {% if question_data.selected_likert_item == 1 %} checked {% endif %} /><label for="q{{forloop.counter}}_1">Trifft nicht zu.</label>
+                </div>
+                {% endfor %}
+            </form>
+            <style>
+            .question input[type="radio"] {
+                border: 2px solid {{subject_color}};
+            }
+            .question input[type="radio"]:checked {
+                background-color: {{subject_color}};
+            }
+            </style>
+        </div>
+        <p class="answer-counter-text"></p>
+        <div class="actions-bar">
+            {% if current_site_index > 1 %}
+            <button class="back-button" type="submit" form="question-list" name="action" value="back_{{previous_site_index}}" style="background-color: {{subject_color}}">Zurück</button>
+            {% endif %}
+            {% if current_site_index != number_of_sub_pages%}
+            <button class="next-button" type="submit" form="question-list" name="action" value="next_{{next_site_index}}" style="background-color: {{subject_color}}">Weiter</button>
+            {% endif %}
+            {% if current_site_index == number_of_sub_pages %}
+            <button class="submit-button" type="submit" form="question-list" name="action" value="send">Absenden</button>
+            {% endif %}
+        </div>
+        {% include 'evaluation_tool/components/evaluation-progress-bar.html' %}
+    </main>
+    {% include 'evaluation_tool/components/default-footer.html' %}
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+{% load static %}
+<div class="clipboard">
+    <input class="clipboard-url" type="text" value="{{share_url}}">
+    <img class="clipboard-icon" src="{% static 'icons/clipboard.svg' %}" alt="Clipboard Icon">
+
+    <p class="hidden-text"></p>
+    <script>
+        var shareUrl = "{{share_url}}"
+        var clipboard = document.querySelector(".clipboard");
+        var clipboardIcon = document.querySelector(".clipboard-icon");
+        var clipboardURL = document.querySelector(".clipboard-url");
+        var hiddenText = document.querySelector(".hidden-text");
+        clipboardIcon.addEventListener("click", () => {
+            // https://stackoverflow.com/questions/51805395/navigator-clipboard-is-undefined
+            console.log(navigator.clipboard);
+            navigator.clipboard.writeText(shareUrl);
+            clipboard.style.backgroundColor = "#e4f9e2";
+            clipboardURL.focus();
+            clipboardURL.select();
+            hiddenText.innerHTML = "Kopiert ✔";
+            hiddenText.style.minWidth = "65px";
+        });
+    </script>
+</div>

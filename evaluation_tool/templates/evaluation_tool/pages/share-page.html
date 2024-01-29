@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="en">
+
+<head>
+    {% include 'evaluation_tool/components/header-base.html' %}
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/card-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/logo-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/main-title-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/share-page-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/footer-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/notification-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/flexible-card-style.css' %}" />
+</head>
+
+<body>
+    {% if messages %}
+    {% for message in messages %}
+    <div class="notification-container">
+        <div class="notification">
+            <div class="notification-header" style="background-color: {{subject_color}};">
+                <p class="notification-title">NEUE EVALUATION</p>
+                <img class="notification-close-icon" src="{% static 'icons/close.svg' %}" alt="close icon">
+            </div>
+            <p class="notification-description">Es wurde eine E-Mail an <b class="notification-mail"></b>
+                versendet, mit dem Link zur Statusseite. Auf der Statusseite können Sie die Umfrage verwalten und den
+                aktuellen Stand der Umfrage einsehen.</p>
+        </div>
+    </div>
+    <script>
+        let emailElement = document.querySelector(".notification-mail");
+        let notificationContainer = document.querySelector(".notification-container");
+        let closeIconNotificationContainer = document.querySelector(".notification-close-icon");
+
+        email = "{{message}}"
+        emailElement.innerHTML = email
+
+        function turnOffMessage() {
+            notificationContainer.style.display = 'none';
+        }
+
+        closeIconNotificationContainer.addEventListener("click", () => {
+            turnOffMessage();
+        });
+
+        setTimeout(turnOffMessage, 200000)
+    </script>
+    {% endfor %}
+    {% endif %}
+
+    <main class="flex-page">
+        {% include 'evaluation_tool/components/logo-header.html' %}
+        <p class="share-title">Link / QR-Code zur Evaluation</p>
+        <p class="share-description">Der QR-Code führt zu Ihrer Evaluation. Um daran teilnehmen zu können, müssen Ihre
+            Schüler:innen entweder den QR-Code scannen oder die unten angegebene URL im Browser öffnen. Wie man mit
+            einem iOS und Android-Gerät einen QR-Code scannt, zeigen die unten verlinkten Anleitungen.</p>
+        <!-- Card with QR-Code -->
+        <div class="main-card">
+            {% autoescape off %}
+            {{qr_code_svg_string}}
+            {% endautoescape %}
+        </div>
+        {% include 'evaluation_tool/components/clipboard-field.html' %}
+        </div>
+
+        <div class="links-plattforms-container-upper">
+        <div class="links-plattforms-container">
+            <div class="logo-apple-android-container">
+               <img class="logo-apple-android-container-arrow" src="{% static 'icons/arrow-left-huge.svg' %}" alt="arrow left">
+               <img class="apple-android-logo" src="{% static 'icons/apple-logo.svg' %}" alt="Logo Apple">
+               <a class="logo-apple-android-container-link-text" href="https://support.apple.com/de-de/HT208843#:~:text=%C3%96ffne%20die%20Kamera%2DApp%20vom,und%20zeigt%20eine%20Mitteilung%20an." target="_blank" >Wie scanne ich einen QR-Code mit einem iOS Gerät?</a>
+            </div>
+            <div class="logo-apple-android-container">
+              <img class="logo-apple-android-container-arrow" src="{% static 'icons/arrow-left-huge.svg' %}" alt="arrow left">
+              <img class="apple-android-logo" src="{% static 'icons/android-logo.svg' %}" alt="Logo Android">
+              <a class="logo-apple-android-container-link-text" href="https://www.heise.de/tipps-tricks/QR-Code-scannen-in-Android-4579918.html" target="_blank" >Wie scanne ich einen QR-Code mit einem Android Gerät?</a>
+           </div>
+       </div>
+       </div>
+        
+
+        
+        
+    </main>
+    {% include 'evaluation_tool/components/default-footer.html' %}
+</body>
+
+</html>

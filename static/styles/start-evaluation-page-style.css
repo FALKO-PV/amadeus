@@ -1,0 +1,233 @@
+.evaluation-intro {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+.meta-title {
+  font-weight: 800;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.meta-text {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.intro-description {
+  margin-top: 20px;
+  text-align: justify;
+}
+
+.subject-badge {
+  padding: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  display: inline-block;
+  border-radius: 20px;
+  color: #692545;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.acronym-title {
+  font-weight: 800;
+}
+
+.acronym-input {
+  height: 35px;
+  border: 0px;
+  background-color: #f5f5f5;
+  border-radius: 6px;
+  padding-left: 12px;
+  font-family: "Atkinson Hyperlegible";
+  font-size: 14px;
+  margin-bottom: 25px;
+  width: 200px;
+}
+
+.acronym-input:focus {
+  outline: none;
+}
+
+.study-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+input[type="submit"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  color: white;
+  font-family: "Atkinson Hyperlegible";
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.13);
+  border-radius: 10px;
+  padding: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+input[type="submit"]:hover {
+  opacity: 0.9;
+}
+
+.start-button-without-nwfg {
+  width: 160px;
+}
+
+.to-questionnaire-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  color: white;
+  font-family: "Atkinson Hyperlegible";
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.13);
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+
+.to-questionnaire-button:hover {
+  opacity: 0.9;
+}
+
+.start-evaluation-button:hover {
+  background: #6a68eb;
+}
+
+.start-evaluation-button-text {
+  color: white;
+  font-weight: 700;
+  font-family: "Atkinson Hyperlegible";
+  font-size: 16px;
+}
+
+.question-text {
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.top-items-evaluation-intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+.current-evaluation-info-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 50px;
+  border-radius: 10px;
+  margin-top: 5px;
+  color: white;
+  font-size: 16px;
+}
+
+.current-evaluation-info-card-description {
+  font-size: 10px;
+  margin: 0px;
+  font-weight: 300;
+}
+
+.current-evaluation-info-card-title {
+  font-size: 20px;
+  margin: 0px;
+  font-weight: 900;
+}
+
+.break-small {
+  display: block;
+  content: "";
+  margin-top: 10px;
+}
+
+.questionnaire-hint-card {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  padding: 15px;
+}
+
+.questionnaire-icon-background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, rgba(220, 105, 42, 1) 0%, rgba(120, 72, 91, 1) 50%, rgba(75, 156, 126, 1) 100%);
+  border-radius: 15px;
+  padding: 8px;
+}
+
+.questionnaire-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.questionnaire-title {
+  margin: 0px;
+  font-weight: bold;
+}
+
+.questionnaire-text {
+  margin: 0px;
+  margin-top: 5px;
+}
+.questionnaire-hint {
+  font-weight: bold;
+  margin-top: 30px;
+  padding: 0px;
+}
+
+.questionnaire-link {
+  background-color: rgb(248, 248, 255);
+  text-decoration: none;
+  padding: 2px 4px;
+  color: #292f61;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.questionnaire-link:hover {
+  background-color: #292f61;
+  color: white;
+}
+
+.two-options-questionnaire {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+@media (max-width: 600px) {
+  .two-options-questionnaire {
+    flex-direction: column;
+  }
+
+  .start-button-with-nwfg,
+  .to-questionnaire-button {
+    width: 100%;
+    padding: 0px;
+  }
+}

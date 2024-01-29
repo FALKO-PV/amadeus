@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="215" height="323" viewBox="0 0 215 323">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="215" height="323" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Wiederholungsraster_1" data-name="Wiederholungsraster 1" clip-path="url(#clip-path)">
+    <g transform="translate(1796.5 599)">
+      <g id="Komponente_6_1" data-name="Komponente 6 – 1" transform="translate(-1796.5 -599)">
+        <rect id="Rechteck_226" data-name="Rechteck 226" width="42" height="323" rx="15" transform="translate(86.5)" fill="#fff"/>
+        <rect id="Rechteck_227" data-name="Rechteck 227" width="42" height="215" rx="15" transform="translate(215 84.5) rotate(90)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

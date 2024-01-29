@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://amadeus.falko-pv.de</loc>
+    <lastmod>2023-03-28</lastmod>
+  </url>
+    <url>
+        <loc>https://amadeus.falko-pv.de/app</loc>
+        <lastmod>2023-03-28</lastmod>
+    </url>
+    <url>
+        <loc>https://amadeus.falko-pv.de/ueber-modellierung</loc>
+        <lastmod>2023-03-28</lastmod>
+    </url>
+    <url>
+        <loc>https://amadeus.falko-pv.de/ueber-evaluierung</loc>
+        <lastmod>2023-03-28</lastmod>
+    </url>
+    <url>
+        <loc>https://amadeus.falko-pv.de/faq</loc>
+        <lastmod>2023-03-28</lastmod>
+    </url>
+    <url>
+        <loc>https://amadeus.falko-pv.de/datenschutzhinweise</loc>
+        <lastmod>2023-03-28</lastmod>
+    </url>
+    <url>
+        <loc>https://amadeus.falko-pv.de/impressum</loc>
+        <lastmod>2023-03-28</lastmod>
+    </url>
+</urlset>

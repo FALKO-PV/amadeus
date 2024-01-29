@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1280" height="907" overflow="hidden">
+  <defs>
+    <clipPath id="clip0">
+      <rect x="0" y="0" width="1280" height="907"></rect>
+    </clipPath>
+    <clipPath id="clip1">
+      <rect x="9" y="-89" width="516" height="247"></rect>
+    </clipPath>
+    <clipPath id="clip2">
+      <rect x="524" y="-194" width="747" height="493"></rect>
+    </clipPath>
+    <clipPath id="clip3">
+      <rect x="9" y="-101" width="516" height="493"></rect>
+    </clipPath>
+    <clipPath id="clip4">
+      <rect x="9" y="-101" width="516" height="493"></rect>
+    </clipPath>
+    <clipPath id="clip5">
+      <rect x="524" y="-101" width="747" height="493"></rect>
+    </clipPath>
+    <clipPath id="clip6">
+      <rect x="524" y="-101" width="747" height="493"></rect>
+    </clipPath>
+    <clipPath id="clip7">
+      <rect x="9" y="115" width="516" height="247"></rect>
+    </clipPath>
+    <clipPath id="clip8">
+      <rect x="524" y="-8" width="747" height="493"></rect>
+    </clipPath>
+    <clipPath id="clip9">
+      <rect x="524" y="-8" width="747" height="493"></rect>
+    </clipPath>
+    <clipPath id="clip10">
+      <rect x="9" y="208" width="516" height="247"></rect>
+    </clipPath>
+    <clipPath id="clip11">
+      <rect x="524" y="85" width="747" height="493"></rect>
+    </clipPath>
+    <clipPath id="clip12">
+      <rect x="524" y="85" width="747" height="493"></rect>
+    </clipPath>
+    <clipPath id="clip13">
+      <rect x="9" y="301" width="516" height="247"></rect>
+    </clipPath>
+    <clipPath id="clip14">
+      <rect x="524" y="178" width="747" height="493"></rect>
+    </clipPath>
+    <clipPath id="clip15">
+      <rect x="524" y="178" width="747" height="493"></rect>
+    </clipPath>
+    <clipPath id="clip16">
+      <rect x="9" y="271" width="516" height="493"></rect>
+    </clipPath>
+    <clipPath id="clip17">
+      <rect x="9" y="271" width="516" height="493"></rect>
+    </clipPath>
+    <clipPath id="clip18">
+      <rect x="524" y="271" width="747" height="493"></rect>
+    </clipPath>
+    <clipPath id="clip19">
+      <rect x="524" y="271" width="747" height="493"></rect>
+    </clipPath>
+    <clipPath id="clip20">
+      <rect x="9" y="487" width="516" height="247"></rect>
+    </clipPath>
+    <clipPath id="clip21">
+      <rect x="524" y="364" width="747" height="493"></rect>
+    </clipPath>
+    <clipPath id="clip22">
+      <rect x="524" y="364" width="747" height="493"></rect>
+    </clipPath>
+    <clipPath id="clip23">
+      <rect x="9" y="562" width="516" height="248"></rect>
+    </clipPath>
+    <clipPath id="clip24">
+      <rect x="524" y="562" width="747" height="248"></rect>
+    </clipPath>
+    <clipPath id="clip25">
+      <rect x="9" y="638" width="516" height="247"></rect>
+    </clipPath>
+    <clipPath id="clip26">
+      <rect x="524" y="515" width="747" height="493"></rect>
+    </clipPath>
+    <clipPath id="clip27">
+      <rect x="524" y="515" width="747" height="493"></rect>
+    </clipPath>
+    <clipPath id="clip28">
+      <rect x="9" y="608" width="516" height="493"></rect>
+    </clipPath>
+    <clipPath id="clip29">
+      <rect x="9" y="608" width="516" height="493"></rect>
+    </clipPath>
+    <clipPath id="clip30">
+      <rect x="524" y="608" width="747" height="493"></rect>
+    </clipPath>
+    <clipPath id="clip31">
+      <rect x="524" y="608" width="747" height="493"></rect>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip0)">
+    <rect x="0" y="0" width="1280" height="906.833" fill="#FFFFFF"></rect>
+    <path d="M9.71423 98.8565 1270.29 98.8565" stroke="#000000" stroke-width="1.33333" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd"></path>
+    <path d="M9.71423 5.79642 1270.29 5.79642" stroke="#000000" stroke-width="3" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd"></path>
+    <path d="M9.71423 901.203 1270.29 901.203" stroke="#000000" stroke-width="3" stroke-linejoin="round" stroke-miterlimit="10" fill="none" fill-rule="evenodd"></path>
+    <g clip-path="url(#clip1)">
+      <text font-family="Verdana,Verdana_MSFontService,sans-serif" font-weight="700" font-size="29" transform="matrix(1 0 0 0.999816 9.90205 46)">Merkmal</text>
+    </g>
+    <text font-family="Verdana,Verdana_MSFontService,sans-serif" font-weight="700" font-size="29" transform="matrix(1 0 0 0.999816 795.929 46)">Beispielitem</text>
+    <g clip-path="url(#clip2)">
+      <text font-family="Verdana,Verdana_MSFontService,sans-serif" font-weight="400" font-size="29" transform="matrix(1 0 0 0.999816 541.642 81)">(Skalierung: 1 = Trifft nicht zu, ..., 5 = Trifft zu)</text>
+    </g>
+    <g clip-path="url(#clip3)">
+      <text font-family="Verdana,Verdana_MSFontService,sans-serif" font-weight="400" font-size="29" transform="matrix(1 0 0 0.999816 9.90205 139)">Auswahl und Thematisierung von</text>
+    </g>
+    <g clip-path="url(#clip4)">
+      <text font-family="Verdana,Verdana_MSFontService,sans-serif" font-weight="400" font-size="29" transform="matrix(1 0 0 0.999816 9.90205 174)">Inhalten und Fachmethoden</text>
+    </g>
+    <g clip-path="url(#clip5)">
+      <text font-family="Verdana,Verdana_MSFontService,sans-serif" font-weight="400" font-size="29" transform="matrix(1 0 0 0.999816 524.759 139)">Unsere Lehrkraft drückt sich im Unterricht klar</text>
+    </g>
+    <g clip-path="url(#clip6)">
+      <text font-family="Verdana,Verdana_MSFontService,sans-serif" font-weight="400" font-size="29" transform="matrix(1 0 0 0.999816 524.759 174)">und verständlich aus.</text>
+    </g>
+    <g clip-path="url(#clip7)">
+      <text font-family="Verdana,Verdana_MSFontService,sans-serif" font-weight="400" font-size="29" transform="matrix(1 0 0 0.999816 9.90205 250)">Kognitive Aktivierung</text>
+    </g>
+    <g clip-path="url(#clip8)">
+      <text font-family="Verdana,Verdana_MSFontService,sans-serif" font-weight="400" font-size="29" transform="matrix(1 0 0 0.999816 524.759 232)">Unsere Lehrkraft ermuntert mich, eigene</text>
+    </g>
+    <g clip-path="url(#clip9)">
+      <text font-family="Verdana,Verdana_MSFontService,sans-serif" font-weight="400" font-size="29" transform="matrix(1 0 0 0.999816 524.759 267)">Lösungswege zu probieren.</text>
+    </g>
+    <g clip-path="url(#clip10)">
+      <text font-family="Verdana,Verdana_MSFontService,sans-serif" font-weight="400" font-size="29" transform="matrix(1 0 0 0.999816 9.90205 343)">Unterstützung des Übens</text>
+    </g>
+    <g clip-path="url(#clip11)">
+      <text font-family="Verdana,Verdana_MSFontService,sans-serif" font-weight="400" font-size="29" transform="matrix(1 0 0 0.999816 524.759 325)">Mit Fehlern geht unsere Lehrkraft so um, dass wir</text>
+    </g>
+    <g clip-path="url(#clip12)">
+      <text font-family="Verdana,Verdana_MSFontService,sans-serif" font-weight="400" font-size="29" transform="matrix(1 0 0 0.999816 524.759 360)">daraus etwas lernen können.</text>
+    </g>
+    <g clip-path="url(#clip13)">
+      <text font-family="Verdana,Verdana_MSFontService,sans-serif" font-weight="400" font-size="29" transform="matrix(1 0 0 0.999816 9.90205 436)">Formatives Assessment</text>
+    </g>
+    <g clip-path="url(#clip14)">
+      <text font-family="Verdana,Verdana_MSFontService,sans-serif" font-weight="400" font-size="29" transform="matrix(1 0 0 0.999816 524.759 418)">Nach Fehlern erfahren wir nicht nur, dass etwas</text>
+    </g>
+    <g clip-path="url(#clip15)">
+      <text font-family="Verdana,Verdana_MSFontService,sans-serif" font-weight="400" font-size="29" transform="matrix(1 0 0 0.999816 524.759 453)">falsch ist, sondern auch warum.</text>
+    </g>
+    <g clip-path="url(#clip16)">
+      <text font-family="Verdana,Verdana_MSFontService,sans-serif" font-weight="400" font-size="29" transform="matrix(1 0 0 0.999816 9.90205 511)">Unterstützung des Lernens aller</text>
+    </g>
+    <g clip-path="url(#clip17)">
+      <text font-family="Verdana,Verdana_MSFontService,sans-serif" font-weight="400" font-size="29" transform="matrix(1 0 0 0.999816 9.90205 546)">Schüler:innen</text>
+    </g>
+    <g clip-path="url(#clip18)">
+      <text font-family="Verdana,Verdana_MSFontService,sans-serif" font-weight="400" font-size="29" transform="matrix(1 0 0 0.999816 524.759 511)">Unsere Lehrkraft weiß, bei welchen Aufgaben ich</text>
+    </g>
+    <g clip-path="url(#clip19)">
+      <text font-family="Verdana,Verdana_MSFontService,sans-serif" font-weight="400" font-size="29" transform="matrix(1 0 0 0.999816 524.759 546)">Schwierigkeiten habe.</text>
+    </g>
+    <g clip-path="url(#clip20)">
+      <text font-family="Verdana,Verdana_MSFontService,sans-serif" font-weight="400" font-size="29" transform="matrix(1 0 0 0.999816 9.90205 622)">Sozio</text>
+    </g>
+    <text font-family="Verdana,Verdana_MSFontService,sans-serif" font-weight="400" font-size="29" transform="matrix(1 0 0 0.999816 88.902 622)">-</text>
+    <text font-family="Verdana,Verdana_MSFontService,sans-serif" font-weight="400" font-size="29" transform="matrix(1 0 0 0.999816 102.235 622)">emotionale Unterstützung</text>
+    <g clip-path="url(#clip21)">
+      <text font-family="Verdana,Verdana_MSFontService,sans-serif" font-weight="400" font-size="29" transform="matrix(1 0 0 0.999816 524.759 604)">Unsere Lehrkraft nimmt sich Zeit, wenn ich etwas</text>
+    </g>
+    <g clip-path="url(#clip22)">
+      <text font-family="Verdana,Verdana_MSFontService,sans-serif" font-weight="400" font-size="29" transform="matrix(1 0 0 0.999816 524.759 639)">mit ihr besprechen möchte.</text>
+    </g>
+    <g clip-path="url(#clip23)">
+      <text font-family="Verdana,Verdana_MSFontService,sans-serif" font-weight="400" font-size="29" transform="matrix(1 0 0 0.999816 9.90205 697)">Klassenführung</text>
+    </g>
+    <g clip-path="url(#clip24)">
+      <text font-family="Verdana,Verdana_MSFontService,sans-serif" font-weight="400" font-size="29" transform="matrix(1 0 0 0.999816 524.759 697)">Unsere Lehrkraft hat die Klasse im Griff.</text>
+    </g>
+    <g clip-path="url(#clip25)">
+      <text font-family="Verdana,Verdana_MSFontService,sans-serif" font-weight="400" font-size="29" transform="matrix(1 0 0 0.999816 9.90205 773)">Ästhetisch</text>
+    </g>
+    <text font-family="Verdana,Verdana_MSFontService,sans-serif" font-weight="400" font-size="29" transform="matrix(1 0 0 0.999816 161.402 773)">-</text>
+    <text font-family="Verdana,Verdana_MSFontService,sans-serif" font-weight="400" font-size="29" transform="matrix(1 0 0 0.999816 174.735 773)">emotionales Lernen</text>
+    <g clip-path="url(#clip26)">
+      <text font-family="Verdana,Verdana_MSFontService,sans-serif" font-weight="400" font-size="29" transform="matrix(1 0 0 0.999816 524.759 755)">Unsere Lehrkraft fördert unseren kreativen</text>
+    </g>
+    <g clip-path="url(#clip27)">
+      <text font-family="Verdana,Verdana_MSFontService,sans-serif" font-weight="400" font-size="29" transform="matrix(1 0 0 0.999816 524.759 790)">Umgang mit Themen des Unterrichts.</text>
+    </g>
+    <g clip-path="url(#clip28)">
+      <text font-family="Verdana,Verdana_MSFontService,sans-serif" font-weight="400" font-size="29" transform="matrix(1 0 0 0.999816 9.90205 848)">Fachspezifische Facette</text>
+    </g>
+    <g clip-path="url(#clip29)">
+      <text font-family="Verdana,Verdana_MSFontService,sans-serif" font-weight="400" font-size="29" transform="matrix(1 0 0 0.999816 9.90205 883)">(z. B. Musik)</text>
+    </g>
+    <g clip-path="url(#clip30)">
+      <text font-family="Verdana,Verdana_MSFontService,sans-serif" font-weight="400" font-size="29" transform="matrix(1 0 0 0.999816 524.759 848)">Unsere Lehrkraft kann uns gut zeigen, wie wir die</text>
+    </g>
+    <g clip-path="url(#clip31)">
+      <text font-family="Verdana,Verdana_MSFontService,sans-serif" font-weight="400" font-size="29" transform="matrix(1 0 0 0.999816 524.759 883)">Musikinstrumente verwenden sollen.</text>
+    </g>
+  </g>
+</svg>

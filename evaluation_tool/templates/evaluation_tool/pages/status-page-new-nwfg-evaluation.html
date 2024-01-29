@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="en">
+  <head>
+    {% include 'evaluation_tool/components/header-base.html' %}
+    <link rel="stylesheet" href="{% static 'styles/charts.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/card-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/logo-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/main-title-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/footer-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/flexible-card-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/new-nwfg-status-style.css' %}" />
+  </head>
+
+  <body>
+    <script src="{% static 'scripts/createStatsCard.js' %}"></script>
+    <main class="flex-page">
+      {% include 'evaluation_tool/components/logo-header.html' %}
+      <div class="main-card">
+        <div class="student-counter-card">
+          <p class="student-counter">{{n_used_acronyms}}</p>
+          <p class="student-counter-label">Schüler:innen haben ein Muster erstellt</p>
+        </div>
+        <p class="description-text">
+          Liebe Lehrkraft,
+          <br class="break-small" />
+          derzeit erstellen Ihre Schüler:innen ein persönliches Bildmuster, welches sie für zukünftige Anmeldungen über die Web-App AMADEUS benötigen. Hierzu wählen sie jeweils ein Muster aus fünf
+          Bildern aus. Um sich das Muster besser einprägen zu können, erhalten Ihre Schüler:innnen daraufhin einen Merksatz, der sich aus den fünf gewählten Bildern ergibt. Bitten Sie Ihre
+          Schüler:innen, sich den Merksatz einzuprägen, ihn auf dem ausgeteilten Vordruck zu notieren und diesen bei Ihnen abzugeben. Verwahren Sie diese Vordrucke gut und für Dritte unzugänglich. Sie
+          verbleiben als Erinnerungshilfe bei Ihnen, falls eine:r Ihrer Schüler:innen seinen Merksatz doch einmal vergessen sollte.
+          <br class="break-small" />
+          Wenn die Anzahl der Bildmuster der Zahl der Schüler:innen in Ihrer Klasse entspricht, haben alle erfolgreich ein Muster erstellt. Bitten Sie Ihre Schüler:innen abschließend, den
+          Demographiefragebogen auszufüllen.
+          <br class="break-small" />
+          Sobald alle Ihre Schüler:innen, die an der Studie teilnehmen, ein Muster erstellt haben, können Sie die erste Evaluation starten. Bitte beachten Sie, dass Ihre Schüler:innen dann keine
+          weiteren Muster erstellen können. Drücken Sie diesen Button also erst, wenn sich alle Schüler:innen registriert haben.
+        </p>
+        <form class="control-buttons" action="" method="POST">
+          {% csrf_token %}
+          <button class="control-button cb-blue" type="submit" onclick="clickedStartNextEvaluation(event)" name="action" value="start_first_evaluation">
+            <img class="control-button-img" src="{% static 'icons/status-page-controler/arrow.svg' %}" alt="Arrow Icon" />
+            <div class="control-button-text">
+              <p class="control-button-title">Erste Evaluation Starten</p>
+              <p class="control-button-description">EZ 1, BR 1</p>
+            </div>
+          </button>
+        </form>
+      </div>
+
+      <script>
+        function clickedStartNextEvaluation(e) {
+          if (!confirm("Sind Sie sicher, dass Sie mit der ersten Evaluation beginnen möchten? Schüler:innen können ab dann kein Muster für die Teilnahme erstellen!")) {
+            e.preventDefault();
+          }
+        }
+      </script>
+    </main>
+    {% include 'evaluation_tool/components/default-footer.html' %}
+  </body>
+</html>

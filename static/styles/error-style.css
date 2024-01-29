@@ -1,0 +1,58 @@
+main  {
+    width: 90%
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.main-card {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.button-container {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.button {
+  text-decoration: none;
+  padding: 10px;
+  background-color: #292f61;
+  color: white;
+  border-radius: 10px;
+}
+
+.button:hover {
+  background-color: #292f61da;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.link {
+  text-decoration: none;
+  color: #292f61;
+  background-color: #292f6130;
+  padding: 2px 4px;
+  border-radius: 4px;
+  width: auto;
+}
+
+.link:hover {
+  background-color: #292f61;
+  color: white;
+}

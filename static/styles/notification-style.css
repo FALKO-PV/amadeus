@@ -1,0 +1,110 @@
+.notification-container {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  left: 0px;
+  z-index: 3000;
+  webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+  -ms-animation: fadein 2s; /* Internet Explorer */
+  -o-animation: fadein 2s; /* Opera < 12.1 */
+  animation: fadein 2s;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.notification {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: rgba(21, 27, 97, 0.25) 0px 25px 25px;
+  color: #292f61;
+  max-width: 500px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.notification-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #e4f9e2;
+  margin: 0px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.notification-close-icon {
+    width: 20px;
+}
+
+.notification-close-icon:hover {
+    cursor: pointer;
+}
+
+.notification-title {
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.notification-description {
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: justify;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}

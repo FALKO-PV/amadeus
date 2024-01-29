@@ -1,0 +1,17 @@
+.main-title {
+  font-size: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.main-title-left {
+  font-weight: 100;
+  margin-right: 5px;
+}
+
+.main-title-right {
+  font-weight: 700;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="en">
+  <head>
+    {% include 'evaluation_tool/components/header-base.html' %}
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/card-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/logo-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/falko-description-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/main-title-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/create-evaluation-form-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/create-evaluation-button-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/footer-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/cookie-consent.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/documentation-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/flexible-card-style.css' %}" />
+  </head>
+
+  <body>
+    <main>
+      {% include 'evaluation_tool/components/logo-header.html' %}
+      <a class="back-button" href="{% url 'start_page' %}">
+        <img class="arrow-back-left" src="{% static 'icons/arrow-fat-left-fill.svg' %}" alt="arrow left" />
+        <span>Zurück zur Startseite</span>
+      </a>
+      <div class="main-card main-card-sub-page">
+        {% include 'evaluation_tool/components/usage-tutorial.html' %}
+        <a class="button" href="{% url 'start_page' %}">Zurück zur Startseite</a>
+      </div>
+    </main>
+    <script type="text/javascript"></script>
+    {% include 'evaluation_tool/components/home-footer.html' %}
+  </body>
+</html>

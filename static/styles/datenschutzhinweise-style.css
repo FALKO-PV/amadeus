@@ -1,0 +1,50 @@
+.main-card {
+  padding: 20px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 0px;
+  text-align: center;
+}
+
+.sub-title {
+  font-size: 16px;
+  font-weight: bolder;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.description {
+  text-align: justify;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+li {
+  font-size: 14px !important;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  width: 100px;
+  background-color: #292f61;
+  color: white;
+  font-family: "Atkinson Hyperlegible";
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.13);
+  border-radius: 10px;
+  padding: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+  border: none;
+  margin-top: 20px;
+  text-decoration: none;
+}

@@ -1,0 +1,11 @@
+{% load static %}
+<div class="main-footer">
+    <p>© {% now 'Y' %} Nachwuchsforschungsgruppe FALKO-PV</p>
+    <div class="clickable-links">
+        <a href="{% url 'impressum' %}" target="_blank" class="clickable-links-button">Impressum</a>
+        <a href="mailto:falko-pv@ur.de?subject=Feedback" class="clickable-links-button">Feedback Senden</a>
+        <a href="{% url 'datenschutzhinweise' %}" target="_blank" class="clickable-links-button">Datenschutzhinweise</a>
+        <a href="{% url 'faq_page' %}" target="_blank" class="clickable-links-button">FAQ</a>
+    </div>
+    <p class="icon-source-url">Icons by https://icons8.com/</p>
+</div>

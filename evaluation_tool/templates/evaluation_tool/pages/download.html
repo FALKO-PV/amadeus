@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="en">
+<head>
+    {% include 'evaluation_tool/components/header-base.html' %}
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/card-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/logo-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/footer-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/error-style.css' %}" />
+    <title>FALKO-PV Download Data</title>
+</head>
+
+<body>
+<main>
+    {% include 'evaluation_tool/components/logo-header.html' %}
+    <div class="main-card">
+        <form action="/download" method="post">
+            {% csrf_token %}
+            {{ form }}
+        <input type="submit" value="Download">
+        </form>
+    </div>
+</main>
+
+{% include 'evaluation_tool/components/home-footer.html' %}
+</body>
+</html>

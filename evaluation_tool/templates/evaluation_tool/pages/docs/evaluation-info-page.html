@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="en">
+  <head>
+    {% include 'evaluation_tool/components/header-base.html' %}
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/card-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/logo-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/falko-description-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/main-title-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/create-evaluation-form-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/create-evaluation-button-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/footer-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/cookie-consent.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/documentation-style.css' %}" />
+  </head>
+
+  <body>
+    <main>
+      {% include 'evaluation_tool/components/logo-header.html' %}
+      <a class="back-button" href="{% url 'start_page' %}">
+        <img class="arrow-back-left" src="{% static 'icons/arrow-fat-left-fill.svg' %}" alt="arrow left" />
+        <span>Zurück zur Startseite</span>
+      </a>
+      <div class="main-card main-card-sub-page">
+        <div class="left">
+          <h1>Wie wird Unterrichtsqualität in AMADEUS evaluiert?</h1>
+
+          <div>
+            <h3>Unterrichtsqualität messbar machen</h3>
+            <p>
+              Zu den&nbsp;<span class="eigennamen">Dimensionen und Facetten von Unterrichtsqualität</span>, die den
+              <a class="in-text-link" href="{% url 'modelling_info_page' %}">theoretischen Hintergrund</a> bilden, wurden sehr viele Aussagen (sog. Items) formuliert und in Vorstudien wurde getestet,
+              inwiefern Schüler:innen der Sekundarstufe diese <span class="eigennamen">sprachlich und inhaltlich verstehen</span> bzw. ob diese die erforderlichen
+              <span class="eigennamen">psychometrischen Gütekriterien</span> erfüllen.
+            </p>
+            <p>
+              Nur eine Auswahl an <span class="eigennamen">43 Aussagen zu fachübergreifenden Merkmalen</span>&nbsp;und
+              <span class="eigennamen">zwischen&nbsp;neun und zwölf Aussagen zu fachspezifischen Facetten&nbsp;</span>von Unterrichtsqualität, die sich multikriterial bewährten, wurde in die
+              Evaluation von AMADEUS übernommen und wird hier eingesetzt. Diese werden von Schüler:innen in Hinblick auf ihren Unterricht bei einer bestimmten Lehrkraft oder einem bestimmten Fach auf
+              einer Skala mit <span class="eigennamen">fünf Stufen</span> eingeschätzt (1 = Trifft nicht zu, ..., 5 = Trifft zu). Nachstehende Tabelle enthält für jedes Merkmal eine beispielhafte
+              Aussage.
+            </p>
+            <div>
+              <table>
+                <thead>
+                  <tr>
+                    <th><b>Merkmal</b></th>
+                    <th><b>Beispielitem</b><br />(Skalierung: 1 = Trifft nicht zu, ..., 5 = Trifft zu)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Auswahl und Thematisierung von Inhalten und Fachmethoden</td>
+                    <td>Unsere Lehrkraft drückt sich im Unterricht klar und verständlich aus.</td>
+                  </tr>
+                  <tr>
+                    <td>Kognitive Aktivierung</td>
+                    <td>Unsere Lehrkraft ermuntert mich, eigene Lösungswege zu probieren.</td>
+                  </tr>
+                  <tr>
+                    <td>Unterstützung des Übens</td>
+                    <td>Mit Fehlern geht unsere Lehrkraft so um, dass wir daraus etwas lernen können.</td>
+                  </tr>
+                  <tr>
+                    <td>Formatives Assessment</td>
+                    <td>Nach Fehlern erfahren wir nicht nur, dass etwas falsch ist, sondern auch warum.</td>
+                  </tr>
+                  <tr>
+                    <td>Unterstützung des Lernens aller Schüler:innen</td>
+                    <td>Unsere Lehrkraft weiß, bei welchen Aufgaben ich Schwierigkeiten habe.</td>
+                  </tr>
+                  <tr>
+                    <td>Sozio-emotionale Unterstützung</td>
+                    <td>Unsere Lehrkraft nimmt sich Zeit, wenn ich etwas mit ihr besprechen möchte.</td>
+                  </tr>
+                  <tr>
+                    <td>Klassenführung</td>
+                    <td>Unsere Lehrkraft hat die Klasse im Griff.</td>
+                  </tr>
+                  <tr>
+                    <td>Ästhetisch-emotionales Lernen</td>
+                    <td>Unsere Lehrkraft fördert unseren kreativen Umgang mit Themen des Unterrichts.</td>
+                  </tr>
+                  <tr>
+                    <td>Fachspezifische Facette<br />(z. B. Musik)</td>
+                    <td>Unsere Lehrkraft kann uns gut zeigen, wie wir die Musikinstrumente verwenden sollen.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h3>Können Schüler:innen die Qualität von Unterricht einschätzen?</h3>
+            <p>
+              <span class="eigennamen">Ja, das können sie</span>, und zwar besser als oftmals gedacht. Schüler:innen sind nicht nur die primären Adressat:innen von Unterricht, an deren Voraussetzungen
+              und Bedarfen dieser ausgerichet sein sollte und an deren Lernerfolgen sich dessen Gelingen schließlich ablesen lässt. Ihnen bieten sich im Schulalltag auf natürliche Weise vielfältige
+              Vergleichsmöglichkeiten und sie erleben den Unterricht einer bestimmten Lehrkraft oder in einem bestimmten Fach nicht nur punktuell (wie z. B. externe Beobachter:innen), sondern sind ihm
+              über einen längeren Zeitraum unmittelbar ausgesetzt. Dementsprechend hat sich&nbsp;die Perspektive von&nbsp;Schüler:innen in der Forschung zu Unterrichtsqualität hinsichtlich vieler
+              Kriterien als <span class="eigennamen">zuverlässig und valide</span> erwiesen, wenngleich gewisse blinde Flecken nicht auszuschließen sind&nbsp;(z. B. Clausen, 2002; Desimone et al.,
+              2010; Göllner et al., 2016, 2020; Kunter &amp; Baumert, 2006; Praetorius et al., 2017; zsf. Fauth et al. 2020).
+            </p>
+          </div>
+          <div>
+            <div>
+              <div class="section-item section-item-accordion">
+                <span>Erwähnte Literatur</span>
+                <div class="section-list-item-button"><img class="arrow-icon" src="{% static 'icons/long-accordion-arrow-blue.svg' %}" alt="Pfeil" /></div>
+              </div>
+              <div class="accordion-content">
+                <ul>
+                  <li>
+                    Clausen, M. (2002).&nbsp;<span class="eigennamen"
+                      >Unterrichtsqualität: Eine Frage der Perspektive? Empirische Analysen zur Übereinstimmung, Konstrukt- und Kriteriumsvalidität.</span
+                    >
+                    Waxmann.
+                  </li>
+                  <li>
+                    Desimone, L. M., Smith, T. M. &amp; Frisvold, D. E. (2010). Survey measures of classroom instruction. Comparing student and teacher reports.&nbsp;<em>Educational Policy, 24</em
+                    >(2), 267-329. <a class="in-text-link" href="https://doi.org/10.1177/089590480833017" target="_blank" rel="noreferrer">https://doi.org/10.1177/089590480833017</a>&nbsp;&nbsp;
+                  </li>
+                  <li>
+                    Fauth, B., Göllner, R., Lenske, G., Praetorius, A.-K. &amp; Wagner, W. (2020). Who sees what? Conceptual considerations on the measurement of teaching quality from different
+                    perspectives.&nbsp;<em>Zeitschrift für Pädagogik, 6<span class="eigennamen">6.&nbsp;</span></em
+                    ><span class="eigennamen">Beiheft</span>,&nbsp;138-155.
+                    <a class="in-text-link" href="https://doi.org/10.3262/ZPB2001" target="_blank" rel="noreferrer">https://doi.org/10.3262/ZPB2001</a>&nbsp;
+                  </li>
+                  <li>
+                    Göllner, R., Fauth, B., Lenske, G., Praetorius, A.-K. &amp; Wagner, W. (2020). Do student ratings of classroom management tell us more about teachers or about classroom
+                    composition?&nbsp;<em>Zeitschrift für Pädagogik, 66<span class="eigennamen">.&nbsp;</span></em
+                    ><span class="eigennamen">Beiheft</span>,&nbsp;156-172.
+                    <a class="in-text-link" href="https://doi.org/10.3262/ZPB2001" target="_blank" rel="noreferrer">https://doi.org/10.3262/ZPB2001</a>&nbsp;
+                  </li>
+                  <li>
+                    Göllner, R., Wagner, W., Klieme, E., Lüdtke, O., Nagengast, B. &amp; Trautwein, U. (2016). Erfassung der Unterrichtsqualität mithilfe von Schülerurteilen: Chancen, Grenzen und
+                    Forschungsperspektiven. In Bundesministerium für Bildung und Forschung (Hrsg.), <span class="eigennamen">Forschungsvorhaben in Ankopplung an Large-Scale-Assessments</span> (S.
+                    63-82). Bundesministerium für Bildung und Forschung.
+                  </li>
+                  <li>
+                    Kunter, M. &amp; Baumert, J. (2006). Who is the expert? Construct and criteria validity of student and teacher ratings of instruction.&nbsp;<em
+                      >Learning Environments Research, 9</em
+                    >(3), 231-251. <a class="in-text-link" href="https://doi.org/10.1007/s10984-006-9015-7" target="_blank" rel="noreferrer">https://doi.org/10.1007/s10984-006-9015-7</a>&nbsp;
+                  </li>
+                  <li>
+                    Praetorius, A.-K., Lauermann, F., Klassen, R. M., Dickhäuser, O., Janke, S. &amp; Dresel, M. (2017). Longitudinal relations between teaching-related motivations and
+                    student-reported teaching quality. <i>Teaching and Teacher Education, 65</i>, 241-254.
+                    <a class="in-text-link" href="https://psycnet.apa.org/doi/10.1016/j.tate.2017.03.023" target="_blank" rel="noreferrer">https://psycnet.apa.org/doi/10.1016/j.tate.2017.03.023</a
+                    >&nbsp;
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="text/javascript"></script>
+    <script src="{% static 'scripts/accordion.js' %}"></script>
+    {% include 'evaluation_tool/components/home-footer.html' %}
+  </body>
+</html>

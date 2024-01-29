@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="en">
+  <head>
+    {% include 'evaluation_tool/components/header-base.html' %}
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/card-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/logo-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/footer-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/datenschutzhinweise-style.css' %}" />
+  </head>
+
+  <body>
+    <main>
+      {% include 'evaluation_tool/components/logo-header.html' %}
+      <div class="main-card">
+        <p class="title">Informationen zur Verarbeitung personenbezogener Daten und zum Urheberrecht im Rahmen der Web-App AMADEUS von FALKO-PV</p>
+        <p class="sub-title">Anwendungsbeschreibung</p>
+        <div class="description">
+          AMADEUS ist eine Web-App zur Evaluation der Qualität des eigenen Unterrichts aus der Perspektive von
+          Schülerinnen und Schülern. Sie basiert auf den neuesten Forschungsergebnissen zu generischen und fachspezifischen Merkmalen und wird kontinuierlich weiterentwickelt. Ihr einfaches und
+          benutzerfreundliches Design ermöglicht es, sowohl einzelne (z. B. nach der Erprobung neuer Materialien) als auch mehrere Unterrichtsstunden (z. B. für eine persönliche Betrachtung der
+          Unterrichtsentwicklung) im unmittelbaren Anschluss zu evaluieren. Als Lehrkraft erhalten Sie eine individuelle Rückmeldung zu Ihrem Unterricht in einem bestimmten Fach und in einer
+          bestimmten Klasse und dies für alle Teilnehmenden vollständig datenschutzkonform, anonym und kostenlos.
+        </div>
+        <p class="sub-title" style="margin-top: 25px;">Informationen zur Datenverarbeitung</p>
+        <div class="description">
+          Mit den folgenden Informationen kommt die Universität Regensburg für die oben genannte Verarbeitung personenbezogener Daten ihrer Informationspflicht gem. Art. 13 DSGVO nach.
+        </div>
+        <p class="sub-title">1. Verantwortlicher</p>
+        <div class="description">
+          Verantwortlich für die Verarbeitung ist die Universität Regensburg, vertreten durch den Präsidenten.
+          <br />Kontakt:<br />Universität Regensburg<br />93040 Regensburg<br /><a href="mailto:kontakt@ur.de">kontakt@ur.de</a><br /><br />
+          Die ausführende Institution ist die BMBF-Nachwuchsforschungsgruppe FALKO-PV (Fachspezifische Lehrkraftkompetenzen – Prädiktive Validierung), vertreten durch Dr. Alfred Lindl.<br />
+          Kontakt:<br />Sedanstr. 1<br />93055 Regensburg<br /><a href="mailto:falko-pv@ur.de">falko-pv@ur.de</a><br />
+        </div>
+        <p class="sub-title">2. Datenschutzbeauftragte:r</p>
+        <div class="description">Kontakt:<br />Universität Regensburg<br />Datenschutzbeauftragte:r<br />93040 Regensburg<br /><a href="mailto:dsb@ur.de">dsb@ur.de</a><br /></div>
+        <p class="sub-title">3. Ansprechpartner:in für die Web-App AMADEUS von FALKO-PV</p>
+        <div class="description">
+          BMBF-Nachwuchsforschungsgruppe FALKO-PV (Fachspezifische Lehrkraftkompetenzen – Prädiktive Validierung)<br />
+          Projektleitung: Dr. Alfred Lindl<br />
+          Sedanstr. 1<br />
+          93055 Regensburg<br />
+          <a href="mailto:falko-pv@ur.de">falko-pv@ur.de</a><br />
+        </div>
+        <p class="sub-title">4. Zwecke der Verarbeitung personenbezogener Daten</p>
+        <div class="description">
+          Im Rahmen der Nutzung der Web-App AMADEUS von FALKO-PV werden von Ihnen personenbezogene Daten zu folgendem Zweck erhoben und verarbeitet.<br />Für die Zusendung Ihres (personalisierten)
+          Evaluationsergebnisses werden die nachstehenden Angaben benötigt:
+          <ul>
+            <li><i>E-Mail-Adresse</i></li>
+            <li><i>optional: Unterrichtsfach</i></li>
+            <li><i>optional: Name</i></li>
+          </ul>
+        </div>
+        <p class="sub-title">5. Rechtsgrundlage(n) der Verarbeitung</p>
+        <div class="description">Rechtsgrundlage für die Verarbeitung personenbezogener Daten während der Nutzung der Web-App AMADEUS ist Ihre Einwilligung gemäß Art. 6 Abs. 1 Satz 1 lit. a) der Europäischen Datenschutz-Grundverordnung (DSGVO).</div>
+        <p class="sub-title">6. Empfänger bzw. Empfängerkategorien der personenbezogenen Daten</p>
+        <div class="description">Ihre personenbezogenen Daten werden grundsätzlich nicht an Dritte übermittelt. </div>
+        <p class="sub-title">7. Übermittlungen in Drittstaaten oder internationale Organisationen</p>
+        <div class="description">Es erfolgt keine Übermittlung an Drittstaaten oder internationale Organisationen.</div>
+        <p class="sub-title">8. Speicherdauer</p>
+        <div class="description">Sie haben auf Ihrer persönlichen Statusseite jederzeit die Möglichkeit, Ihre Daten über die Funktion „Evaluation löschen“ mit unmittelbarer Wirksamkeit zu löschen. Andernfalls werden Ihre personenbezogenen Daten nach Übersendung Ihres (personalisierten) Evaluationsergebnisses, spätestens jedoch zum Ende der Projektlaufzeit von FALKO-PV (31.05.2026) gelöscht.</div>
+        <p class="sub-title">9. Ihre Rechte als Betroffener</p>
+        <div class="description">
+            Als Betroffene:r haben Sie folgende Rechte gegenüber dem Verantwortlichen<br>
+            <ul>
+                <li>Auskunft über die Verarbeitung und eine Kopie ihrer personenbezogenen Daten gem. Art. 15 DSGVO,</li>
+                <li>Berichtigung Ihrer personenbezogenen Daten gem. Art. 16 DSGVO,</li>
+                <li>Löschung Ihrer personenbezogenen Daten gem. Art. 17 DSGVO,</li>
+                <li>Einschränkung der Verarbeitung und Widerspruch gegen die Verarbeitung Ihrer personenbezogenen Daten gem. Art. 18 und 21 DSGVO,</li>
+                <li>Bereitstellung einer Kopie Ihrer personenbezogenen Daten in einem strukturierten, gängigen und maschinenlesbaren Format, welche Sie zu einem anderen Verantwortlichen übermitteln können (Datenübertragbarkeit).</li>
+            </ul>
+            Sie können Ihre Einwilligung jederzeit widerrufen. Der Widerruf berührt jedoch nicht die Rechtmäßigkeit der Verarbeitung ihrer Daten vor dem Zeitpunkt des Widerrufs.
+            <br><br>
+            Sie haben ein Beschwerderecht bei der Aufsichtsbehörde. Die zuständige Aufsichtsbehörde ist: <br>
+            Der Bayerische Landesbeauftragte für den Datenschutz<br>
+            Postfach 221219<br>
+            80502 München<br>
+            <a href="mailto:poststelle@datenschutz-bayern.de">poststelle@datenschutz-bayern.de</a>
+        </div>
+        <p class="sub-title">10. Pflicht zur Bereitstellung der Daten</p>
+        <div class="description">Die Bereitstellung der Daten ist freiwillig. Sie sind gesetzlich nicht verpflichtet die Daten anzugeben.</div>
+        <p class="sub-title">11. Automatisierte Entscheidungsfindung</p>
+        <div class="description">Bei der Verarbeitung Ihrer personenbezogenen Daten erfolgt keine automatisierte Entscheidungsfindung.</div>
+        <p class="sub-title" style="margin-top: 30px;">Zusätzliche Hinweise zum Urheberrecht</p>
+        <div class="description">Die Evaluationsapp AMADEUS wird von der Forschungsgruppe FALKO-PV an der Universität Regensburg bereitgestellt und darf ausschließlich für Evaluationszwecke in Bildungsinstitutionen und nicht kommerziell oder für wissenschaftliche Interessen Dritter verwendet werden. Diese Anwendung einschließlich aller ihrer Teile ist urheberrechtlich geschützt. Jede Verwertung außerhalb der engen Grenzen des Urheberrechtsgesetzes ist unzulässig und strafbar.</div>
+        <a class="button" href="{% url 'start_page' %}">Zur Startseite</a>
+      </div>
+    </main>
+
+    {% include 'evaluation_tool/components/home-footer.html' %}
+  </body>
+</html>

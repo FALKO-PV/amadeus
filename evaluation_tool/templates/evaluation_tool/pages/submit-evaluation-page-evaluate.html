@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="en">
+
+<head>
+    {% include 'evaluation_tool/components/header-base.html' %}
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/card-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/main-title-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/footer-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/single-evaluation-page-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/logo-style.css' %}" />
+</head>
+
+<body>
+    <main>
+        <div style="pointer-events:none;">{% include 'evaluation_tool/components/logo-header.html' %}</div>
+        {% if single_evaluation_completed %}
+        <div class="submit-finished-screen">
+            <img src="{% static 'icons/successful-sign.svg' %}" alt="Submit was successful sign"
+                width="40px">
+            <p>Vielen Dank für deine Teilnahme! Deine Angaben wurden gespeichert. Bitte bewerte nun die Anwendung:</p>
+            <a  target="_blank" rel="noopener noreferrer" href="http://docs.google.com/forms/d/e/1FAIpQLSdQu4MrW5EbkOKik2NewXNFn0Uu0PphCm24nuh7Om9oD0skJw/viewform?usp=pp_url&entry.838617491=http://amadeus.falko-pv.de/evaluation/{{class_evaluation_id}}/evaluate/{{single_evaluation_id}}">Zur Umfrage</a>
+        </div>
+        {% else %}
+
+        <div class="submit-screen">
+            <p class="submit-information">Bist du sicher, dass du die Evaluation absenden möchtest? Nachträgliche Änderungen deiner Antworten sind nicht möglich.</p>
+            <form class="submit-buttons" action="" method="POST">
+                {% csrf_token %}
+                <button class="submit-page-button" type="submit" name="action" value="back">Zurück</button>
+                <button class="submit-page-button" type="submit" name="action" value="confirm">Absenden</button>
+            </form>
+        </div>
+        {% endif %}
+    </main>
+    {% include 'evaluation_tool/components/default-footer.html' %}
+</body>
+
+</html>

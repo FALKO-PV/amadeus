@@ -1,0 +1,78 @@
+{% load static %}
+<div class="status-header">
+    <div class="status-header-left">
+        <h1 class="status-title">Status</h1>
+        <p class="status-id">ID: {{evaluation_id}}</p>
+        <div class="status-indicator">
+            {% if is_nwfg == False %}
+            {% if completed == False and time_over == True %}
+            <div class="status-indicator-circle red">
+                <div class="status-indicator-circle-inner"></div>
+            </div>
+            <p class="status-indicator-text">FÜR SCHÜLER:INNEN NICHT MEHR VERFÜGBAR</p>
+            {% endif %}
+            {% if completed == False and time_over != True %}
+            <div class="status-indicator-circle">
+                <div class="status-indicator-circle-inner"></div>
+            </div>
+            <p class="status-indicator-text">FÜR SCHÜLER:INNEN VERFÜGBAR</p>
+            {% endif %}
+            {% if completed == True%}
+            <div class="status-indicator-circle red">
+                <div class="status-indicator-circle-inner"></div>
+            </div>
+            <p class="status-indicator-text">FÜR SCHÜLER:INNEN NICHT MEHR VERFÜGBAR</p>
+            {% endif %}
+            {% else %}
+            {% if current_part_status == "completed" %}
+            <div class="status-indicator-circle red">
+                <div class="status-indicator-circle-inner"></div>
+            </div>
+            <p class="status-indicator-text">FÜR SCHÜLER:INNEN NICHT VERFÜGBAR</p>
+            {% else %}
+            <div class="status-indicator-circle">
+                <div class="status-indicator-circle-inner"></div>
+            </div>
+            <p class="status-indicator-text">FÜR SCHÜLER:INNEN VERFÜGBAR</p>
+            {% endif %}
+            {% endif %}
+        </div>
+        <script>
+
+        </script>
+    </div>
+    <div class="status-header-right">
+        <div class="subject-card">
+            <img class="subject-card-icon" src="{% static 'icons/subjects/AllgemeineLehrevaluation.svg' %}"
+                alt="Icon des Schulfachs">
+        </div>
+        <script>
+            var subject = "{{subject}}";
+
+            subjectCard = document.querySelector(".subject-card");
+            subjectCardIcon = document.querySelector(".subject-card-icon");
+
+            subjectCardIcon.setAttribute("src", "/static/icons/subjects/" + subject.replace(" ", "") + ".svg");
+
+            green = ['#102E91', '#3952a2', '#8a9cda']
+            red = ['#692545', '#d07c9f', '#d8b1e0']
+            orange = ['#C16431', '#eca57f', '#e6c4b2']
+            gray = ['#7A7A7A','#DBDBDB', '#333333']
+
+            let selectedColorCodes;
+
+            if (subject === "Evangelische Religion" || subject === "Musik") {
+                selectedColorCodes = orange
+            } else if (subject === "Deutsch" || subject === "Englisch" || subject === "Latein") {
+                selectedColorCodes = red
+            } else if (subject === "Mathematik") {
+                selectedColorCodes = green
+            } else if (subject === "Allgemeine Lehrevaluation") {
+                selectedColorCodes = gray
+            }
+
+            imageString = 'radial-gradient(at top left, ' + selectedColorCodes[0] + ', transparent), radial-gradient(at top right, ' + selectedColorCodes[1] + ', transparent), radial-gradient(at top left, ' + selectedColorCodes[2] + ', transparent)';
+            subjectCard.style.backgroundImage = imageString;
+        </script>
+    </div>
+</div>

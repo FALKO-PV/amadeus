@@ -1,0 +1,104 @@
+.share-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 0px;
+  margin-top: 40px;
+}
+
+.apple-android-logo {
+  margin-right: 16px;
+  width: 32px;
+}
+
+.logo-apple-android-container-arrow {
+  width: 16px;
+  margin-right: 20px;
+}
+
+.links-plattforms-container-upper {
+  display: flex;
+  justify-content: center;
+}
+
+.links-plattforms-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-apple-android-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: baseline;
+  display: flex;
+  font-weight: 600;
+  padding: 15px;
+}
+
+.logo-apple-android-container:hover {
+  background-color: #292f6120;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.logo-apple-android-container-link-text {
+  text-decoration: none;
+  color: #292f61;
+  font-size: 16px;
+}
+
+.share-description {
+  text-align: justify;
+  margin-bottom: 0px;
+}
+
+.clipboard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: white;
+  box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  align-items: center;
+  padding: 14px;
+  z-index: 4000;
+}
+
+.clipboard-url {
+  width: max-content;
+  border: none;
+  background: none;
+  width: 100%;
+  font-family: "Atkinson Hyperlegible";
+  color: #292f61;
+  font-size: 14px;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.clipboard-url:focus {
+  outline: none;
+}
+
+.clipboard-icon {
+  height: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.clipboard-icon:hover {
+  cursor: pointer;
+}
+
+.hidden-text {
+  margin: 0px;
+  font-size: 12px;
+  font-weight: 900;
+  margin-top: 5px;
+}

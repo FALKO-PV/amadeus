@@ -1,0 +1,27 @@
+# environment files
+.idea
+env
+
+# pycache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# notes/passwords etc.
+secret
+ajax-test/
+
+# macOS files
+.DS_STORE
+
+django
+
+info.log
+db.sqlite3
+.env
+.amadeus_pg_pass
+amadeus_pg_pass
+.set_envs.py
+set_envs.py
+
+db.sqlite3

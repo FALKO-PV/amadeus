@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <clipPath id="clip-Zeichenfläche_2">
+      <rect width="30" height="30"/>
+    </clipPath>
+  </defs>
+  <g id="Zeichenfläche_2" data-name="Zeichenfläche – 2" clip-path="url(#clip-Zeichenfläche_2)">
+    <path id="icons8-close" d="M6.867,6.281l-.585.585L13.318,13.9,6.281,20.941l.585.585L13.9,14.489l7.037,7.037.585-.585L14.489,13.9l7.037-7.037-.585-.585L13.9,13.318Z" transform="translate(1.096 1.096)" fill="#fff"/>
+  </g>
+</svg>

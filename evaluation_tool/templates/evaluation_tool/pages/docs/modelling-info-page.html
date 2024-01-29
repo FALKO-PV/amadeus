@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="en">
+  <head>
+    {% include 'evaluation_tool/components/header-base.html' %}
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/card-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/logo-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/falko-description-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/main-title-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/create-evaluation-form-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/create-evaluation-button-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/footer-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/cookie-consent.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/documentation-style.css' %}" />
+  </head>
+
+  <body>
+    <main>
+      {% include 'evaluation_tool/components/logo-header.html' %}
+      <a class="back-button" href="{% url 'start_page' %}">
+        <img class="arrow-back-left" src="{% static 'icons/arrow-fat-left-fill.svg' %}" alt="arrow left" />
+        <span>Zurück zur Startseite</span>
+      </a>
+      <div class="main-card main-card-sub-page">
+        <div class="left">
+          <h1>Wie wird Unterrichtsqualität in AMADEUS modelliert?</h1>
+
+          <div>
+            <h3>Unterricht als Lernangebot</h3>
+            <p>
+              Zur Beschreibung von Unterricht und Lehr-Lernprozessen haben sich – zumindest im deutschsprachigen Raum – <span class="eigennamen">Angebot-Nutzungs-Modelle</span> etabliert (zsf. Vieluf
+              et al., 2020). Sie fußen auf der konstruktivistischen Vorstellung, „dass Lernende aktive (Ko-)Konstrukteure ihres eigenen Lernfortschritts sind“ (Vieluf et al., 2020, 63). Damit können
+              zahlreiche individuelle Faktoren wie schülerseitige Aufmerksamkeit, Motivation, Emotionen etc. die Nutzung von Lerngelegenheiten zwar beeinflussen. Für eine
+              <span class="eigennamen">qualitätsvolle Gestaltung&nbsp;des Unterrichtsangebots</span> sind jedoch maßgeblich die Lehrkräfte verantwortlich (Hill et al., 2008; Kelcey et al., 2019;
+              Kirschner et al., 2017; Kunter et al., 2011).
+            </p>
+            <h3>Was bedeuet Unterrichtsqualität?</h3>
+            <p>
+              Als qualitätsvoll wird Unterricht angesehen, wenn er sich nach normativen Setzungen, die beispielsweise gesellschaftlich, kulturell oder historisch begründet sind, als
+              <span class="eigennamen">gut</span> und aufgrund empirischer Befunde hinsichtlich bestimmter Zielkriterien als <span class="eigennamen">effektiv</span> erweist (Berliner, 2005; Kunter
+              &amp; Trautwein, 2013). Zudem ist wissenschaftlich weitestgehend abgesichert, dass sich die Qualität von Unterricht nicht an sogenannten
+              <span class="eigennamen">Oberflächenstrukturen</span> wie Methodeneinsatz, Organisations- und Sozialformen etc. festmachen lässt, die schon bei einem kurzen Blick in das Klassenzimmer
+              wahrzunehmen sind. Deutlich wirkungsvoller sind hingegen <span class="eigennamen">Tiefenstrukturen</span>, d. h. Merkmale der Prozessebene wie Störungsprävention, sozio-emotionale
+              Unterstützung und kognitiver Anregungsgehalt, die nicht unmittelbar zu erkennen sind, sondern eine differenzierte Beobachtung und Analyse des Unterrichtsgeschehens erfordern (Decristan
+              et al., 2020; Hattie, 2009; Kunter &amp; Trautwein, 2013; Lipowsky &amp; Bleck, 2019).
+            </p>
+            <h3>Welche Merkmale von Unterrichtsqualität gibt es?</h3>
+            <p>
+              In der bildungswissenschaftlichen Forschung gibt es mittlerweile eine Vielzahl an Modellen zur Beschreibung von Unterrichtsqualität und deren Merkmalen. Diese integriert das
+              <span class="eigennamen">Syntheseframework von Praetorius und Kolleg:innen (2020)</span> und bildet damit einen zentralen Kristallisationspunkt des aktuellen Forschungsdiskurses. Gemäß
+              Syntheseframework lässt sich die Qualität von Unterricht anhand von sieben fachübergreifenden Dimensionen (und 21 Subdimensionen) beschreiben, die folgendermaßen lauten:
+            </p>
+            <ul>
+              <li><span class="eigennamen">Auswahl und Thematisierung von Inhalten und Fachmethoden,</span></li>
+              <li><span class="eigennamen">kognitive Aktivierung,</span></li>
+              <li><span class="eigennamen">Unterstützung des Übens,</span></li>
+              <li><span class="eigennamen">formatives Assessment,</span></li>
+              <li><span class="eigennamen">Unterstützung des Lernens aller Schüler:innen,</span></li>
+              <li><span class="eigennamen">sozio-emotionale Unterstützung,</span></li>
+              <li><span class="eigennamen">Klassenführung.</span></li>
+            </ul>
+            <p>
+              Inwiefern diese <span class="eigennamen">generischen Dimensionen</span> jedoch genügen, um die Qualität von Unterricht in jedem Schulfach hinreichend und vollständig zu beschreiben, ist
+              Gegenstand reger bildungswissenschaftlicher Diskussionen (z. B. Praetorius &amp; Gräsel, 2021). Darin wird unter anderem ein stärkerer Einbezug
+              <span class="eigennamen">unterschiedlicher Fachkulturen</span> und <span class="eigennamen">domänenspezifischer Aspekte</span> aller Schulfächer gefordert. Dies veranlasste in FALKO-PV
+              die Berücksichtigung verschiedener weiterer Facetten, die für die Disziplinen <span class="eigennamen">Deutsch, Englisch, Evangelische Religion, Latein, Mathematik</span> und
+              <span class="eigennamen">Musik jeweils fachbezogen</span> konzipiert wurden, nämlich&nbsp;
+            </p>
+            <ul>
+              <li><span class="eigennamen">Angebot, Potenzial und Unterstützung zu ästhetisch-emotionalem Lernen</span> (Lindl et al., in Vorb.) und</li>
+              <li><span class="eigennamen">zusätzliche fachspezifische Aspekte</span> (z. B. Gutsmiedl et al., in Vorb.; Gürtner et al., in Vorb.; Lindl &amp; Krämer, 2022).</li>
+            </ul>
+            <p>Das so erweiterte Syntheseframework stellt den theoretischen Hintergrund für die Evaluation des eigenen Unterricht im Rahmen der Web-App AMADEUS dar.</p>
+          </div>
+          <div>
+            <div>
+              <a class="content_toggle_anchor" name="content_toggle_24871"></a>
+
+              <div class="content_toggle_switch_background" style="opacity: 0.2"></div>
+
+              <div class="section-item section-item-accordion">
+                <span>Erwähnte Literatur</span>
+                <div class="section-list-item-button"><img class="arrow-icon" src="{% static 'icons/long-accordion-arrow-blue.svg' %}" alt="Pfeil" /></div>
+              </div>
+              <div class="accordion-content">
+                <div>
+                  <ul>
+                    <li>
+                      Berliner, D.-C.&nbsp;(2005). The near impossibility of testing for teacher quality. <em>Journal of Teacher Education, 56</em>(3), 205-213.
+                      <a class="in-text-link" href="https://doi.org/10.1177/0022487105275904" target="_blank" rel="noreferrer">https://doi.org/10.1177/0022487105275904</a>
+                    </li>
+                    <li>
+                      Decristan, J., Hess, M., Holzberger, D., Praetorius, A.-K. (2020). Oberflächen- und Tiefenmerkmale: eine Reflexion zweier prominenter Begriffe der Unterrichtsforschung.
+                      <i>Zeitschrift für Pädagogik, 66. Beiheft</i>(1),&nbsp;102-116.
+                      <a class="in-text-link" href="https://doi.org/10.3262/ZPB2001102" target="_blank" rel="noreferrer">https://doi.org/10.3262/ZPB2001102</a>
+                    </li>
+                    <li>
+                      Hattie, J. (2009).&nbsp;Visible Learning. A synthesis of over 800 meta-analyses relating to achievement. Routledge.
+                      <a class="in-text-link" href="https://doi.org/10.4324/9780203887332" target="_blank" rel="noreferrer">https://doi.org/10.4324/9780203887332</a>
+                    </li>
+                    <li>
+                      Hill, H. C., Blunck, M. L., Charalambos, Y. C., Lewis, J. M., Phelps, G. C., Sleep, L. &amp; Ball, D. L. (2008). Mathematical knowledge for teaching and the mathematical quality
+                      of instruction. An exploratory study.&nbsp;<span class="eigennamen">Cognition and Instruction, 26</span>(4), 430-511.
+                      <a class="in-text-link" href="https://doi.org/10.1080/07370000802177235" target="_blank" rel="noreferrer">https://doi.org/10.1080/07370000802177235</a>&nbsp;
+                    </li>
+                    <li>
+                      Kelcey, B., Hill, H. C. &amp; Chin, M. J. (2019). Teacher mathematical knowledge, instructional quality, and student outcomes. A multilevel quantile mediation
+                      analysis.&nbsp;<span class="eigennamen">School Effectiveness and School Improvement,</span>
+                      <a class="in-text-link" href="https://doi.org/10.1080/09243453.2019.1570944" target="_blank" rel="noreferrer">https://doi.org/10.1080/09243453.2019.1570944</a>&nbsp;
+                    </li>
+                    <li>
+                      Kunter, M., Baumert, J., Blum, W., Klusmann, U., Krauss, S. &amp; Neubrand, M. (Hrsg.) (2011).&nbsp;<span class="eigennamen"
+                        >Professionelle Kompetenz von Lehrkräften, Ergebnisse des Forschungsprogramms COACTIV</span
+                      >. Waxmann. <a class="in-text-link" href="https://doi.org/10.31244/9783830974338" target="_blank" rel="noreferrer">https://doi.org/10.31244/9783830974338</a>
+                    </li>
+                    <li>
+                      Kunter, M. &amp; Trautwein, U.&nbsp;(2013). <span class="eigennamen">Psychologie des Unterrichts</span>. UTB.
+                      <a class="in-text-link" href="https://doi.org/10.36198/9783838538952" target="_blank" rel="noreferrer">https://doi.org/10.36198/9783838538952</a>
+                    </li>
+                    <li>
+                      Kirschner, S., Sczudlek, M., Tepner, O., Borowski, A., Fischer, H.-E., Lenske, G. Leutner, D, Neuhaus, B. J., Sumfleth, E., Wirth, T., Wirth, J. (2017). Professionswissen in den
+                      Naturwissenschaften (ProwiN). In: Gräsel, C. &amp; Trempler, K. (Hrsg.),&nbsp;<em
+                        >Entwicklung von Professionalität pädagogischen Personal. Interdisziplinäre Betrachtungen, Befunde und Perspektiven&nbsp;</em
+                      >(S. 113-130. Springer.
+                      <a class="in-text-link" href="https://doi.org/10.1007/978-3-658-07274-2_7" target="_blank" rel="noreferrer">https://doi.org/10.1007/978-3-658-07274-2_7</a>
+                    </li>
+                    <li>
+                      Lindl, A. &amp; Krämer, A. (2022). Was macht guten Lateinunterricht aus? Eine Delphi-Studie zu Unterrichtsqualität im Fach Latein.&nbsp;<span class="eigennamen"
+                        >Die Alten Sprachen im Unterricht, 69</span
+                      >(1), 9-15. <a class="in-text-link" href="" target="_blank" rel="noreferrer"></a>
+                    </li>
+                    <li>
+                      Lipowsky, F. &amp; Bleck, V. (2019). Was wissen wir über guten Unterricht? – Ein Update. In U. Steffens &amp; R. Messner (Hrsg.),
+                      <span class="eigennamen">Unterrichtsqualität: Konzepte und Bilanzen gelingenden Lehrens und Lernens. Grundlagen der Qualität von Schule</span> (Bd. 3; S. 219-249). Waxmann.
+                    </li>
+                    <li>
+                      Praetorius, A. K. &amp; Gräsel, C. (2021). Noch immer auf der Suche nach dem heiligen Gral: Wie generisch oder fachspezifisch sind Dimensionen der Unterrichtsqualität?
+                      <i>Unterrichtswissenschaft, 49</i>(2), 167-188.
+                      <a class="in-text-link" href="https://doi.org/10.1007/s42010-021-00119-6" target="_blank" rel="noreferrer">https://doi.org/10.1007/s42010-021-00119-6</a>
+                    </li>
+                    <li>
+                      Praetorius, A.-K., Herrmann, C., Gerlach, E., Zülsdorf-Kersting, M., Heinitz, B. &amp; Nehring, A. (2020). Unterrichtsqualität in den Fachdidakten im deutschsprachigen Raum -
+                      zwischen Generik und Fachspezifik. <em>Unterrichtswissenschaft</em>,&nbsp;<em>48</em>(3), 409-446.
+                      <a class="in-text-link" href="https://doi.org/10.1007/s42010-020-00082-8" target="_blank" rel="noreferrer">https://doi.org/10.1007/s42010-020-00082-8</a>
+                    </li>
+                    <li>
+                      Vieluf, S., Praetorius, A.-K., Rakoczy, K., Kleinknecht, M. &amp; Pietsch, M. (2020). Angebot-Nutzungs-Modelle der Wirkweise des Unterrichts. Ein kritischer Vergleich
+                      verschiedener Modellvarianten.&nbsp;<span class="eigennamen">Zeitschrift für Pädagogik,&nbsp;66. Beiheft</span>, 63-80.
+                      <a class="in-text-link" href="https://doi.org/10.3262/ZPB2001223" target="_blank" rel="noreferrer">doi.org/10.3262/ZPB2001223</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script type="text/javascript"></script>
+    <script src="{% static 'scripts/accordion.js' %}"></script>
+    {% include 'evaluation_tool/components/home-footer.html' %}
+  </body>
+</html>

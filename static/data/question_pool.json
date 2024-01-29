@@ -1,0 +1,3158 @@
+{
+    "unspecific_dimensions": {
+        "1": {
+            "dimension_name": "Auswahl und Thematisierung von Inhalten und Fachmethoden",
+            "pool": {
+                "sel_1_1_1": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 1,
+                    "question_text": "Ich habe das Gefühl, unsere Lehrkraft wählt Unterrichtsinhalte sehr bewusst für uns aus.",
+                    "subdimension": "Auswahl von bedeutungsvollen, dem Lernstand angemessenen Inhalten sowie Fachmethoden"
+                },
+                "sel_1_1_2": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 2,
+                    "question_text": "Unsere Lehrkraft verwendet häufig das Schulbuch.",
+                    "subdimension": "Auswahl von bedeutungsvollen, dem Lernstand angemessenen Inhalten sowie Fachmethoden"
+                },
+                "sel_1_1_3": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 3,
+                    "question_text": "Unsere Lehrkraft bezieht auch zusätzliches Material ein (z. B. aus dem Internet, mitgebrachte Gegenstände).",
+                    "subdimension": "Auswahl von bedeutungsvollen, dem Lernstand angemessenen Inhalten sowie Fachmethoden"
+                },
+                "sel_1_1_4": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 4,
+                    "question_text": "Ich habe das Gefühl, dass das Vorgehen im Unterricht zum Inhalt passt.",
+                    "subdimension": "Auswahl von bedeutungsvollen, dem Lernstand angemessenen Inhalten sowie Fachmethoden"
+                },
+                "sel_1_1_5": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 5,
+                    "question_text": "Die Arbeitstechniken, die ich im Unterricht lerne, kann ich immer wieder anwenden.",
+                    "subdimension": "Auswahl von bedeutungsvollen, dem Lernstand angemessenen Inhalten sowie Fachmethoden"
+                },
+                "sel_1_2_1": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 6,
+                    "question_text": "Im Unterricht behandeln wir auch Aufgaben, die mit meinen Interessen oder Erfahrungen im Alltag zu tun haben.",
+                    "subdimension": "Motivierung von Inhalten sowie Fachmethoden"
+                },
+                "sel_1_2_2": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 7,
+                    "question_text": "Unsere Lehrkraft verwendet oft Beispiele aus dem täglichen Leben, um uns Inhalte zu erklären.",
+                    "subdimension": "Motivierung von Inhalten sowie Fachmethoden"
+                },
+                "sel_1_2_3": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 8,
+                    "question_text": "Unsere Lehrkraft zeigt häufig auf, wie nützlich bestimmte Inhalte im Alltag sein können.",
+                    "subdimension": "Motivierung von Inhalten sowie Fachmethoden"
+                },
+                "sel_1_2_4": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 9,
+                    "question_text": "Unsere Lehrkraft kann auch langweiligere Themen wirklich interessant machen.",
+                    "subdimension": "Motivierung von Inhalten sowie Fachmethoden"
+                },
+                "sel_1_2_5": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 10,
+                    "question_text": "Unsere Lehrkraft stellt oft Zusammenhänge mit den Inhalten anderer Fächer her.",
+                    "subdimension": "Motivierung von Inhalten sowie Fachmethoden"
+                },
+                "sel_1_3_1": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 11,
+                    "question_text": "Unsere Lehrkraft informiert uns, was wir in den nächsten Wochen im Unterricht durchnehmen.",
+                    "subdimension": "Strukturierung der thematisierten Inhalte sowie Fachmethoden"
+                },
+                "sel_1_3_2": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 12,
+                    "question_text": "Unsere Lehrkraft sagt uns am Anfang der Stunde, was sie mit uns lernen will.",
+                    "subdimension": "Strukturierung der thematisierten Inhalte sowie Fachmethoden"
+                },
+                "sel_1_3_3": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 13,
+                    "question_text": "Im Verlauf der Stunde wiederholt unsere Lehrkraft kurz Inhalte vergangener Stunden.",
+                    "subdimension": "Strukturierung der thematisierten Inhalte sowie Fachmethoden"
+                },
+                "sel_1_3_4": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 14,
+                    "question_text": "Am Ende der Stunde fassen wir die wichtigsten Inhalte und Ergebnisse zusammen.",
+                    "subdimension": "Strukturierung der thematisierten Inhalte sowie Fachmethoden"
+                },
+                "sel_1_3_5": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 15,
+                    "question_text": "Im Verlauf der Stunde hebt unsere Lehrkraft immer wieder hervor, was wichtig ist.",
+                    "subdimension": "Strukturierung der thematisierten Inhalte sowie Fachmethoden"
+                },
+                "sel_1_3_6": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 16,
+                    "question_text": "Unsere Lehrkraft drückt sich im Unterricht klar und verständlich aus.",
+                    "subdimension": "Strukturierung der thematisierten Inhalte sowie Fachmethoden"
+                },
+                "sel_1_3_7": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 17,
+                    "question_text": "Bei den Arbeitsaufträgen im Unterricht weiß ich immer genau, was ich tun soll.",
+                    "subdimension": "Strukturierung der thematisierten Inhalte sowie Fachmethoden"
+                },
+                "sel_1_3_8": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 18,
+                    "question_text": "Der Verlauf der Unterrichtsstunde ist für mich nachvollziehbar.",
+                    "subdimension": "Strukturierung der thematisierten Inhalte sowie Fachmethoden"
+                },
+                "sel_1_3_9": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 19,
+                    "question_text": "Unsere Lehrkraft erklärt uns, warum die jetzt besprochenen Inhalte für spätere Inhalte wichtig sind.",
+                    "subdimension": "Strukturierung der thematisierten Inhalte sowie Fachmethoden"
+                },
+                "sel_1_3_10": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 20,
+                    "question_text": "Unsere Lehrkraft hebt die Beziehung zwischen den besprochenen Themen hervor.",
+                    "subdimension": "Strukturierung der thematisierten Inhalte sowie Fachmethoden"
+                },
+                "sel_1_3_11": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 21,
+                    "question_text": "Bei der Erarbeitung eines Themas gehen wir Schritt für Schritt vor.",
+                    "subdimension": "Strukturierung der thematisierten Inhalte sowie Fachmethoden"
+                },
+                "sel_1_3_12": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 22,
+                    "question_text": "Unsere Lehrkraft gibt anschauliche Beispiele, um den Stoff zu erklären.",
+                    "subdimension": "Strukturierung der thematisierten Inhalte sowie Fachmethoden"
+                },
+                "sel_1_4_1": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 23,
+                    "question_text": "Unsere Lehrkraft verwendet häufig Fachbegriffe.",
+                    "subdimension": "Akkuratheit und Korrektheit der thematisierten Inhalte sowie Fachmethoden"
+                },
+                "sel_1_4_2": {
+                    "nwfg_study_exclusive": true,
+                    "recode": true,
+                    "index": 24,
+                    "question_text": "Ich habe das Gefühl, dass unsere Lehrkraft manchmal selbst nicht genau weiß, was ein Begriff bedeutet.",
+                    "subdimension": "Akkuratheit und Korrektheit der thematisierten Inhalte sowie Fachmethoden"
+                },
+                "sel_1_4_3": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 25,
+                    "question_text": "Unsere Lehrkraft achtet darauf, dass wir Begriffe richtig verwenden.",
+                    "subdimension": "Akkuratheit und Korrektheit der thematisierten Inhalte sowie Fachmethoden"
+                },
+                "sel_1_4_4": {
+                    "nwfg_study_exclusive": true,
+                    "recode": true,
+                    "index": 26,
+                    "question_text": "Unsere Lehrkraft macht oft Fehler.",
+                    "subdimension": "Akkuratheit und Korrektheit der thematisierten Inhalte sowie Fachmethoden"
+                },
+                "sel_1_4_5": {
+                    "nwfg_study_exclusive": true,
+                    "recode": true,
+                    "index": 27,
+                    "question_text": "Wir weisen unsere Lehrkraft manchmal darauf hin, dass sie einen Fehler gemacht hat.",
+                    "subdimension": "Akkuratheit und Korrektheit der thematisierten Inhalte sowie Fachmethoden"
+                },
+                "sel_1_4_6": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 28,
+                    "question_text": "Unsere Lehrkraft entdeckt eigene Fehler selbst.",
+                    "subdimension": "Akkuratheit und Korrektheit der thematisierten Inhalte sowie Fachmethoden"
+                },
+                "sel_1_4_7": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 29,
+                    "question_text": "Ich habe das Gefühl, unsere Lehrkraft kennt ihr Fach in- und auswendig.",
+                    "subdimension": "Akkuratheit und Korrektheit der thematisierten Inhalte sowie Fachmethoden"
+                },
+                "sel_1_4_8": {
+                    "nwfg_study_exclusive": true,
+                    "recode": true,
+                    "index": 30,
+                    "question_text": "Unsere Lehrkraft wirkt bei manchen Themen nicht ganz sicher.",
+                    "subdimension": "Akkuratheit und Korrektheit der thematisierten Inhalte sowie Fachmethoden"
+                }
+            }
+        },
+        "2": {
+            "dimension_name": "Kognitive Aktivierung",
+            "pool": {
+                "coa_2_1_1": {
+                    "nwfg_study_exclusive": true,
+                    "recode": true,
+                    "index": 1,
+                    "question_text": "Die Aufgaben im Unterricht sind mir häufig zu schwer oder häufig zu leicht.",
+                    "subdimension": "Auswahl fachlich gehaltvoller und auf das kognitive Niveau der Schüler:innen"
+                },
+                "coa_2_1_2": {
+                    "nwfg_study_exclusive": true,
+                    "recode": true,
+                    "index": 2,
+                    "question_text": "Die Aufgaben im Unterricht überfordern mich.",
+                    "subdimension": "Auswahl fachlich gehaltvoller und auf das kognitive Niveau der Schüler:innen"
+                },
+                "coa_2_1_3": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 3,
+                    "question_text": "Bei den Aufgaben im Unterricht muss ich zwar häufig stark nachdenken, meistens komme ich aber doch zu einer guten Lösung.",
+                    "subdimension": "Auswahl fachlich gehaltvoller und auf das kognitive Niveau der Schüler:innen"
+                },
+                "coa_2_1_4": {
+                    "nwfg_study_exclusive": true,
+                    "recode": true,
+                    "index": 4,
+                    "question_text": "Im Unterricht komme ich inhaltlich oft nicht mit.",
+                    "subdimension": "Auswahl fachlich gehaltvoller und auf das kognitive Niveau der Schüler:innen"
+                },
+                "coa_2_2_1": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 5,
+                    "question_text": "Unsere Lehrkraft verwendet Aufgaben, die man auf unterschiedliche Weise lösen kann.",
+                    "subdimension": "Einsatz fachlich gehaltvoller Aufgaben"
+                },
+                "coa_2_2_2": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 6,
+                    "question_text": "Unsere Lehrkraft stellt Aufgaben, bei denen ich meine Ergebnisse begründen muss.",
+                    "subdimension": "Einsatz fachlich gehaltvoller Aufgaben"
+                },
+                "coa_2_2_3": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 7,
+                    "question_text": "Unsere Lehrkraft stellt Aufgaben, bei denen ich erst einmal überlegen muss, wie ich sie lösen kann.",
+                    "subdimension": "Einsatz fachlich gehaltvoller Aufgaben"
+                },
+                "coa_2_2_4": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 8,
+                    "question_text": "Unsere Lehrkraft benutzt verschiedene Aufgaben, so dass man sieht, was man verstanden hat.",
+                    "subdimension": "Einsatz fachlich gehaltvoller Aufgaben"
+                },
+                "coa_2_2_5": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 9,
+                    "question_text": "Wir bearbeiten oft Beispiele, aus denen wir selbst Regeln ableiten sollen.",
+                    "subdimension": "Einsatz fachlich gehaltvoller Aufgaben"
+                },
+                "coa_2_3_1": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 10,
+                    "question_text": "Unsere Lehrkraft fragt bei Antworten oft noch weiter nach und möchte genaue Erklärungen haben.",
+                    "subdimension": "Unterstützung der kognitiven Aktivität der Schüler:innen"
+                },
+                "coa_2_3_2": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 11,
+                    "question_text": "Unsere Lehrkraft fordert uns oft auf, unsere Annahmen zu begründen.",
+                    "subdimension": "Unterstützung der kognitiven Aktivität der Schüler:innen"
+                },
+                "coa_2_3_3": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 12,
+                    "question_text": "Unsere Lehrkraft lässt uns genug Zeit, über unsere Antworten nachzudenken.",
+                    "subdimension": "Unterstützung der kognitiven Aktivität der Schüler:innen"
+                },
+                "coa_2_3_4": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 13,
+                    "question_text": "Unsere Lehrkraft lässt uns manchmal mit unseren eigenen Vermutungen in die Irre gehen, bis wir es selbst bemerken.",
+                    "subdimension": "Unterstützung der kognitiven Aktivität der Schüler:innen"
+                },
+                "coa_2_3_5": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 14,
+                    "question_text": "Im Unterricht nimmt unsere Lehrkraft manchmal auch falsche Antworten entgegen, bis wir selbst sehen, dass etwas nicht stimmt.",
+                    "subdimension": "Unterstützung der kognitiven Aktivität der Schüler:innen"
+                },
+                "coa_2_3_6": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 15,
+                    "question_text": "Unsere Lehrkraft ermuntert mich, eigene Lösungswege zu probieren.",
+                    "subdimension": "Unterstützung der kognitiven Aktivität der Schüler:innen"
+                },
+                "coa_2_3_7": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 16,
+                    "question_text": "Unsere Lehrkraft lässt manchmal unterschiedliche Lösungen von Aufgaben vergleichen und bewerten.",
+                    "subdimension": "Unterstützung der kognitiven Aktivität der Schüler:innen"
+                },
+                "coa_2_4_1": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 17,
+                    "question_text": "Unsere Lehrkraft lässt uns häufiger unsere Gedankengänge genau erklären.",
+                    "subdimension": "Einsatz fachlich gehaltvoller Aufgaben"
+                },
+                "coa_2_4_2": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 18,
+                    "question_text": "Unsere Lehrkraft zeigt uns, wie wir bei schwierigen Aufgaben Schritt für Schritt vorgehen können.",
+                    "subdimension": "Einsatz fachlich gehaltvoller Aufgaben"
+                },
+                "coa_2_4_3": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 19,
+                    "question_text": "Unsere Lehrkraft zeigt uns, wie wir verschiedene Arten von Aufgaben am besten anpacken können.",
+                    "subdimension": "Einsatz fachlich gehaltvoller Aufgaben"
+                },
+                "coa_2_4_4": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 20,
+                    "question_text": "Unsere Lehrkraft zeigt uns, wie wir erkennen können, was in Aufgaben wichtig ist.",
+                    "subdimension": "Einsatz fachlich gehaltvoller Aufgaben"
+                },
+                "coa_2_4_5": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 21,
+                    "question_text": "Unsere Lehrkraft gibt uns Hinweise, wie wir besser lernen können.",
+                    "subdimension": "Einsatz fachlich gehaltvoller Aufgaben"
+                }
+            }
+        },
+        "3": {
+            "dimension_name": "Unterstützung des Übens",
+            "pool": {
+                "pra_3_1_1": {
+                    "nwfg_study_exclusive": true,
+                    "recode": true,
+                    "index": 1,
+                    "question_text": "Die Übungsaufgaben finde ich langweilig, wenn ich den Lösungsweg einmal verstanden habe.",
+                    "subdimension": "Unterstützung bei der Festigung von Lern- und Anwendungsprozessen"
+                },
+                "pra_3_1_2": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 2,
+                    "question_text": "Wir üben und wiederholen das Gelernte so lange, bis ich es alleine anwenden kann.",
+                    "subdimension": "Unterstützung bei der Festigung von Lern- und Anwendungsprozessen"
+                },
+                "pra_3_1_3": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 3,
+                    "question_text": "Wenn wir etwas Neues lernen, nimmt sich unsere Lehrkraft Zeit, um es gut zu üben.",
+                    "subdimension": "Unterstützung bei der Festigung von Lern- und Anwendungsprozessen"
+                },
+                "pra_3_1_4": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 4,
+                    "question_text": "Wir üben so, dass wir das Gelernte in verschiedenen Situationen anwenden können.",
+                    "subdimension": "Unterstützung bei der Festigung von Lern- und Anwendungsprozessen"
+                },
+                "pra_3_1_5": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 5,
+                    "question_text": "Unsere Lehrkraft lässt sich von uns immer wieder mal erklären, wie wir bei einer Übung vorgegangen sind.",
+                    "subdimension": "Unterstützung bei der Festigung von Lern- und Anwendungsprozessen"
+                },
+                "pra_3_2_1": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 6,
+                    "question_text": "Wenn wir mal einen Fehler machen, ist das nichts Schlimmes.",
+                    "subdimension": "Konstruktiver Umgang mit Fehlern und Schwierigkeiten von Schüler:innen"
+                },
+                "pra_3_2_2": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 7,
+                    "question_text": "Mit Fehlern geht unsere Lehrkraft so um, dass wir daraus etwas lernen können.",
+                    "subdimension": "Konstruktiver Umgang mit Fehlern und Schwierigkeiten von Schüler:innen"
+                },
+                "pra_3_2_3": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 8,
+                    "question_text": "Unsere Lehrkraft achtet darauf, dass niemand ausgelacht wird, wenn ein Fehler gemacht wird.",
+                    "subdimension": "Konstruktiver Umgang mit Fehlern und Schwierigkeiten von Schüler:innen"
+                },
+                "pra_3_2_4": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 9,
+                    "question_text": "Unsere Lehrkraft findet es wichtig, dass wir uns bei Übungen anstrengen, auch wenn nicht alles richtig ist.",
+                    "subdimension": "Konstruktiver Umgang mit Fehlern und Schwierigkeiten von Schüler:innen"
+                },
+                "pra_3_2_5": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 10,
+                    "question_text": "Unsere Lehrkraft gibt mir die Möglichkeit, meine Antwort zu verbessern oder zu ergänzen, wenn sie unvollständig ist.",
+                    "subdimension": "Konstruktiver Umgang mit Fehlern und Schwierigkeiten von Schüler:innen"
+                },
+                "pra_3_2_6": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 11,
+                    "question_text": "Wenn unsere Lehrkraft selbst einen Fehler macht, gibt sie es auch zu.",
+                    "subdimension": "Konstruktiver Umgang mit Fehlern und Schwierigkeiten von Schüler:innen"
+                }
+            }
+        },
+        "4": {
+            "dimension_name": "Formatives Assessment",
+            "pool": {
+                "fas_4_1_1": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 1,
+                    "question_text": "Unsere Lehrkraft erklärt uns im Voraus, wie Prüfungen bewertet werden.",
+                    "subdimension": "Klare Ausrichtung der Beurteilung auf die zu erlernenden Kompetenzen"
+                },
+                "fas_4_1_2": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 2,
+                    "question_text": "Unsere Lehrkraft sagt uns im Voraus, was wir für eine gute Note können müssen.",
+                    "subdimension": "Klare Ausrichtung der Beurteilung auf die zu erlernenden Kompetenzen"
+                },
+                "fas_4_1_3": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 3,
+                    "question_text": "Unsere Lehrkraft sagt uns im Voraus, was wir für eine gute Note wissen müssen.",
+                    "subdimension": "Klare Ausrichtung der Beurteilung auf die zu erlernenden Kompetenzen"
+                },
+                "fas_4_2_1": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 4,
+                    "question_text": "Unsere Lehrkraft gibt mir regelmäßig Rückmeldungen zu meinen Lernfortschritten.",
+                    "subdimension": "Regelmäßige Überprüfung des Verständnisses der Schüler:innen"
+                },
+                "fas_4_2_2": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 5,
+                    "question_text": "Unsere Lehrkraft fragt uns regelmäßig, ob wir dem Unterricht folgen können.",
+                    "subdimension": "Regelmäßige Überprüfung des Verständnisses der Schüler:innen"
+                },
+                "fas_4_2_3": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 6,
+                    "question_text": "Unsere Lehrkraft überprüft regelmäßig, ob wir ein Thema verstanden haben.",
+                    "subdimension": "Regelmäßige Überprüfung des Verständnisses der Schüler:innen"
+                },
+                "fas_4_3_1": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 7,
+                    "question_text": "Die Rückmeldungen unserer Lehrkraft zeigen mir, wo ich mich noch verbessern kann.",
+                    "subdimension": "Qualitativ hochwertiges Feedback an die Schüler:innen"
+                },
+                "fas_4_3_2": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 8,
+                    "question_text": "Die Hinweise und Rückmeldungen unserer Lehrkraft empfinde ich als hilfreich.",
+                    "subdimension": "Qualitativ hochwertiges Feedback an die Schüler:innen"
+                },
+                "fas_4_3_3": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 9,
+                    "question_text": "Unsere Lehrkraft erklärt uns genau, warum eine Antwort nicht ganz korrekt ist.",
+                    "subdimension": "Qualitativ hochwertiges Feedback an die Schüler:innen"
+                },
+                "fas_4_3_4": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 10,
+                    "question_text": "Nach Fehlern erfahren wir nicht nur, dass etwas falsch ist, sondern auch warum.",
+                    "subdimension": "Qualitativ hochwertiges Feedback an die Schüler:innen"
+                },
+                "fas_4_3_5": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 11,
+                    "question_text": "Wenn ich mich besonders anstrenge, lobt mich unsere Lehrkraft meistens, auch wenn andere noch besser sind als ich.",
+                    "subdimension": "Qualitativ hochwertiges Feedback an die Schüler:innen"
+                },
+                "fas_4_3_6": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 12,
+                    "question_text": "Unsere Lehrkraft kommentiert meine Prüfungen so, dass ich weiß, was ich falsch gemacht habe.",
+                    "subdimension": "Qualitativ hochwertiges Feedback an die Schüler:innen"
+                },
+                "fas_4_4_1": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 13,
+                    "question_text": "Unsere Lehrkraft versucht, unsere Rückmeldung im Unterricht umzusetzen.",
+                    "subdimension": "Nutzung des Feedbacks als Grundlage für die Ausrichtung des weiteren Unterrichts"
+                },
+                "fas_4_4_2": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 14,
+                    "question_text": "Unsere Lehrkraft fragt uns, was sie im Unterricht besser machen kann.",
+                    "subdimension": "Nutzung des Feedbacks als Grundlage für die Ausrichtung des weiteren Unterrichts"
+                },
+                "fas_4_4_3": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 15,
+                    "question_text": "Wenn ich etwas nicht verstanden habe, nutzt unsere Lehrkraft das für den weiteren Unterricht.",
+                    "subdimension": "Nutzung des Feedbacks als Grundlage für die Ausrichtung des weiteren Unterrichts"
+                },
+                "fas_4_4_4": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 16,
+                    "question_text": "Wenn unsere Lehrkraft bemerkt, dass wir etwas gar nicht können, geht sie noch einmal genauer darauf ein.",
+                    "subdimension": "Nutzung des Feedbacks als Grundlage für die Ausrichtung des weiteren Unterrichts"
+                }
+            }
+        },
+        "5": {
+            "dimension_name": "Unterstützung des Lernens aller Schüler:innen",
+            "pool": {
+                "ssl_5_1_1": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 1,
+                    "question_text": "Unsere Lehrkraft nimmt unsere Vorschläge und Ideen in den Unterricht auf.",
+                    "subdimension": "Bereitstellung eines Lernumfelds, das produktives Verhalten fördert"
+                },
+                "ssl_5_1_2": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 2,
+                    "question_text": "Wir bearbeiten im Unterricht immer wieder mal ein Thema, das wir uns selbst aussuchen dürfen.",
+                    "subdimension": "Bereitstellung eines Lernumfelds, das produktives Verhalten fördert"
+                },
+                "ssl_5_1_3": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 3,
+                    "question_text": "Unsere Lehrkraft gibt mir die Möglichkeit, Aufgaben auf meine eigene Art zu erledigen.",
+                    "subdimension": "Bereitstellung eines Lernumfelds, das produktives Verhalten fördert"
+                },
+                "ssl_5_1_4": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 4,
+                    "question_text": "Im Unterricht lerne ich, selbstständig zu arbeiten.",
+                    "subdimension": "Bereitstellung eines Lernumfelds, das produktives Verhalten fördert"
+                },
+                "ssl_5_1_5": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 5,
+                    "question_text": "Unsere Lehrkraft erklärt im Voraus, wie sie sich unsere Mitarbeit im Unterricht vorstellt.",
+                    "subdimension": "Bereitstellung eines Lernumfelds, das produktives Verhalten fördert"
+                },
+                "ssl_5_2_1": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 6,
+                    "question_text": "Unsere Lehrkraft nimmt sich Zeit, um mir Dinge, die ich nicht verstanden habe, noch einmal zu erklären.",
+                    "subdimension": "Differenzierung und Adaptivität"
+                },
+                "ssl_5_2_2": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 7,
+                    "question_text": "Wenn ich im Unterricht eine Aufgabe schneller erledigt habe, kann ich gleich die nächste bearbeiten.",
+                    "subdimension": "Differenzierung und Adaptivität"
+                },
+                "ssl_5_2_3": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 8,
+                    "question_text": "Unsere Lehrkraft stellt uns unterschiedlich schwere Fragen, je nachdem wie gut wir sind.",
+                    "subdimension": "Differenzierung und Adaptivität"
+                },
+                "ssl_5_2_4": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 9,
+                    "question_text": "Unsere Lehrkraft weiß, bei welchen Aufgaben ich Schwierigkeiten habe.",
+                    "subdimension": "Differenzierung und Adaptivität"
+                },
+                "ssl_5_2_5": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 10,
+                    "question_text": "Wenn ich etwas nicht verstehe, bekomme ich Tipps von unserer Lehrkraft, die mir wirklich weiterhelfen.",
+                    "subdimension": "Differenzierung und Adaptivität"
+                },
+                "ssl_5_2_6": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 11,
+                    "question_text": "Ich kann aus unterschiedlich schweren Aufgaben auswählen und verschiedene Hilfen nutzen.",
+                    "subdimension": "Differenzierung und Adaptivität"
+                },
+                "ssl_5_3_1": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 12,
+                    "question_text": "Unsere Lehrkraft schafft es, dass möglichst viele im Unterricht mitarbeiten.",
+                    "subdimension": "Förderung der aktiven Mitwirkung von allen Schüler:innen"
+                },
+                "ssl_5_3_2": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 13,
+                    "question_text": "Unsere Lehrkraft achtet darauf, dass möglichst viele am Unterrichtsgespräch teilnehmen.",
+                    "subdimension": "Förderung der aktiven Mitwirkung von allen Schüler:innen"
+                },
+                "ssl_5_3_3": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 14,
+                    "question_text": "Unsere Lehrkraft ermutigt mich, meine eigene Meinung zu sagen.",
+                    "subdimension": "Förderung der aktiven Mitwirkung von allen Schüler:innen"
+                },
+                "ssl_5_3_4": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 15,
+                    "question_text": "Ich werde auch aufgerufen, wenn ich mich nicht melde.",
+                    "subdimension": "Förderung der aktiven Mitwirkung von allen Schüler:innen"
+                }
+            }
+        },
+        "6": {
+            "dimension_name": "Sozio-emotionale Unterstützung",
+            "pool": {
+                "soe_6_1_1": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 1,
+                    "question_text": "Unsere Lehrkraft nimmt sich Zeit, wenn ich etwas mit ihr besprechen möchte.",
+                    "subdimension": "Beziehung zwischen Lehrperson und Schüler:innen"
+                },
+                "soe_6_1_2": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 2,
+                    "question_text": "Ich habe das Gefühl, ich werde von unserer Lehrkraft ernst genommen.",
+                    "subdimension": "Beziehung zwischen Lehrperson und Schüler:innen"
+                },
+                "soe_6_1_3": {
+                    "nwfg_study_exclusive": true,
+                    "recode": true,
+                    "index": 3,
+                    "question_text": "Bei unserer Lehrkraft habe ich Angst, mich im Unterricht zu melden.",
+                    "subdimension": "Beziehung zwischen Lehrperson und Schüler:innen"
+                },
+                "soe_6_1_4": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 4,
+                    "question_text": "Mit meinen Beiträgen geht unsere Lehrkraft wertschätzend um.",
+                    "subdimension": "Beziehung zwischen Lehrperson und Schüler:innen"
+                },
+                "soe_6_1_5": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 5,
+                    "question_text": "Unsere Lehrkraft zeigt Verständnis, wenn es einem von uns einmal schlecht geht.",
+                    "subdimension": "Beziehung zwischen Lehrperson und Schüler:innen"
+                },
+                "soe_6_1_6": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 6,
+                    "question_text": "Unsere Lehrkraft hat Humor.",
+                    "subdimension": "Beziehung zwischen Lehrperson und Schüler:innen"
+                },
+                "soe_6_1_7": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 7,
+                    "question_text": "Unsere Lehrkraft lobt mich, wenn ich mir Mühe gebe.",
+                    "subdimension": "Beziehung zwischen Lehrperson und Schüler:innen"
+                },
+                "soe_6_1_8": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 8,
+                    "question_text": "Unsere Lehrkraft ist auch dann geduldig, wenn sie die Dinge mehrmals erklären muss.",
+                    "subdimension": "Beziehung zwischen Lehrperson und Schüler:innen"
+                },
+                "soe_6_2_1": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 9,
+                    "question_text": "Bei uns ist es selbstverständlich, dass wir uns gegenseitig helfen.",
+                    "subdimension": "Beziehung der Schüler:innen"
+                },
+                "soe_6_2_2": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 10,
+                    "question_text": "Wenn ich Schwierigkeiten habe, kann ich mich auf andere in der Klasse verlassen.",
+                    "subdimension": "Beziehung der Schüler:innen"
+                },
+                "soe_6_2_3": {
+                    "nwfg_study_exclusive": true,
+                    "recode": true,
+                    "index": 11,
+                    "question_text": "Im Unterricht wird man leicht ausgeschlossen, wenn man nicht tut, was die Klasse für richtig hält.",
+                    "subdimension": "Beziehung der Schüler:innen"
+                },
+                "soe_6_2_4": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 12,
+                    "question_text": "Ich fühle mich in meiner Klasse wohl.",
+                    "subdimension": "Beziehung der Schüler:innen"
+                },
+                "soe_6_2_5": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 13,
+                    "question_text": "Im Unterricht ist keiner von der Klassengemeinschaft ausgeschlossen.",
+                    "subdimension": "Beziehung der Schüler:innen"
+                },
+                "soe_6_2_6": {
+                    "nwfg_study_exclusive": true,
+                    "recode": true,
+                    "index": 14,
+                    "question_text": "Im Unterricht versucht jeder, besser zu sein als der andere.",
+                    "subdimension": "Beziehung der Schüler:innen"
+                }
+            }
+        },
+        "7": {
+            "dimension_name": "Klassenführung",
+            "pool": {
+                "crm_7_1_1": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 1,
+                    "question_text": "Die Verhaltensregeln, die wir im Unterricht einhalten müssen, sind mir bekannt.",
+                    "subdimension": "Verhaltensmanagement"
+                },
+                "crm_7_1_2": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 2,
+                    "question_text": "Unsere Lehrkraft hat uns klar gemacht, was passiert, wenn wir die Verhaltensregeln verletzen.",
+                    "subdimension": "Verhaltensmanagement"
+                },
+                "crm_7_1_3": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 3,
+                    "question_text": "Unsere Lehrkraft hat die Klasse im Griff.",
+                    "subdimension": "Verhaltensmanagement"
+                },
+                "crm_7_1_4": {
+                    "nwfg_study_exclusive": true,
+                    "recode": true,
+                    "index": 4,
+                    "question_text": "Oft ist es im Unterricht laut und alles geht durcheinander.",
+                    "subdimension": "Verhaltensmanagement"
+                },
+                "crm_7_1_5": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 5,
+                    "question_text": "Unsere Lehrkraft weiß immer genau, was während des Unterrichts in der Klasse vor sich geht.",
+                    "subdimension": "Verhaltensmanagement"
+                },
+                "crm_7_1_6": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 6,
+                    "question_text": "Unsere Lehrkraft achtet sehr darauf, dass wir aufpassen.",
+                    "subdimension": "Verhaltensmanagement"
+                },
+                "crm_7_1_7": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 7,
+                    "question_text": "Mir ist klar, was ich tun soll, wenn ich mit einer Aufgabe mal früher fertig bin.",
+                    "subdimension": "Verhaltensmanagement"
+                },
+                "crm_7_1_8": {
+                    "nwfg_study_exclusive": true,
+                    "recode": true,
+                    "index": 8,
+                    "question_text": "Unsere Lehrkraft muss lange warten, bis wir alle ruhig werden.",
+                    "subdimension": "Verhaltensmanagement"
+                },
+                "crm_7_1_9": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 9,
+                    "question_text": "Unsere Lehrkraft achtet darauf, dass der Unterricht wenig gestört wird.",
+                    "subdimension": "Verhaltensmanagement"
+                },
+                "crm_7_2_1": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 10,
+                    "question_text": "Unser Unterricht beginnt meist pünktlich.",
+                    "subdimension": "Zeitmanagement"
+                },
+                "crm_7_2_2": {
+                    "nwfg_study_exclusive": true,
+                    "recode": true,
+                    "index": 11,
+                    "question_text": "Zu Beginn der Stunde dauert es meist sehr lange, bis wir alle ruhig werden und zu arbeiten bereit sind.",
+                    "subdimension": "Zeitmanagement"
+                },
+                "crm_7_2_3": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 12,
+                    "question_text": "Material oder Geräte (z. B. Arbeitsblätter, Schulbücher, Beamer) sind gleich verfügbar und einsatzbereit.",
+                    "subdimension": "Zeitmanagement"
+                },
+                "crm_7_2_4": {
+                    "nwfg_study_exclusive": false,
+                    "recode": false,
+                    "index": 13,
+                    "question_text": "Unsere Lehrkraft unterrichtet so, dass wir stets beschäftigt sind und wenig Zeit verloren geht.",
+                    "subdimension": "Zeitmanagement"
+                },
+                "crm_7_2_5": {
+                    "nwfg_study_exclusive": true,
+                    "recode": true,
+                    "index": 14,
+                    "question_text": "Bei unserer Lehrkraft wird im Unterricht viel Zeit vertrödelt.",
+                    "subdimension": "Zeitmanagement"
+                },
+                "crm_7_2_6": {
+                    "nwfg_study_exclusive": true,
+                    "recode": false,
+                    "index": 15,
+                    "question_text": "Wenn wir uns z. B. für eine Gruppenarbeit umsetzen, wissen wir genau, wie wir vorzugehen haben, ohne dass unsere Lehrkraft viel sagen muss.",
+                    "subdimension": "Zeitmanagement"
+                },
+                "crm_7_2_7": {
+                    "nwfg_study_exclusive": true,
+                    "recode": true,
+                    "index": 16,
+                    "question_text": "Unsere Lehrkraft nimmt so viele Inhalte durch, dass ich gar nicht alles aufnehmen kann.",
+                    "subdimension": "Zeitmanagement"
+                },
+                "crm_7_2_8": {
+                    "nwfg_study_exclusive": true,
+                    "recode": true,
+                    "index": 17,
+                    "question_text": "Der Unterricht geht oft so schnell voran, dass ich Schwierigkeiten habe, mitzukommen.",
+                    "subdimension": "Zeitmanagement"
+                },
+                "crm_7_2_9": {
+                    "nwfg_study_exclusive": true,
+                    "recode": true,
+                    "index": 18,
+                    "question_text": "Häufig sitze ich im Unterricht einfach nur da, ohne dass irgendetwas vorangeht.",
+                    "subdimension": "Zeitmanagement"
+                }
+            }
+        }
+    },
+    "specific_dimension": {
+        "8": {
+            "dimension_name": "Ästhetik",
+            "subjects": {
+                "Deutsch": {
+                    "pool": {
+                        "aes-ger_8_1_1": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 1,
+                            "question_text": "Ich merke manchmal, wie begeistert unsere Lehrkraft ist, wenn sie mit uns über Geschichten, Bücher oder Gedichte spricht.",
+                            "subdimension": "ästhetisch-emotionales Er- und Vorleben"
+                        },
+                        "aes-ger_8_1_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 2,
+                            "question_text": "Im Unterricht bin ich manchmal so in das Stundenthema vertieft, dass die Stunde viel schneller als sonst vergeht.",
+                            "subdimension": "ästhetisch-emotionales Er- und Vorleben"
+                        },
+                        "aes-ger_8_1_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 3,
+                            "question_text": "Unsere Lehrkraft schildert, welche Gefühle eine Geschichte, ein Buch oder ein Gedicht in ihr ausgelöst hat.",
+                            "subdimension": "ästhetisch-emotionales Er- und Vorleben"
+                        },
+                        "aes-ger_8_2_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 4,
+                            "question_text": "Unsere Lehrkraft stellt uns im Unterricht Geschichten, Bücher oder Gedichte vor, die angenehme oder unangenehme Gefühle in mir auslösen.",
+                            "subdimension": "Freiräume für ästhetisch-emotionale Erfahrungen"
+                        },
+                        "aes-ger_8_2_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 5,
+                            "question_text": "Unsere Lehrkraft gibt mir genug Zeit, mich mit Geschichten, Büchern oder Gedichten zu beschäftigen, die mich irgendwie beeindrucken.",
+                            "subdimension": "Freiräume für ästhetisch-emotionale Erfahrungen"
+                        },
+                        "aes-ger_8_2_3": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 6,
+                            "question_text": "Unsere Lehrkraft schafft eine angenehme Atmosphäre, so dass ich mich traue, auch über meine eigenen Eindrücke zu einer Geschichte, einem Buch oder einem Gedicht zu sprechen.",
+                            "subdimension": "Freiräume für ästhetisch-emotionale Erfahrungen"
+                        },
+                        "aes-ger_8_2_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 7,
+                            "question_text": "Unsere Lehrkraft ist an unseren eigenen Eindrücken zu Geschichten, Büchern oder Gedichten ernsthaft interessiert.",
+                            "subdimension": "Freiräume für ästhetisch-emotionale Erfahrungen"
+                        },
+                        "aes-ger_8_3_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 8,
+                            "question_text": "Im Unterricht stellt uns unsere Lehrkraft Fragen zu unseren eigenen Eindrücken bei einem bestimmten Thema.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-ger_8_3_2": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 9,
+                            "question_text": "Ich finde, unsere Lehrkraft achtet meine Vorlieben hinsichtlich Geschichten, Büchern oder Gedichten.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-ger_8_3_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 10,
+                            "question_text": "Unsere Lehrkraft ermuntert uns, über unsere Gefühle bei bestimmten Themen zu sprechen.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-ger_8_3_4": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 11,
+                            "question_text": "Unsere Lehrkraft fördert unseren kreativen Umgang mit Themen des Unterrichts.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-ger_8_3_5": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 12,
+                            "question_text": "Im Unterricht können wir eigene Texte erfinden und schreiben.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-ger_8_3_6": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 13,
+                            "question_text": "Unsere Lehrkraft lässt uns Themen der Unterrichtsstunde manchmal eigenständig weiterentwickeln.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-ger_8_3_7": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 14,
+                            "question_text": "Im Unterricht kann ich auch darüber sprechen, dass eine Geschichte, ein Buch oder ein Gedicht bei mir bestimmte Gefühle auslöst.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-ger_8_4_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 15,
+                            "question_text": "Eine Geschichte, ein Buch oder ein Gedicht hat mich im Unterricht so beeindruckt, dass ich mich nun auch in meiner Freizeit gerne damit beschäftige.",
+                            "subdimension": "Veränderungen infolge ästhetischer Erfahrung"
+                        },
+                        "aes-ger_8_4_2": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 16,
+                            "question_text": "Über bestimmte Themen empfinde ich anders, nachdem wir im Unterricht darüber gesprochen haben.",
+                            "subdimension": "Veränderungen infolge ästhetischer Erfahrung"
+                        },
+                        "aes-ger_8_4_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 17,
+                            "question_text": "Seitdem wir im Unterricht über eine Geschichte, ein Buch oder ein Gedicht gesprochen haben, verbinde ich damit ein bestimmtes Gefühl.",
+                            "subdimension": "Veränderungen infolge ästhetischer Erfahrung"
+                        },
+                        "aes-ger_8_4_5": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 18,
+                            "question_text": "Unsere Lehrkraft behandelt im Unterricht manchmal Themen mit uns, die mich über mich selbst nachdenken lassen.",
+                            "subdimension": "Veränderungen infolge ästhetischer Erfahrung"
+                        },
+                        "aes-ger_8_5_1": {
+                            "nwfg_study_exclusive": false,
+                            "recode": true,
+                            "index": 19,
+                            "question_text": "Ich habe das Gefühl, unsere Lehrkraft möchte, dass ich dasselbe denke oder dasselbe gut finde wie sie.",
+                            "subdimension": "Bewusstsein für Beeinflussung und Gefahren ästhetischer Erfahrung"
+                        },
+                        "aes-ger_8_5_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": true,
+                            "index": 20,
+                            "question_text": "Ich habe das Gefühl, dass ich bei einem bestimmten Unterrichtsthema etwas fühlen soll, was ich aber gar nicht tue.",
+                            "subdimension": "Bewusstsein für Beeinflussung und Gefahren ästhetischer Erfahrung"
+                        },
+                        "aes-ger_8_5_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": true,
+                            "index": 21,
+                            "question_text": "Im Unterricht dürfen wir alle unsere freie Meinung äußern, aufgeschrieben wird aber diejenige unserer Lehrkraft.",
+                            "subdimension": "Bewusstsein für Beeinflussung und Gefahren ästhetischer Erfahrung"
+                        },
+                        "aes-ger_8_5_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": true,
+                            "index": 22,
+                            "question_text": "Ich habe das Gefühl, dass unsere Lehrkraft mir ihre Vorlieben in Deutsch aufzwingen möchte.",
+                            "subdimension": "Bewusstsein für Beeinflussung und Gefahren ästhetischer Erfahrung"
+                        }
+                    }
+                },
+                "Englisch": {
+                    "pool": {
+                        "aes-eng_8_1_1": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 1,
+                            "question_text": "Ich merke manchmal, wie begeistert unsere Lehrkraft ist, wenn sie mit uns über englischsprachige Texte und Medien (z. B. Videos oder Hörbeispiele) spricht.",
+                            "subdimension": "Ästhetisch-emotionales Er- und Vorleben"
+                        },
+                        "aes-eng_8_1_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 2,
+                            "question_text": "Im Unterricht bin ich manchmal so in das Stundenthema vertieft, dass die Stunde viel schneller als sonst vergeht.",
+                            "subdimension": "Ästhetisch-emotionales Er- und Vorleben"
+                        },
+                        "aes-eng_8_1_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 3,
+                            "question_text": "Unsere Lehrkraft schildert, welche Gefühle englischsprachige Texte und Medien (z. B. Videos oder Hörbeispiele) in ihr ausgelöst haben.",
+                            "subdimension": "Ästhetisch-emotionales Er- und Vorleben"
+                        },
+                        "aes-eng_8_2_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 4,
+                            "question_text": "Unsere Lehrkraft stellt uns im Unterricht englischsprachige Texte und Medien (z. B. Videos oder Hörbeispiele) vor, die angenehme oder unangenehme Gefühle in mir auslösen.",
+                            "subdimension": "Freiräume für ästhetisch-emotionale Erfahrungen"
+                        },
+                        "aes-eng_8_2_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 5,
+                            "question_text": "Unsere Lehrkraft gibt mir genug Zeit, mich mit englischsprachigen Texten und Medien (z. B. Videos oder Hörbeispielen) zu beschäftigen, die mich irgendwie beeindrucken.",
+                            "subdimension": "Freiräume für ästhetisch-emotionale Erfahrungen"
+                        },
+                        "aes-eng_8_2_3": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 6,
+                            "question_text": "Unsere Lehrkraft schafft eine angenehme Atmosphäre, so dass ich mich traue, auch über meine eigenen Eindrücke zu englischsprachigen Texten und Medien (z. B. Videos oder Hörbeispielen) zu sprechen.",
+                            "subdimension": "Freiräume für ästhetisch-emotionale Erfahrungen"
+                        },
+                        "aes-eng_8_2_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 7,
+                            "question_text": "Unsere Lehrkraft ist an unseren eigenen Eindrücken zu englischsprachigen Texten und Medien (z. B. Videos oder Hörbeispielen) ernsthaft interessiert.",
+                            "subdimension": "Freiräume für ästhetisch-emotionale Erfahrungen"
+                        },
+                        "aes-eng_8_3_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 8,
+                            "question_text": "Im Unterricht stellt uns unsere Lehrkraft Fragen zu unseren eigenen Eindrücken bei einem bestimmten Thema.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-eng_8_3_2": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 9,
+                            "question_text": "Ich finde, unsere Lehrkraft achtet meine literarischen Vorlieben.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-eng_8_3_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 10,
+                            "question_text": "Unsere Lehrkraft ermuntert uns, über unsere Gefühle bei bestimmten Themen zu sprechen.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-eng_8_3_4": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 11,
+                            "question_text": "Unsere Lehrkraft fördert unseren kreativen Umgang mit Themen des Unterrichts.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-eng_8_3_5": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 12,
+                            "question_text": "Im Unterricht können wir eigene englischsprachige Texte erfinden und schreiben.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-eng_8_3_6": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 13,
+                            "question_text": "Unsere Lehrkraft lässt uns Themen der Unterrichtsstunde manchmal eigenständig weiterentwickeln.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-eng_8_3_7": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 14,
+                            "question_text": "Im Unterricht kann ich auch darüber sprechen, dass englischsprachige Texte und Medien (z. B. Videos oder Hörbeispiele) bei mir bestimmte Gefühle auslösen.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-eng_8_4_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 15,
+                            "question_text": "Englischsprachige Texte und Medien (z. B. Videos oder Hörbeispiele) haben mich im Unterricht so beeindruckt, dass ich mich nun auch in meiner Freizeit gerne damit beschäftige.",
+                            "subdimension": "Veränderungen infolge ästhetischer Erfahrung"
+                        },
+                        "aes-eng_8_4_2": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 16,
+                            "question_text": "Über bestimmte Themen empfinde ich anders, nachdem wir im Unterricht darüber gesprochen haben.",
+                            "subdimension": "Veränderungen infolge ästhetischer Erfahrung"
+                        },
+                        "aes-eng_8_4_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 17,
+                            "question_text": "Seitdem wir im Unterricht über englischsprachige Texte und Medien (z. B. Videos oder Hörbeispiele) gesprochen haben, verbinde ich damit ein bestimmtes Gefühl.",
+                            "subdimension": "Veränderungen infolge ästhetischer Erfahrung"
+                        },
+                        "aes-eng_8_4_5": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 18,
+                            "question_text": "Unsere Lehrkraft behandelt im Unterricht manchmal Themen mit uns, die mich über mich selbst nachdenken lassen.",
+                            "subdimension": "Veränderungen infolge ästhetischer Erfahrung"
+                        },
+                        "aes-eng_8_5_1": {
+                            "nwfg_study_exclusive": false,
+                            "recode": true,
+                            "index": 19,
+                            "question_text": "Ich habe das Gefühl, unsere Lehrkraft möchte, dass ich dasselbe denke oder dasselbe gut finde wie sie.",
+                            "subdimension": "Bewusstsein für Beeinflussung und Gefahren ästhetischer Erfahrung"
+                        },
+                        "aes-eng_8_5_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": true,
+                            "index": 20,
+                            "question_text": "Ich habe das Gefühl, dass ich bei einem bestimmten Unterrichtsthema etwas fühlen soll, was ich aber gar nicht tue.",
+                            "subdimension": "Bewusstsein für Beeinflussung und Gefahren ästhetischer Erfahrung"
+                        },
+                        "aes-eng_8_5_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": true,
+                            "index": 21,
+                            "question_text": "Im Unterricht dürfen wir alle unsere freie Meinung äußern, aufgeschrieben wird aber diejenige unserer Lehrkraft.",
+                            "subdimension": "Bewusstsein für Beeinflussung und Gefahren ästhetischer Erfahrung"
+                        },
+                        "aes-eng_8_5_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": true,
+                            "index": 22,
+                            "question_text": "Ich habe das Gefühl, dass unsere Lehrkraft mir ihre Vorlieben in Englisch aufzwingen möchte.",
+                            "subdimension": "Bewusstsein für Beeinflussung und Gefahren ästhetischer Erfahrung"
+                        }
+                    }
+                },
+                "Evangelische Religion": {
+                    "pool": {
+                        "aes-rel_8_1_1": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 1,
+                            "question_text": "Ich merke manchmal, wie begeistert unsere Lehrkraft ist, wenn sie mit uns über Religion oder religiöse Texte spricht.",
+                            "subdimension": "Ästhetisch-emotionales Er- und Vorleben"
+                        },
+                        "aes-rel_8_1_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 2,
+                            "question_text": "Im Unterricht bin ich manchmal so in das Stundenthema vertieft, dass die Stunde viel schneller als sonst vergeht.",
+                            "subdimension": "Ästhetisch-emotionales Er- und Vorleben"
+                        },
+                        "aes-rel_8_1_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 3,
+                            "question_text": "Unsere Lehrkraft schildert gelegentlich, welche Gefühle ihre eigene Beschäftigung mit Religion in ihr ausgelöst haben.",
+                            "subdimension": "Ästhetisch-emotionales Er- und Vorleben"
+                        },
+                        "aes-rel_8_2_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 4,
+                            "question_text": "Unsere Lehrkraft stellt uns im Unterricht biblische oder andere religiöse Texte vor, die angenehme oder unangenehme Gefühle in mir auslösen.",
+                            "subdimension": "Freiräume für ästhetisch-emotionale Erfahrungen"
+                        },
+                        "aes-rel_8_2_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 5,
+                            "question_text": "Unsere Lehrkraft gibt mir genug Zeit, mich mit religiösen Texten und Themen zu beschäftigen, die mich irgendwie beeindrucken.",
+                            "subdimension": "Freiräume für ästhetisch-emotionale Erfahrungen"
+                        },
+                        "aes-rel_8_2_3": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 6,
+                            "question_text": "Unsere Lehrkraft schafft eine angenehme Atmosphäre, so dass ich mich traue, auch über meine eigenen Eindrücke zu religiösen Texte, Inhalten und Themen zu sprechen.",
+                            "subdimension": "Freiräume für ästhetisch-emotionale Erfahrungen"
+                        },
+                        "aes-rel_8_2_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 7,
+                            "question_text": "Unsere Lehrkraft ist an unseren eigenen Eindrücken zu religiösen Texten, Themen und Inhalten ernsthaft interessiert.",
+                            "subdimension": "Freiräume für ästhetisch-emotionale Erfahrungen"
+                        },
+                        "aes-rel_8_3_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 8,
+                            "question_text": "Im Unterricht stellt uns unsere Lehrkraft Fragen zu unseren eigenen Eindrücken bei einem bestimmten Thema.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-rel_8_3_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 9,
+                            "question_text": "Unsere Lehrkraft ermuntert uns, über unsere Gefühle bei bestimmten Themen zu sprechen.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-rel_8_3_4": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 10,
+                            "question_text": "Unsere Lehrkraft fördert unseren kreativen Umgang mit Themen des Unterrichts.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-rel_8_3_5": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 11,
+                            "question_text": "Im Unterricht können wir manchmal eigene religiöse Texte, wie Gebete, Meditationstexte usw. erfinden.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-rel_8_3_6": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 12,
+                            "question_text": "Unsere Lehrkraft lässt uns Themen der Unterrichtsstunde manchmal eigenständig weiterentwickeln.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-rel_8_3_7": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 13,
+                            "question_text": "Im Unterricht kann ich auch darüber sprechen, dass religiöse Texte, Themen und Handlungen bei mir bestimmte Gefühle auslösen.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-rel_8_4_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 14,
+                            "question_text": "Einige biblische oder religiöse Texte haben mich im Unterricht so beeindruckt, dass ich mich nun auch in meiner Freizeit gerne mehr mit Religion oder dem christlichen Glauben beschäftigen möchte.",
+                            "subdimension": "Veränderungen infolge ästhetischer Erfahrung"
+                        },
+                        "aes-rel_8_4_2": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 15,
+                            "question_text": "Über bestimmte Themen (z. B. Gottesbilder, Stellung der Frau, Homosexualität oder ähnliches) empfinde ich anders, nachdem wir im Unterricht darüber gesprochen haben.",
+                            "subdimension": "Veränderungen infolge ästhetischer Erfahrung"
+                        },
+                        "aes-rel_8_4_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 16,
+                            "question_text": "Seitdem wir im Unterricht über gewisse biblische/religiöse Texte, oder religiöse Themen  gesprochen haben, verbinde ich damit ein bestimmtes Gefühl.",
+                            "subdimension": "Veränderungen infolge ästhetischer Erfahrung"
+                        },
+                        "aes-rel_8_4_5": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 17,
+                            "question_text": "Unsere Lehrkraft behandelt im Unterricht manchmal Themen mit uns, die mich über mich selbst nachdenken lassen.",
+                            "subdimension": "Veränderungen infolge ästhetischer Erfahrung"
+                        },
+                        "aes-rel_8_5_1": {
+                            "nwfg_study_exclusive": false,
+                            "recode": true,
+                            "index": 18,
+                            "question_text": "Ich habe das Gefühl, unsere Lehrkraft möchte, dass ich dasselbe denke oder dasselbe gut finde wie sie.",
+                            "subdimension": "Bewusstsein für Beeinflussung und Gefahren ästhetischer Erfahrung"
+                        },
+                        "aes-rel_8_5_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": true,
+                            "index": 19,
+                            "question_text": "Ich habe das Gefühl, dass ich bei einem bestimmten Unterrichtsthema etwas fühlen soll, was ich aber gar nicht tue.",
+                            "subdimension": "Bewusstsein für Beeinflussung und Gefahren ästhetischer Erfahrung"
+                        },
+                        "aes-rel_8_5_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": true,
+                            "index": 20,
+                            "question_text": "Im Unterricht dürfen wir alle unsere freie Meinung äußern, aufgeschrieben wird aber diejenige unserer Lehrkraft.",
+                            "subdimension": "Bewusstsein für Beeinflussung und Gefahren ästhetischer Erfahrung"
+                        },
+                        "aes-rel_8_5_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": true,
+                            "index": 21,
+                            "question_text": "Ich habe das Gefühl, dass unsere Lehrkraft mir ihre Vorlieben bei der Beschäftigung mit religiösen Themen und Inhalten aufzwingen möchte.",
+                            "subdimension": "Bewusstsein für Beeinflussung und Gefahren ästhetischer Erfahrung"
+                        }
+                    }
+                },
+                "Latein": {
+                    "pool": {
+                        "aes-lat_8_1_1": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 1,
+                            "question_text": "Ich merke manchmal, wie begeistert unsere Lehrkraft ist, wenn sie mit uns über bestimmte Inhalte des Lateinunterrichts (z. B. römischer Alltag, Götterwelt und Sagen, Grammatik, Literatur) spricht.",
+                            "subdimension": "Ästhetisch-emotionales Er- und Vorleben"
+                        },
+                        "aes-lat_8_1_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 2,
+                            "question_text": "Im Unterricht bin ich manchmal so in das Stundenthema vertieft, dass die Stunde viel schneller als sonst vergeht.",
+                            "subdimension": "Ästhetisch-emotionales Er- und Vorleben"
+                        },
+                        "aes-lat_8_1_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 3,
+                            "question_text": "Unsere Lehrkraft schildert gelegentlich, welche Gefühle die Beschäftigung mit lateinischen Texten oder der Besuch römischer Stätten (z. B. Forum Romanum) in ihr ausgelöst haben.",
+                            "subdimension": "Ästhetisch-emotionales Er- und Vorleben"
+                        },
+                        "aes-lat_8_2_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 4,
+                            "question_text": "Unsere Lehrkraft stellt uns im Unterricht lateinische Texte vor, die angenehme oder unangenehme Gefühle in mir auslösen.",
+                            "subdimension": "Freiräume für ästhetisch-emotionale Erfahrungen"
+                        },
+                        "aes-lat_8_2_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 5,
+                            "question_text": "Unsere Lehrkraft gibt mir genug Zeit, mich mit lateinischen Texten und deren Inhalten zu beschäftigen, die mich irgendwie beeindrucken.",
+                            "subdimension": "Freiräume für ästhetisch-emotionale Erfahrungen"
+                        },
+                        "aes-lat_8_2_3": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 6,
+                            "question_text": "Unsere Lehrkraft schafft eine angenehme Atmosphäre, so dass ich mich traue, auch über meine eigenen Eindrücke zu lateinischen Texten und deren Inhalten zu sprechen.",
+                            "subdimension": "Freiräume für ästhetisch-emotionale Erfahrungen"
+                        },
+                        "aes-lat_8_2_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 7,
+                            "question_text": "Unsere Lehrkraft ist an unseren eigenen Eindrücken zu lateinischen Texten und deren Inhalten ernsthaft interessiert.",
+                            "subdimension": "Freiräume für ästhetisch-emotionale Erfahrungen"
+                        },
+                        "aes-lat_8_3_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 8,
+                            "question_text": "Im Unterricht stellt uns die Lehrkraft Fragen zu unseren eigenen Eindrücken bei einem bestimmten Thema.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-lat_8_3_2": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 9,
+                            "question_text": "Ich finde, unsere Lehrkraft achtet meine Vorlieben bei unserer Beschäftigung mit lateinischen Texten und deren Inhalten.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-lat_8_3_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 10,
+                            "question_text": "Unsere Lehrkraft ermuntert uns, über unsere Gefühle bei bestimmten Themen zu sprechen.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-lat_8_3_4": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 11,
+                            "question_text": "Unsere Lehrkraft fördert unseren kreativen Umgang mit Themen des Unterrichts.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-lat_8_3_5": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 12,
+                            "question_text": "Im Unterricht können wir auch immer wieder Textstellen neu erschließen, hierfür neue Übersetzungsmöglichkeiten (z. B. im Dialekt) erstellen oder diese szenisch darstellen (z. B. als Theaterstück).",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-lat_8_3_6": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 13,
+                            "question_text": "Unsere Lehrkraft lässt uns Themen der Unterrichtsstunde manchmal eigenständig weiterentwickeln.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-lat_8_3_7": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 14,
+                            "question_text": "Im Unterricht kann ich auch darüber sprechen, dass lateinische Texte und deren Inhalte bei mir bestimmte Gefühle auslösen.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-lat_8_4_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 15,
+                            "question_text": "Einige lateinische Texte und deren Inhalte (z. B. Sagen und Götterwelt, Geschichte der Römer) haben mich im Unterricht so beeindruckt, dass ich mich nun auch in meiner Freizeit gerne damit beschäftige.",
+                            "subdimension": "Veränderungen infolge ästhetischer Erfahrung"
+                        },
+                        "aes-lat_8_4_2": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 16,
+                            "question_text": "Über bestimmte Themen (z. B. Sklaverei, Stellung der Frau) empfinde ich anders, nachdem wir im Unterricht darüber gesprochen haben.",
+                            "subdimension": "Veränderungen infolge ästhetischer Erfahrung"
+                        },
+                        "aes-lat_8_4_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 17,
+                            "question_text": "Seitdem wir im Unterricht über gewisse lateinische Texte gesprochen haben, verbinde ich damit ein bestimmtes Gefühl.",
+                            "subdimension": "Veränderungen infolge ästhetischer Erfahrung"
+                        },
+                        "aes-lat_8_4_5": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 18,
+                            "question_text": "Unsere Lehrkraft behandelt im Unterricht manchmal Themen mit uns, die mich über mich selbst nachdenken lassen.",
+                            "subdimension": "Veränderungen infolge ästhetischer Erfahrung"
+                        },
+                        "aes-lat_8_5_1": {
+                            "nwfg_study_exclusive": false,
+                            "recode": true,
+                            "index": 19,
+                            "question_text": "Ich habe das Gefühl, unsere Lehrkraft möchte, dass ich dasselbe denke oder dasselbe gut finde wie sie.",
+                            "subdimension": "Bewusstsein für Beeinflussung und Gefahren ästhetischer Erfahrung"
+                        },
+                        "aes-lat_8_5_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": true,
+                            "index": 20,
+                            "question_text": "Ich habe das Gefühl, dass ich bei einem bestimmten Unterrichtsthema etwas fühlen soll, was ich aber gar nicht tue.",
+                            "subdimension": "Bewusstsein für Beeinflussung und Gefahren ästhetischer Erfahrung"
+                        },
+                        "aes-lat_8_5_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": true,
+                            "index": 21,
+                            "question_text": "Im Unterricht dürfen wir alle unsere freie Meinung äußern, aufgeschrieben wird aber diejenige unserer Lehrkraft.",
+                            "subdimension": "Bewusstsein für Beeinflussung und Gefahren ästhetischer Erfahrung"
+                        },
+                        "aes-lat_8_5_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": true,
+                            "index": 22,
+                            "question_text": "Ich habe das Gefühl, dass unsere Lehrkraft mir ihre Vorlieben bei der Beschäftigung mit lateinischen Texten und deren Inhalten aufzwingen möchte.",
+                            "subdimension": "Bewusstsein für Beeinflussung und Gefahren ästhetischer Erfahrung"
+                        }
+                    }
+                },
+                "Mathematik": {
+                    "pool": {
+                        "aes-mat_8_1_1": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 1,
+                            "question_text": "Ich merke manchmal, wie begeistert unsere Lehrkraft ist, wenn sie mit uns über Mathematik spricht.",
+                            "subdimension": "Ästhetisch-emotionales Er- und Vorleben"
+                        },
+                        "aes-mat_8_1_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 2,
+                            "question_text": "Im Unterricht bin ich manchmal so in das Stundenthema vertieft, dass die Stunde viel schneller als sonst vergeht.",
+                            "subdimension": "Ästhetisch-emotionales Er- und Vorleben"
+                        },
+                        "aes-mat_8_1_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 3,
+                            "question_text": "Unsere Lehrkraft schildert gelegentlich, welche Gefühle mathematische Themen, Ideen oder Darstellungen in ihr ausgelöst haben.",
+                            "subdimension": "Ästhetisch-emotionales Er- und Vorleben"
+                        },
+                        "aes-mat_8_2_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 4,
+                            "question_text": "Unsere Lehrkraft stellt uns im Unterricht mathematische Themen, Ideen oder Darstellungen vor, die angenehme oder unangenehme Gefühle in mir auslösen.",
+                            "subdimension": "Freiräume für ästhetisch-emotionale Erfahrungen"
+                        },
+                        "aes-mat_8_2_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 5,
+                            "question_text": "Unsere Lehrkraft gibt mir genug Zeit, mich mit mathematischen Themen, Ideen oder Darstellungen zu beschäftigen, die mich irgendwie beeindrucken.",
+                            "subdimension": "Freiräume für ästhetisch-emotionale Erfahrungen"
+                        },
+                        "aes-mat_8_2_3": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 6,
+                            "question_text": "Unsere Lehrkraft schafft eine angenehme Atmosphäre, so dass ich mich traue, auch über meine eigenen Eindrücke zu mathematischen Themen, Ideen oder Darstellungen zu sprechen.",
+                            "subdimension": "Freiräume für ästhetisch-emotionale Erfahrungen"
+                        },
+                        "aes-mat_8_2_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 7,
+                            "question_text": "Unsere Lehrkraft ist an unseren eigenen Eindrücken zu mathematischen Themen, Ideen oder Darstellungen ernsthaft interessiert.",
+                            "subdimension": "Freiräume für ästhetisch-emotionale Erfahrungen"
+                        },
+                        "aes-mat_8_3_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 8,
+                            "question_text": "Im Unterricht stellt uns unsere Lehrkraft Fragen zu unseren eigenen Eindrücken bei einem bestimmten Thema.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-mat_8_3_2": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 9,
+                            "question_text": "Ich finde, unsere Lehrkraft achtet meine inhaltlichen Vorlieben in Mathematik.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-mat_8_3_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 10,
+                            "question_text": "Unsere Lehrkraft ermuntert uns, über unsere Gefühle bei bestimmten Themen zu sprechen.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-mat_8_3_4": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 11,
+                            "question_text": "Unsere Lehrkraft fördert unseren kreativen Umgang mit Themen des Unterrichts.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-mat_8_3_5": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 12,
+                            "question_text": "Im Unterricht können wir immer wieder auch neue mathematische Fragestellungen entdecken, neue Lösungsansätze erarbeiten oder neue Beweismöglichkeiten und Darstellungsarten erfinden.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-mat_8_3_6": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 13,
+                            "question_text": "Unsere Lehrkraft lässt uns Themen der Unterrichtsstunde manchmal eigenständig weiterentwickeln.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-mat_8_3_7": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 14,
+                            "question_text": "Im Unterricht kann ich auch darüber sprechen, dass ein mathematisches Thema, eine Idee oder Darstellungsweise bei mir bestimmte Gefühle auslöst.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-mat_8_4_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 15,
+                            "question_text": "Ein mathematisches Thema, eine Idee oder Darstellungsweise hat mich im Unterricht so beeindruckt, dass ich mich nun auch in meiner Freizeit gerne damit beschäftige.",
+                            "subdimension": "Veränderungen infolge ästhetischer Erfahrung"
+                        },
+                        "aes-mat_8_4_2": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 16,
+                            "question_text": "Über bestimmte Themen empfinde ich anders, nachdem wir im Unterricht darüber gesprochen haben.",
+                            "subdimension": "Veränderungen infolge ästhetischer Erfahrung"
+                        },
+                        "aes-mat_8_4_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 17,
+                            "question_text": "Seitdem wir im Unterricht über ein bestimmtes mathematisches Thema, eine Idee oder Darstellung gesprochen haben, verbinde ich damit ein bestimmtes Gefühl.",
+                            "subdimension": "Veränderungen infolge ästhetischer Erfahrung"
+                        },
+                        "aes-mat_8_4_5": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 18,
+                            "question_text": "Unsere Lehrkraft behandelt im Unterricht manchmal Themen mit uns, die mich über mich selbst nachdenken lassen.",
+                            "subdimension": "Veränderungen infolge ästhetischer Erfahrung"
+                        },
+                        "aes-mat_8_4_6": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 19,
+                            "question_text": "Unsere Lehrkraft zeigt uns immer wieder auf, dass man die Welt durch Mathematik anders wahrnehmen kann.",
+                            "subdimension": "Veränderungen infolge ästhetischer Erfahrung"
+                        },
+                        "aes-mat_8_4_7": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 20,
+                            "question_text": "Unsere Lehrkraft zeigt uns immer wieder auf, inwiefern mathematische Erkenntnisse Maler, Musiker oder auch Architekten beeinflusst haben und beeinflussen.",
+                            "subdimension": "Veränderungen infolge ästhetischer Erfahrung"
+                        },
+                        "aes-mat_8_4_8": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 21,
+                            "question_text": "Im Unterricht behandeln wir immer wieder Themen, die mich die Welt danach mit anderen Augen sehen lassen.",
+                            "subdimension": "Veränderungen infolge ästhetischer Erfahrung"
+                        },
+                        "aes-mat_8_5_1": {
+                            "nwfg_study_exclusive": false,
+                            "recode": true,
+                            "index": 22,
+                            "question_text": "Ich habe das Gefühl, unsere Lehrkraft möchte, dass ich dasselbe denke oder dasselbe gut finde wie sie.",
+                            "subdimension": "Bewusstsein für Beeinflussung und Gefahren ästhetischer Erfahrung"
+                        },
+                        "aes-mat_8_5_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": true,
+                            "index": 23,
+                            "question_text": "Ich habe das Gefühl, dass ich bei einem bestimmten Unterrichtsthema etwas fühlen soll, was ich aber gar nicht tue.",
+                            "subdimension": "Bewusstsein für Beeinflussung und Gefahren ästhetischer Erfahrung"
+                        },
+                        "aes-mat_8_5_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": true,
+                            "index": 24,
+                            "question_text": "Im Unterricht dürfen wir alle unsere freie Meinung äußern, aufgeschrieben wird aber diejenige unserer Lehrkraft.",
+                            "subdimension": "Bewusstsein für Beeinflussung und Gefahren ästhetischer Erfahrung"
+                        },
+                        "aes-mat_8_5_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": true,
+                            "index": 25,
+                            "question_text": "Ich habe das Gefühl, dass unsere Lehrkraft mir ihre Vorlieben in Mathematik aufzwingen möchte.",
+                            "subdimension": "Bewusstsein für Beeinflussung und Gefahren ästhetischer Erfahrung"
+                        }
+                    }
+                },
+                "Musik": {
+                    "pool": {
+                        "aes-mus_8_1_1": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 1,
+                            "question_text": "Ich merke manchmal, wie begeistert unsere Lehrkraft ist, wenn sie mit uns über Musik spricht.",
+                            "subdimension": "Ästhetisch-emotionales Er- und Vorleben"
+                        },
+                        "aes-mus_8_1_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 2,
+                            "question_text": "Im Unterricht bin ich manchmal so in das Stundenthema vertieft, dass die Stunde viel schneller als sonst vergeht.",
+                            "subdimension": "Ästhetisch-emotionales Er- und Vorleben"
+                        },
+                        "aes-mus_8_1_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 3,
+                            "question_text": "Unsere Lehrkraft schildert, welche Gefühle bestimmte Musik in ihr ausgelöst hat.",
+                            "subdimension": "Ästhetisch-emotionales Er- und Vorleben"
+                        },
+                        "aes-mus_8_2_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 4,
+                            "question_text": "Unsere Lehrkraft lässt uns im Unterricht Musik anhören, welche angenehme oder unangenehme Gefühle in mir auslösen.",
+                            "subdimension": "Freiräume für ästhetisch-emotionale Erfahrungen"
+                        },
+                        "aes-mus_8_2_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 5,
+                            "question_text": "Unsere Lehrkraft gibt mir genug Zeit, mich mit Musik zu beschäftigen, die mich irgendwie beeindruckt.",
+                            "subdimension": "Freiräume für ästhetisch-emotionale Erfahrungen"
+                        },
+                        "aes-mus_8_2_3": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 6,
+                            "question_text": "Unsere Lehrkraft schafft eine Atmosphäre, so dass ich mich traue, auch über meine eigenen Eindrücke zu bestimmter Musik zu sprechen.",
+                            "subdimension": "Freiräume für ästhetisch-emotionale Erfahrungen"
+                        },
+                        "aes-mus_8_2_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 7,
+                            "question_text": "Unsere Lehrkraft ist an unseren eigenen Eindrücken zu Musik ernsthaft interessiert.",
+                            "subdimension": "Freiräume für ästhetisch-emotionale Erfahrungen"
+                        },
+                        "aes-mus_8_3_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 8,
+                            "question_text": "Im Unterricht stellt uns unsere Lehrkraft Fragen zu unseren eigenen Eindrücken bei einem bestimmten Thema.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-mus_8_3_2": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 9,
+                            "question_text": "Ich finde, unsere Lehrkraft achtet meine Vorlieben in Musik.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-mus_8_3_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 10,
+                            "question_text": "Unsere Lehrkraft ermuntert uns, über unsere Gefühle bei bestimmten Themen zu sprechen.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-mus_8_3_4": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 11,
+                            "question_text": "Unsere Lehrkraft fördert unseren kreativen Umgang mit Themen des Unterrichts.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-mus_8_3_5": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 12,
+                            "question_text": "Im Unterricht können wir eigene Musik erfinden oder neue Texte zu einer Musik schreiben.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-mus_8_3_6": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 13,
+                            "question_text": "Unsere Lehrkraft lässt uns Themen der Unterrichtsstunde manchmal eigenständig weiterentwickeln.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-mus_8_3_7": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 14,
+                            "question_text": "Im Unterricht kann ich auch darüber sprechen, dass bestimmte Musik bei mir bestimmte Gefühle auslöst.",
+                            "subdimension": "Schaffung ästhetischer Handlungsanlässe"
+                        },
+                        "aes-mus_8_4_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 15,
+                            "question_text": "Musikbeispiele im Unterricht haben mich so beeindruckt, dass ich diese nun auch in meiner Freizeit gerne anhöre.",
+                            "subdimension": "Veränderungen infolge ästhetischer Erfahrung"
+                        },
+                        "aes-mus_8_4_2": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 16,
+                            "question_text": "Über bestimmte Musik empfinde ich anders, nachdem wir im Unterricht darüber gesprochen haben.",
+                            "subdimension": "Veränderungen infolge ästhetischer Erfahrung"
+                        },
+                        "aes-mus_8_4_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 17,
+                            "question_text": "Bei bestimmten Hörbeispielen im Musikunterricht verstehe ich nicht, wie diese jemandem gefallen können.",
+                            "subdimension": "Veränderungen infolge ästhetischer Erfahrung"
+                        },
+                        "aes-mus_8_4_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 18,
+                            "question_text": "Seitdem wir im Unterricht über ein Hörbeispiel gesprochen haben, verbinde ich mit dieser Musik ein bestimmtes Gefühl.",
+                            "subdimension": "Veränderungen infolge ästhetischer Erfahrung"
+                        },
+                        "aes-mus_8_4_5": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 19,
+                            "question_text": "Unsere Lehrkraft behandelt im Unterricht manchmal Themen mit uns, die mich über mich selbst nachdenken lassen.",
+                            "subdimension": "Veränderungen infolge ästhetischer Erfahrung"
+                        },
+                        "aes-mus_8_5_1": {
+                            "nwfg_study_exclusive": false,
+                            "recode": true,
+                            "index": 20,
+                            "question_text": "Ich habe das Gefühl, unsere Lehrkraft möchte, dass ich dasselbe denke oder dasselbe gut finde wie sie.",
+                            "subdimension": "Bewusstsein für Beeinflussung und Gefahren ästhetischer Erfahrung"
+                        },
+                        "aes-mus_8_5_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": true,
+                            "index": 21,
+                            "question_text": "Ich habe das Gefühl, dass ich bei einem bestimmten Unterrichtsthema etwas fühlen soll, was ich aber gar nicht tue.",
+                            "subdimension": "Bewusstsein für Beeinflussung und Gefahren ästhetischer Erfahrung"
+                        },
+                        "aes-mus_8_5_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": true,
+                            "index": 22,
+                            "question_text": "Im Unterricht dürfen wir alle unsere freie Meinung äußern, aufgeschrieben wird aber diejenige unserer Lehrkraft.",
+                            "subdimension": "Bewusstsein für Beeinflussung und Gefahren ästhetischer Erfahrung"
+                        },
+                        "aes-mus_8_5_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": true,
+                            "index": 23,
+                            "question_text": "Ich habe das Gefühl, dass unsere Lehrkraft mir ihre Vorlieben in Musik aufzwingen möchte.",
+                            "subdimension": "Bewusstsein für Beeinflussung und Gefahren ästhetischer Erfahrung"
+                        }
+                    }
+                }
+            }
+        },
+        "9": {
+            "dimension_name": "Fachspezifik",
+            "subjects": {
+                "Deutsch": {
+                    "pool": {
+                        "dsp-ger_9_1_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 1,
+                            "question_text": "Im Unterricht lerne ich fremde Kulturen und Lebenswelten kennen.",
+                            "subdimension": "Fremdheitserfahrung"
+                        },
+                        "dsp-ger_9_1_2": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 2,
+                            "question_text": "Der Unterricht lässt mich (bekannte) Dinge oftmals anders sehen.",
+                            "subdimension": "Fremdheitserfahrung"
+                        },
+                        "dsp-ger_9_1_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 3,
+                            "question_text": "Im Unterricht gibt es häufig Gelegenheiten, den Blickwinkel anderer Personen einzunehmen.",
+                            "subdimension": "Fremdheitserfahrung"
+                        },
+                        "dsp-ger_9_1_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 4,
+                            "question_text": "Unsere Lehrkraft ermutigt uns, selbstständig Gemeinsamkeiten und Unterschiede zwischen unserer und fremden Kulturen und Lebenswelten zu finden.",
+                            "subdimension": "Fremdheitserfahrung"
+                        },
+                        "dsp-ger_9_2_1": {
+                            "nwfg_study_exclusive": false,
+                            "recode": true,
+                            "index": 5,
+                            "question_text": "Ich habe das Gefühl, dass unsere Lehrkraft Mädchen in Deutsch mehr zutraut.",
+                            "subdimension": "Gendersensibler Unterricht"
+                        },
+                        "dsp-ger_9_2_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 6,
+                            "question_text": "Unsere Lehrkraft vermittelt mir den Eindruck, dass jede:r in Deutsch gut sein kann.",
+                            "subdimension": "Gendersensibler Unterricht"
+                        },
+                        "dsp-ger_9_2_3": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 7,
+                            "question_text": "Ich habe das Gefühl, unsere Lehrkraft ist davon überzeugt, dass Leistungen in Deutsch nicht vom Geschlecht abhängen.",
+                            "subdimension": "Gendersensibler Unterricht"
+                        },
+                        "dsp-ger_9_2_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": true,
+                            "index": 8,
+                            "question_text": "Unsere Lehrkraft fördert Jungen im Unterricht besonders.",
+                            "subdimension": "Gendersensibler Unterricht"
+                        },
+                        "dsp-ger_9_2_5": {
+                            "nwfg_study_exclusive": true,
+                            "recode": true,
+                            "index": 9,
+                            "question_text": "Unsere Lehrkraft fördert Mädchen im Unterricht besonders.",
+                            "subdimension": "Gendersensibler Unterricht"
+                        },
+                        "dsp-ger_9_2_6": {
+                            "nwfg_study_exclusive": false,
+                            "recode": true,
+                            "index": 10,
+                            "question_text": "Unsere Lehrkraft vermittelt mir den Eindruck, dass Mädchen Deutsch einfach besser können als Jungen.",
+                            "subdimension": "Gendersensibler Unterricht"
+                        },
+                        "dsp-ger_9_3_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": true,
+                            "index": 11,
+                            "question_text": "Unsere Lehrkraft gibt mir in meinen Texten hauptsächlich Rückmeldung auf Rechtschreibung und Grammatik.",
+                            "subdimension": "Rückmeldung hinsichtlich Tiefenstrukturen"
+                        },
+                        "dsp-ger_9_3_2": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 12,
+                            "question_text": "Die Rückmeldungen unserer Lehrkraft helfen mir dabei, Aufbau und Inhalt meiner Texte zu verbessern.",
+                            "subdimension": "Rückmeldung hinsichtlich Tiefenstrukturen"
+                        },
+                        "dsp-ger_9_3_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 13,
+                            "question_text": "Ich erhalte regelmäßig Rückmeldung auf Texte, die ich schreibe.",
+                            "subdimension": "Rückmeldung hinsichtlich Tiefenstrukturen"
+                        },
+                        "dsp-ger_9_3_4": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 14,
+                            "question_text": "Die Korrekturen unserer Lehrkraft enthalten hilfreiche Tipps, wie ich meine Texte verbessern kann.",
+                            "subdimension": "Rückmeldung hinsichtlich Tiefenstrukturen"
+                        },
+                        "dsp-ger_9_3_5": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 15,
+                            "question_text": "Bei Rückmeldungen benennt unsere Lehrkraft genau die Stärken und Schwächen meiner Texte.",
+                            "subdimension": "Rückmeldung hinsichtlich Tiefenstrukturen"
+                        },
+                        "dsp-ger_9_4_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 16,
+                            "question_text": "Wir beschäftigen uns mit Texten, die nicht gedruckt vorliegen (z. B. Handynachrichten, Filmausschnitte, Hörspiele).",
+                            "subdimension": "Berücksichtigung eines erweiterten Textbegriffs"
+                        },
+                        "dsp-ger_9_4_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 17,
+                            "question_text": "Unsere Lehrkraft gibt uns gelegentlich die Aufgabe, selbstständig Audioaufnahmen, Videoclips oder Ähnliches zu erstellen.",
+                            "subdimension": "Berücksichtigung eines erweiterten Textbegriffs"
+                        },
+                        "dsp-ger_9_4_3": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 18,
+                            "question_text": "Unsere Lehrkraft schafft immer wieder Gelegenheiten, Gestaltung und Merkmale von digitalen Texten (z. B. Handynachrichten, Werbung) zu untersuchen.",
+                            "subdimension": "Berücksichtigung eines erweiterten Textbegriffs"
+                        },
+                        "dsp-ger_9_4_4": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 19,
+                            "question_text": "Unsere Lehrkraft fordert uns auf, immer wieder kritisch über Absichten und Wirkungen von digitalen Texten (z. B. Fake News, Werbung) nachzudenken.",
+                            "subdimension": "Berücksichtigung eines erweiterten Textbegriffs"
+                        },
+                        "dsp-ger_9_5_1": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 20,
+                            "question_text": "Wir erhalten regelmäßig Gelegenheiten, selbstständig Texte zu schreiben.",
+                            "subdimension": "vielfältige Produktionsgelegenheiten"
+                        },
+                        "dsp-ger_9_5_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 21,
+                            "question_text": "Wir trainieren jede Aufsatzart (z. B. Erzählung, Vorgangsbeschreibung) durch das Schreiben unterschiedlicher Texte.",
+                            "subdimension": "vielfältige Produktionsgelegenheiten"
+                        },
+                        "dsp-ger_9_5_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 22,
+                            "question_text": "Bei jeder Aufsatzart (z. B. Erzählung, Vorgangsbeschreibung) üben wir bestimmte Teile eines Texts durch unterschiedliche Aufgaben besonders.",
+                            "subdimension": "vielfältige Produktionsgelegenheiten"
+                        },
+                        "dsp-ger_9_5_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 23,
+                            "question_text": "Wir erhalten immer wieder die Möglichkeit, unsere Texte zu überarbeiten und zu verbessern.",
+                            "subdimension": "vielfältige Produktionsgelegenheiten"
+                        },
+                        "dsp-ger_9_6_1": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 24,
+                            "question_text": "Unsere Lehrkraft gibt mir immer wieder Hinweise, wie ich üben kann, bei einem Vortrag vor der Klasse frei zu sprechen.",
+                            "subdimension": "Vortragen und Debattieren"
+                        },
+                        "dsp-ger_9_6_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 25,
+                            "question_text": "Unsere Lehrkraft zeigt mir regelmäßig, wie ich bei Vorträgen Medien (z. B. Powerpoint, Videos) sinnvoll einsetzen kann.",
+                            "subdimension": "Vortragen und Debattieren"
+                        },
+                        "dsp-ger_9_6_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 26,
+                            "question_text": "Unsere Lehrkraft schafft Gesprächssituationen, bei denen ich üben kann, meine eigenen Argumente zu vertreten.",
+                            "subdimension": "Vortragen und Debattieren"
+                        },
+                        "dsp-ger_9_6_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 27,
+                            "question_text": "Unsere Lehrkraft gibt Tipps und macht vor, wie ich in Gesprächen Argumente eines anderen aufgreifen kann.",
+                            "subdimension": "Vortragen und Debattieren"
+                        },
+                        "dsp-ger_9_7_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 28,
+                            "question_text": "Unsere Lehrkraft übt mit uns, wie wir die sprachlichen Besonderheiten z. B. von Erzählungen und Gedichten herausarbeiten können.",
+                            "subdimension": "Strategieeinsatz beim Textverständnis und Schreiben"
+                        },
+                        "dsp-ger_9_7_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 29,
+                            "question_text": "Unsere Lehrkraft hilft uns, auch schwierige Texte zu verstehen, indem sie uns mit passenden Hilfestellungen und Tipps durch den Text führt.",
+                            "subdimension": "Strategieeinsatz beim Textverständnis und Schreiben"
+                        },
+                        "dsp-ger_9_7_3": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 30,
+                            "question_text": "Unsere Lehrkraft zeigt uns immer wieder, welche Techniken wir einsetzen können, um schwierige Texte besser zu verstehen.",
+                            "subdimension": "Strategieeinsatz beim Textverständnis und Schreiben"
+                        },
+                        "dsp-ger_9_7_4": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 31,
+                            "question_text": "Unsere Lehrkraft übt regelmäßig mit uns, wie wir Zusatzmaterial für das Schreiben von Texten gewinnbringend nutzen können.",
+                            "subdimension": "Strategieeinsatz beim Textverständnis und Schreiben"
+                        },
+                        "dsp-ger_9_7_5": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 32,
+                            "question_text": "Das Zusatzmaterial, das uns unsere Lehrkraft bereitstellt, können wir für das Schreiben von Texten gut einsetzen.",
+                            "subdimension": "Strategieeinsatz beim Textverständnis und Schreiben"
+                        }
+                    }
+                },
+                "Englisch": {
+                    "pool": {
+                        "dsp-eng_9_1_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 1,
+                            "question_text": "Im Unterricht lerne ich fremde Kulturen und Lebenswelten kennen.",
+                            "subdimension": "Fremdheitserfahrung"
+                        },
+                        "dsp-eng_9_1_2": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 2,
+                            "question_text": "Der Unterricht lässt mich (bekannte) Dinge oftmals anders sehen.",
+                            "subdimension": "Fremdheitserfahrung"
+                        },
+                        "dsp-eng_9_1_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 3,
+                            "question_text": "Im Unterricht gibt es häufig Gelegenheiten, den Blickwinkel anderer Personen einzunehmen.",
+                            "subdimension": "Fremdheitserfahrung"
+                        },
+                        "dsp-eng_9_1_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 4,
+                            "question_text": "Unsere Lehrkraft ermutigt uns, selbstständig Gemeinsamkeiten und Unterschiede zwischen unserer und fremden Kulturen und Lebenswelten zu finden.",
+                            "subdimension": "Fremdheitserfahrung"
+                        },
+                        "dsp-eng_9_2_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 5,
+                            "question_text": "Ich kann unserer Lehrkraft gut folgen, wenn sie im Unterricht Englisch spricht.",
+                            "subdimension": "Kommunikation der Lehrkraft in sprachlich und fachlich korrektem und/aber dem Lernstand angepasstem Englisch"
+                        },
+                        "dsp-eng_9_2_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 6,
+                            "question_text": "Unsere Lehrkraft drückt sich im Unterricht klar und verständlich auf Englisch aus.",
+                            "subdimension": "Kommunikation der Lehrkraft in sprachlich und fachlich korrektem und/aber dem Lernstand angepasstem Englisch"
+                        },
+                        "dsp-eng_9_2_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 7,
+                            "question_text": "Unsere Lehrkraft verwendet selten englische Begriffe, die ich nicht kenne.",
+                            "subdimension": "Kommunikation der Lehrkraft in sprachlich und fachlich korrektem und/aber dem Lernstand angepasstem Englisch"
+                        },
+                        "dsp-eng_9_2_4": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 8,
+                            "question_text": "Unsere Lehrkraft formuliert ihre Sätze auf Englisch um, wenn sie merkt, dass wir sie nicht verstehen.",
+                            "subdimension": "Kommunikation der Lehrkraft in sprachlich und fachlich korrektem und/aber dem Lernstand angepasstem Englisch"
+                        },
+                        "dsp-eng_9_2_5": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 9,
+                            "question_text": "Unsere Lehrkraft muss nicht lange überlegen, wenn sie etwas auf Englisch sagt.",
+                            "subdimension": "Kommunikation der Lehrkraft in sprachlich und fachlich korrektem und/aber dem Lernstand angepasstem Englisch"
+                        },
+                        "dsp-eng_9_2_6": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 10,
+                            "question_text": "Unserer Lehrkraft fallen in der Regel englische Wörter sehr schnell ein.",
+                            "subdimension": "Kommunikation der Lehrkraft in sprachlich und fachlich korrektem und/aber dem Lernstand angepasstem Englisch"
+                        },
+                        "dsp-eng_9_2_7": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 11,
+                            "question_text": "Unsere Lehrkraft spricht sehr flüssig auf Englisch.",
+                            "subdimension": "Kommunikation der Lehrkraft in sprachlich und fachlich korrektem und/aber dem Lernstand angepasstem Englisch"
+                        },
+                        "dsp-eng_9_2_8": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 12,
+                            "question_text": "Unsere Lehrkraft hat eine sehr gute englische Aussprache.",
+                            "subdimension": "Kommunikation der Lehrkraft in sprachlich und fachlich korrektem und/aber dem Lernstand angepasstem Englisch"
+                        },
+                        "dsp-eng_9_3_1": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 13,
+                            "question_text": "Unsere Lehrkraft lässt mir genügend Zeit, auf Englisch zu antworten.",
+                            "subdimension": "Unterstützung der kognitiven Aktivität der Schüler:innen"
+                        },
+                        "dsp-eng_9_3_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 14,
+                            "question_text": "Wenn man einen Fehler auf Englisch macht, fragt unsere Lehrkraft manchmal die anderen, wie es richtig heißt.",
+                            "subdimension": "Unterstützung der kognitiven Aktivität der Schüler:innen"
+                        },
+                        "dsp-eng_9_3_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 15,
+                            "question_text": "Wenn man ein Wort auf Englisch nicht weiß, fragt unsere Lehrkraft manchmal die anderen, ob sie es wissen.",
+                            "subdimension": "Unterstützung der kognitiven Aktivität der Schüler:innen"
+                        },
+                        "dsp-eng_9_3_4": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 16,
+                            "question_text": "Für das Schreiben verschiedener Texte stellt unsere Lehrkraft hilfreiche Textbausteine und Formulierungen bereit.",
+                            "subdimension": "Unterstützung der kognitiven Aktivität der Schüler:innen"
+                        },
+                        "dsp-eng_9_3_5": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 17,
+                            "question_text": "Unsere Lehrkraft bereitet uns mit Redewendungen und Formulierungen auf Gesprächssituationen vor.",
+                            "subdimension": "Unterstützung der kognitiven Aktivität der Schüler:innen"
+                        },
+                        "dsp-eng_9_4_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 18,
+                            "question_text": "Unsere Lehrkraft vergleicht manchmal die englische Grammatik mit der Grammatik, die wir schon aus anderen (Fremd-)Sprachen kennen.",
+                            "subdimension": "Schaffung und Nutzung interdisziplinärer Bezüge zwischen (schulischen) Fremdsprachen als Lerngelegenheiten"
+                        },
+                        "dsp-eng_9_4_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 19,
+                            "question_text": "Der Unterricht hilft mir, die deutsche Sprache besser zu verstehen.",
+                            "subdimension": "Schaffung und Nutzung interdisziplinärer Bezüge zwischen (schulischen) Fremdsprachen als Lerngelegenheiten"
+                        },
+                        "dsp-eng_9_4_3": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 20,
+                            "question_text": "Unsere Lehrkraft vergleicht manchmal neue englische Vokabeln mit Vokabeln, die wir schon aus anderen (Fremd-)Sprachen kennen.",
+                            "subdimension": "Schaffung und Nutzung interdisziplinärer Bezüge zwischen (schulischen) Fremdsprachen als Lerngelegenheiten"
+                        },
+                        "dsp-eng_9_5_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 21,
+                            "question_text": "Unserer Lehrkraft ist es wichtig, dass wir im Unterricht viel Englisch sprechen.",
+                            "subdimension": "Schaffung hoher Sprechanteile"
+                        },
+                        "dsp-eng_9_5_2": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 22,
+                            "question_text": "Im Unterricht schafft unsere Lehrkraft viele Gelegenheiten, damit ich mich auf Englisch äußern kann.",
+                            "subdimension": "Schaffung hoher Sprechanteile"
+                        },
+                        "dsp-eng_9_5_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 23,
+                            "question_text": "Unsere Lehrkraft fordert uns auf, im Unterricht auf Englisch zu antworten.",
+                            "subdimension": "Schaffung hoher Sprechanteile"
+                        },
+                        "dsp-eng_9_5_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 24,
+                            "question_text": "Im Unterricht sprechen wir in der Regel Englisch.",
+                            "subdimension": "Schaffung hoher Sprechanteile"
+                        },
+                        "dsp-eng_9_5_5": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 25,
+                            "question_text": "Wenn ich ein englisches Wort falsch ausspreche, werde ich in der Klasse nicht ausgelacht.",
+                            "subdimension": "Schaffung hoher Sprechanteile"
+                        },
+                        "dsp-eng_9_5_6": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 26,
+                            "question_text": "Ich traue mich, im Unterricht auf Englisch zu antworten, auch wenn ich mir manchmal unsicher bin.",
+                            "subdimension": "Schaffung hoher Sprechanteile"
+                        }
+                    }
+                },
+                "Evangelische Religion": {
+                    "pool": {
+                        "dsp-rel_9_1_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 1,
+                            "question_text": "Im Unterricht lerne ich fremde Kulturen und Lebenswelten kennen.",
+                            "subdimension": "Fremdheitserfahrung"
+                        },
+                        "dsp-rel_9_1_2": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 2,
+                            "question_text": "Der Unterricht lässt mich (bekannte) Dinge oftmals anders sehen.",
+                            "subdimension": "Fremdheitserfahrung"
+                        },
+                        "dsp-rel_9_1_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 3,
+                            "question_text": "Im Unterricht gibt es häufig Gelegenheiten, den Blickwinkel anderer Personen einzunehmen.",
+                            "subdimension": "Fremdheitserfahrung"
+                        },
+                        "dsp-rel_9_1_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 4,
+                            "question_text": "Unsere Lehrkraft ermutigt uns, selbstständig Gemeinsamkeiten und Unterschiede zwischen unserer und fremden Kulturen und Lebenswelten zu finden.",
+                            "subdimension": "Fremdheitserfahrung"
+                        },
+                        "dsp-rel_9_2_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 5,
+                            "question_text": "Unsere Lehrkraft sagt ehrlich, wenn sie nicht auf alle Fragen fertige Antworten hat.",
+                            "subdimension": "Authentizität"
+                        },
+                        "dsp-rel_9_2_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 6,
+                            "question_text": "Ich glaube meiner Lehrkraft, was sie sagt.",
+                            "subdimension": "Authentizität"
+                        },
+                        "dsp-rel_9_2_3": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 7,
+                            "question_text": "Unsere Lehrkraft steht hinter dem, was sie im Religionsunterricht sagt.",
+                            "subdimension": "Authentizität"
+                        },
+                        "dsp-rel_9_3_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 8,
+                            "question_text": "In unserem Religionsunterricht wird normalerweise jede Meinung erst einmal angehört.",
+                            "subdimension": "Dialogorientierung"
+                        },
+                        "dsp-rel_9_3_2": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 9,
+                            "question_text": "Unserer Lehrkraft ist es wichtig, dass Diskussionen nicht so schnell abgebrochen werden, auch wenn eigentlich ein anderes Thema dran wäre.",
+                            "subdimension": "Dialogorientierung"
+                        },
+                        "dsp-rel_9_3_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 10,
+                            "question_text": "Unsere Lehrkraft nimmt meine Vorstellungen über Gott oder religiöse Themen ernst.",
+                            "subdimension": "Dialogorientierung"
+                        },
+                        "dsp-rel_9_3_4": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 11,
+                            "question_text": "Unsere Lehrkraft achtet darauf, dass  in Diskussionen über religiöse Themen niemand wegen seiner Vorstellungen ausgelacht wird.",
+                            "subdimension": "Dialogorientierung"
+                        },
+                        "dsp-rel_9_3_5": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 12,
+                            "question_text": "Die Gespräche im Religionsunterricht helfen mir, eine eigene Meinung zu religiösen Themen zu finden.",
+                            "subdimension": "Dialogorientierung"
+                        },
+                        "dsp-rel_9_3_6": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 13,
+                            "question_text": "Die Diskussionen und Gespräche im Religionsunterricht helfen mir, religiöse Themen aus unterschiedlichen Blickwinkeln zu betrachten.",
+                            "subdimension": "Dialogorientierung"
+                        },
+                        "dsp-rel_9_3_7": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 14,
+                            "question_text": "In unserem Religionsunterricht gibt es immer wieder gute Gespräche, über die ich auch später noch nachdenke.",
+                            "subdimension": "Dialogorientierung"
+                        },
+                        "dsp-rel_9_3_8": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 15,
+                            "question_text": "Unsere Lehrkraft weicht auch mal von ihrem Plan im Unterricht ab, wenn es Bedarf an Diskussion gibt.",
+                            "subdimension": "Dialogorientierung"
+                        },
+                        "dsp-rel_9_4_1": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 16,
+                            "question_text": "Unsere Lehrkraft hilft mir, mich besser in Menschen mit einem anderen Glauben hineinzuversetzen.",
+                            "subdimension": "Interreligiöses Lernen"
+                        },
+                        "dsp-rel_9_4_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 17,
+                            "question_text": "Im Religionsunterricht lernen wir die Sichtweisen von Menschen kennen, die anders glauben.",
+                            "subdimension": "Interreligiöses Lernen"
+                        },
+                        "dsp-rel_9_4_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 18,
+                            "question_text": "Durch den Religionsunterricht habe ich herausgefunden, was mich mit anderen Religionen und Glaubensweisen verbindet.",
+                            "subdimension": "Interreligiöses Lernen"
+                        },
+                        "dsp-rel_9_4_4": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 19,
+                            "question_text": "Durch den Religionsunterricht habe ich herausgefunden, was mir an anderen Religionen und Glaubensweisen schwerfällt zu akzeptieren.",
+                            "subdimension": "Interreligiöses Lernen"
+                        },
+                        "dsp-rel_9_4_5": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 20,
+                            "question_text": "Im Religionsunterricht sprechen wir auch manchmal mit Menschen anderer Religionen und Glaubensweisen.",
+                            "subdimension": "Interreligiöses Lernen"
+                        },
+                        "dsp-rel_9_5_1": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 21,
+                            "question_text": "Im Religionsunterricht habe ich das Gefühl, dass ich als Person wichtig bin.",
+                            "subdimension": "Subjektorientierung"
+                        },
+                        "dsp-rel_9_5_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 22,
+                            "question_text": "Durch den Religionsunterricht kann ich mit schwierigen Lebensfragen besser umgehen.",
+                            "subdimension": "Subjektorientierung"
+                        },
+                        "dsp-rel_9_5_3": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 23,
+                            "question_text": "Im Religionsunterricht können wir auch mal die dunklen Seiten unseres Lebens ansprechen.",
+                            "subdimension": "Subjektorientierung"
+                        },
+                        "dsp-rel_9_5_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 24,
+                            "question_text": "Im Religionsunterricht unserer Lehrkraft kann jeder offen über seinen persönlichen Glauben oder Nicht-Glauben reden.",
+                            "subdimension": "Subjektorientierung"
+                        },
+                        "dsp-rel_9_6_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 25,
+                            "question_text": "Durch den Religionsunterricht unserer Lehrkraft habe ich nun mehr Gewissheit darüber, warum ich religiöse Dinge tue oder auch nicht tue. (Beispiele: Gottesdienst, christliche Jugendgruppe oder Freizeiten besuchen, christliche Lieder singen, für mich und für andere beten).",
+                            "subdimension": "Religiöse Deutungsangebote wahrnehmen und darüber entscheiden"
+                        },
+                        "dsp-rel_9_6_2": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 26,
+                            "question_text": "Durch den Religionsunterricht unserer Lehrkraft wird mir klar, wo mir Religion und Religiöses in meinem Alltag begegnet.",
+                            "subdimension": "Religiöse Deutungsangebote wahrnehmen und darüber entscheiden"
+                        },
+                        "dsp-rel_9_7_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 27,
+                            "question_text": "Unsere Religionslehrkraft hat immer ein offenes Ohr für uns.",
+                            "subdimension": "Seelsorge"
+                        },
+                        "dsp-rel_9_7_2": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 28,
+                            "question_text": "Meiner Religionslehrkraft kann ich mich auch mit schwierigen Fragen  anvertrauen.",
+                            "subdimension": "Seelsorge"
+                        }
+                    }
+                },
+                "Latein": {
+                    "pool": {
+                        "dsp-lat_9_1_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 1,
+                            "question_text": "Im Unterricht lerne ich fremde Kulturen und Lebenswelten kennen.",
+                            "subdimension": "Fremdheitserfahrung"
+                        },
+                        "dsp-lat_9_1_2": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 2,
+                            "question_text": "Der Unterricht lässt mich (bekannte) Dinge oftmals anders sehen.",
+                            "subdimension": "Fremdheitserfahrung"
+                        },
+                        "dsp-lat_9_1_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 3,
+                            "question_text": "Im Unterricht gibt es häufig Gelegenheiten, den Blickwinkel anderer Personen einzunehmen.",
+                            "subdimension": "Fremdheitserfahrung"
+                        },
+                        "dsp-lat_9_1_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 4,
+                            "question_text": "Unsere Lehrkraft ermutigt uns, selbstständig Gemeinsamkeiten und Unterschiede zwischen unserer und fremden Kulturen und Lebenswelten zu finden.",
+                            "subdimension": "Fremdheitserfahrung"
+                        },
+                        "dsp-lat_9_1_5": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 5,
+                            "question_text": "Unsere Lehrkraft macht uns immer wieder darauf aufmerksam, dass die Römer anders über bestimmte Dinge dachten als wir heute.",
+                            "subdimension": "Fremdheitserfahrung"
+                        },
+                        "dsp-lat_9_1_6": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 6,
+                            "question_text": "Im Unterricht betrachten wir kritisch, wie die Römer über andere Völker dachten und mit ihnen umgingen.",
+                            "subdimension": "Fremdheitserfahrung"
+                        },
+                        "dsp-lat_9_2_1": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 7,
+                            "question_text": "Unsere Lehrkraft vergleicht Latein immer wieder mit anderen Sprachen (z. B. Deutsch, Englisch, Französisch).",
+                            "subdimension": "Verwendung der Sprache als Reflexionsgegenstand"
+                        },
+                        "dsp-lat_9_2_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 8,
+                            "question_text": "Der Unterricht hilft mir, die deutsche Sprache besser zu verstehen.",
+                            "subdimension": "Verwendung der Sprache als Reflexionsgegenstand"
+                        },
+                        "dsp-lat_9_2_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 9,
+                            "question_text": "Im Unterricht sprechen wir oft darüber, wie die unterschiedlichen Bedeutungen eines lateinischen Worts zustande kommen.",
+                            "subdimension": "Verwendung der Sprache als Reflexionsgegenstand"
+                        },
+                        "dsp-lat_9_2_4": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 10,
+                            "question_text": "Im Unterricht führen wir deutsche Wörter, wenn möglich, auf ihren lateinischen Ursprung zurück.",
+                            "subdimension": "Verwendung der Sprache als Reflexionsgegenstand"
+                        },
+                        "dsp-lat_9_2_5": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 11,
+                            "question_text": "Unsere Lehrkraft weist regelmäßig darauf hin, dass wir Fachbegriffe wie Kasus, Subjekt oder Adjektiv, die wir im Unterricht lernen, auch auf andere Sprachen anwenden können.",
+                            "subdimension": "Verwendung der Sprache als Reflexionsgegenstand"
+                        },
+                        "dsp-lat_9_2_6": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 12,
+                            "question_text": "Beim Übersetzen aus dem Lateinischen bemerke ich oft, wie viele Möglichkeiten es gibt, etwas auszudrücken.",
+                            "subdimension": "Verwendung der Sprache als Reflexionsgegenstand"
+                        },
+                        "dsp-lat_9_3_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 13,
+                            "question_text": "Unsere Lehrkraft gibt Arbeitsanweisungen auf Lateinisch.",
+                            "subdimension": "Aktiver Gebrauch der Sprache als Kommunikationsmedium"
+                        },
+                        "dsp-lat_9_3_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 14,
+                            "question_text": "Unsere Lehrkraft gibt (einfache) Antworten auf Lateinisch.",
+                            "subdimension": "Aktiver Gebrauch der Sprache als Kommunikationsmedium"
+                        },
+                        "dsp-lat_9_3_3": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 15,
+                            "question_text": "Unserer Lehrkraft ist es wichtig, dass wir lateinische Texte laut vorlesen.",
+                            "subdimension": "Aktiver Gebrauch der Sprache als Kommunikationsmedium"
+                        },
+                        "dsp-lat_9_4_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 16,
+                            "question_text": "Im Unterricht beschäftigen wir uns immer wieder mit Bauwerken, Texten oder Kunstgegenständen, die auf Vorbilder aus der Römerzeit zurückgehen.",
+                            "subdimension": "Auswahl und Berücksichtigung bedeutsamer Rezeptionsdokumente"
+                        },
+                        "dsp-lat_9_4_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 17,
+                            "question_text": "Im Unterricht lerne ich auch Kunst und Literatur kennen, die nach der Zeit der Römer entstanden ist.",
+                            "subdimension": "Auswahl und Berücksichtigung bedeutsamer Rezeptionsdokumente"
+                        },
+                        "dsp-lat_9_4_3": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 18,
+                            "question_text": "Im Unterricht betrachten und bestimmen wir oft römische (und griechische) Einflüsse auf Kunstwerke und Literatur der Gegenwart.",
+                            "subdimension": "Auswahl und Berücksichtigung bedeutsamer Rezeptionsdokumente"
+                        },
+                        "dsp-lat_9_5_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": true,
+                            "index": 19,
+                            "question_text": "Unsere Lehrkraft betont ständig, dass Latein auch heute noch wichtig ist.",
+                            "subdimension": "Kritische Reflexion über die gegenwärtige (und zukünftige) kulturelle wie auch gesellschaftliche Relevanz des Fachs"
+                        },
+                        "dsp-lat_9_5_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 20,
+                            "question_text": "Im Unterricht hinterfragen wir, welche Bedeutung die Zeit der Römer heute noch für uns hat.",
+                            "subdimension": "Kritische Reflexion über die gegenwärtige (und zukünftige) kulturelle wie auch gesellschaftliche Relevanz des Fachs"
+                        },
+                        "dsp-lat_9_5_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": true,
+                            "index": 21,
+                            "question_text": "Mit unserer Lehrkraft haben wir noch nie diskutiert, warum wir heute noch Latein lernen.",
+                            "subdimension": "Kritische Reflexion über die gegenwärtige (und zukünftige) kulturelle wie auch gesellschaftliche Relevanz des Fachs"
+                        },
+                        "dsp-lat_9_5_4": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 22,
+                            "question_text": "Im Unterricht denken wir auch darüber nach, welchen Nutzen es hat, Latein zu lernen.",
+                            "subdimension": "Kritische Reflexion über die gegenwärtige (und zukünftige) kulturelle wie auch gesellschaftliche Relevanz des Fachs"
+                        },
+                        "dsp-lat_9_6_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 23,
+                            "question_text": "Im Unterricht betrachten wir Texte, einzelne Sätze, bestimmte Wörter und deren Endungen immer ganz genau.",
+                            "subdimension": "Zeitintensive, stark fokussierte und analytisch genaue Betrachtung von Fachinhalten"
+                        },
+                        "dsp-lat_9_6_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 24,
+                            "question_text": "Unsere Lehrkraft fordert uns auf, über die Bedeutung von Wörtern genau nachzudenken.",
+                            "subdimension": "Zeitintensive, stark fokussierte und analytisch genaue Betrachtung von Fachinhalten"
+                        },
+                        "dsp-lat_9_6_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 25,
+                            "question_text": "In einer Stunde schaffen wir manchmal nur einen einzigen Satz.",
+                            "subdimension": "Zeitintensive, stark fokussierte und analytisch genaue Betrachtung von Fachinhalten"
+                        },
+                        "dsp-lat_9_6_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": true,
+                            "index": 26,
+                            "question_text": "Im Unterricht fällt es schwer, den Zusammenhang eines Texts zu erkennen, weil dieser nur in kurzen Abschnitten gelesen wird.",
+                            "subdimension": "Zeitintensive, stark fokussierte und analytisch genaue Betrachtung von Fachinhalten"
+                        },
+                        "dsp-lat_9_6_5": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 27,
+                            "question_text": "Im Unterricht lesen wir wenige Sätze. Dann besprechen wir deren Inhalt ausführlich.",
+                            "subdimension": "Zeitintensive, stark fokussierte und analytisch genaue Betrachtung von Fachinhalten"
+                        },
+                        "dsp-lat_9_6_6": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 28,
+                            "question_text": "Wir diskutieren häufig, wie ein bestimmtes lateinisches Wort oder ein Satzteil zu verstehen ist.",
+                            "subdimension": "Zeitintensive, stark fokussierte und analytisch genaue Betrachtung von Fachinhalten"
+                        },
+                        "dsp-lat_9_7_1": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 29,
+                            "question_text": "Unsere Lehrkraft vergleicht häufig aktuelle Ereignisse (z. B. in Gesellschaft, Politik) mit Ereignissen bei den Römern.",
+                            "subdimension": "Regelmäßige Aktualitätsbezüge zur Lebenswelt der Schüler:innen"
+                        },
+                        "dsp-lat_9_7_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 30,
+                            "question_text": "Unsere Lehrkraft zeigt uns regelmäßig an Beispielen, wie die Zeit der Römer unsere Lebenswelt noch heute beeinflusst.",
+                            "subdimension": "Regelmäßige Aktualitätsbezüge zur Lebenswelt der Schüler:innen"
+                        },
+                        "dsp-lat_9_8_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 31,
+                            "question_text": "Unsere Lehrkraft weckt mein Interesse an den alten Römern und Griechen.",
+                            "subdimension": "Förderung einer Faszination an Latein"
+                        },
+                        "dsp-lat_9_8_2": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 32,
+                            "question_text": "Unsere Lehrkraft kann mich häufig für Inhalte des Lateinunterrichts begeistern.",
+                            "subdimension": "Förderung einer Faszination an Latein"
+                        },
+                        "dsp-lat_9_8_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 33,
+                            "question_text": "Unsere Lehrkraft stellt Inhalte so dar, dass ich mich gerne auch außerhalb des Unterrichts damit beschäftige.",
+                            "subdimension": "Förderung einer Faszination an Latein"
+                        }
+                    }
+                },
+                "Mathematik": {
+                    "pool": {
+                        "dsp-mat_9_1_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 1,
+                            "question_text": "Im Unterricht lerne ich fremde Kulturen und Lebenswelten kennen.",
+                            "subdimension": "Fremdheitserfahrung"
+                        },
+                        "dsp-mat_9_1_2": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 2,
+                            "question_text": "Der Unterricht lässt mich (bekannte) Dinge oftmals anders sehen.",
+                            "subdimension": "Fremdheitserfahrung"
+                        },
+                        "dsp-mat_9_1_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 3,
+                            "question_text": "Im Unterricht gibt es häufig Gelegenheiten, den Blickwinkel anderer Personen einzunehmen.",
+                            "subdimension": "Fremdheitserfahrung"
+                        },
+                        "dsp-mat_9_1_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 4,
+                            "question_text": "Unsere Lehrkraft ermutigt uns, selbstständig Gemeinsamkeiten und Unterschiede zwischen unserer und fremden Kulturen und Lebenswelten zu finden.",
+                            "subdimension": "Fremdheitserfahrung"
+                        },
+                        "dsp-mat_9_2_1": {
+                            "nwfg_study_exclusive": false,
+                            "recode": true,
+                            "index": 5,
+                            "question_text": "Ich habe das Gefühl, dass unsere Lehrkraft Jungen in Mathematik mehr zutraut.",
+                            "subdimension": "Gendersensibler Unterricht"
+                        },
+                        "dsp-mat_9_2_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 6,
+                            "question_text": "Unsere Lehrkraft vermittelt den Eindruck, dass jede:r in Mathematik gut sein kann.",
+                            "subdimension": "Gendersensibler Unterricht"
+                        },
+                        "dsp-mat_9_2_3": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 7,
+                            "question_text": "Ich habe das Gefühl, unsere Lehrkraft ist davon überzeugt, dass Leistungen in Mathematik nicht vom Geschlecht abhängen.",
+                            "subdimension": "Gendersensibler Unterricht"
+                        },
+                        "dsp-mat_9_2_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": true,
+                            "index": 8,
+                            "question_text": "Unsere Lehrkraft fördert Jungen im Unterricht besonders.",
+                            "subdimension": "Gendersensibler Unterricht"
+                        },
+                        "dsp-mat_9_2_5": {
+                            "nwfg_study_exclusive": true,
+                            "recode": true,
+                            "index": 9,
+                            "question_text": "Unsere Lehrkraft fördert Mädchen im Unterricht besonders.",
+                            "subdimension": "Gendersensibler Unterricht"
+                        },
+                        "dsp-mat_9_2_6": {
+                            "nwfg_study_exclusive": false,
+                            "recode": true,
+                            "index": 10,
+                            "question_text": "Unsere Lehrkraft vermittelt den Eindruck, dass Jungen Mathematik einfach besser können als Mädchen.",
+                            "subdimension": "Gendersensibler Unterricht"
+                        },
+                        "dsp-mat_9_3_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 11,
+                            "question_text": "Unsere Lehrkraft stellt häufig Aufgaben (zu Alltagssituationen), bei denen wir selbst herausfinden müssen, welche der gegebenen Informationen wichtig sind.",
+                            "subdimension": "Modellierung"
+                        },
+                        "dsp-mat_9_3_2": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 12,
+                            "question_text": "Unsere Lehrkraft stellt immer wieder Aufgaben (zu Alltagssituationen), bei denen wir selbst herausfinden müssen, ob und welche Informationen fehlen.",
+                            "subdimension": "Modellierung"
+                        },
+                        "dsp-mat_9_3_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 13,
+                            "question_text": "Im Unterricht beschreiben wir Alltagssituationen oftmals mithilfe mathematischer Darstellungen (wie z. B. Skizze, Tabelle, Graph, Term, Gleichung).",
+                            "subdimension": "Modellierung"
+                        },
+                        "dsp-mat_9_3_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 14,
+                            "question_text": "Unserer Lehrkraft ist es wichtig, dass wir lernen zu erkennen, dass sich viele Probleme des Alltags mithilfe von Mathematik beschreiben lassen.",
+                            "subdimension": "Modellierung"
+                        },
+                        "dsp-mat_9_3_5": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 15,
+                            "question_text": "Im Unterricht macht uns die Lehrkraft häufig vor, wie sie Alltagssituationen Schritt für Schritt in mathematische Darstellungen (z. B. Skizze, Tabelle, Graph, Term, Gleichung) überführt.",
+                            "subdimension": "Modellierung"
+                        },
+                        "dsp-mat_9_3_6": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 16,
+                            "question_text": "Unsere Lehrkraft gibt uns Tipps, wie wir selbstständig Alltagssituationen mithilfe von Mathematik beschreiben können.",
+                            "subdimension": "Modellierung"
+                        },
+                        "dsp-mat_9_3_7": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 17,
+                            "question_text": "Unsere Lehrkraft fragt uns bei Aufgaben zu Alltagssituationen immer wieder, was unsere (mathematischen) Lösungen bezogen auf diese Situationen bedeuten.",
+                            "subdimension": "Modellierung"
+                        },
+                        "dsp-mat_9_3_8": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 18,
+                            "question_text": "Unsere Lehrkraft fordert uns dazu auf, bei Aufgaben zu Alltagssituationen immer zu überprüfen, ob unsere Lösungen bezogen auf diese Situationen sinnvoll sind.",
+                            "subdimension": "Modellierung"
+                        },
+                        "dsp-mat_9_3_9": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 19,
+                            "question_text": "Im Unterricht üben wir immer wieder, wie man Probleme des Alltags in die Welt der Mathematik überführen kann.",
+                            "subdimension": "Modellierung"
+                        },
+                        "dsp-mat_9_4_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 20,
+                            "question_text": "Unserer Lehrkraft ist es wichtig, uns immer wieder zu zeigen, dass es auch in Mathematik noch ungelöste/unlösbare Fragen und Probleme gibt.",
+                            "subdimension": "(Historische) Kontextualisierung"
+                        },
+                        "dsp-mat_9_4_2": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 21,
+                            "question_text": "Im Unterricht beschäftigen wir uns nicht nur mit mathematischen Inhalten, sondern auch damit, welche Frage- und Problemstellungen im Verlauf der Geschichte zur Entdeckung dieser Inhalte führten.",
+                            "subdimension": "(Historische) Kontextualisierung"
+                        },
+                        "dsp-mat_9_4_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 22,
+                            "question_text": "Unsere Lehrkraft nutzt auch Beispiele aus der Geschichte der Mathematik, um uns zu zeigen, welche Bedeutung bestimmte mathematische Fragestellungen und Entdeckungen haben.",
+                            "subdimension": "(Historische) Kontextualisierung"
+                        },
+                        "dsp-mat_9_5_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 23,
+                            "question_text": "Unsere Lehrkraft verwendet im Unterricht spezielle digitale Geräte oder Programme (z. B. GeoGebra, Cinderella, CAS-Taschenrechner), um bestimmte Inhalte zu veranschaulichen.",
+                            "subdimension": "Sinnvolle Nutzung (digitaler) Medien"
+                        },
+                        "dsp-mat_9_5_2": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 24,
+                            "question_text": "Wir benutzen im Unterricht immer wieder spezielle digitale Geräte oder Programme (z. B. GeoGebra, Cinderella, CAS-Taschenrechner), um neue Inhalte selbstständig zu erarbeiten.",
+                            "subdimension": "Sinnvolle Nutzung (digitaler) Medien"
+                        },
+                        "dsp-mat_9_5_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 25,
+                            "question_text": "Im Unterricht sollen wir immer wieder spezielle digitale Geräte oder Programme (z. B. GeoGebra, Cinderella, CAS-Taschenrechner) nutzen, um Aufgaben zu bearbeiten.",
+                            "subdimension": "Sinnvolle Nutzung (digitaler) Medien"
+                        },
+                        "dsp-mat_9_5_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": true,
+                            "index": 26,
+                            "question_text": "Wir verwenden nie spezielle digitale Geräte oder Programme (z. B. GeoGebra, Cinderella, CAS-Taschenrechner) im Unterricht.",
+                            "subdimension": "Sinnvolle Nutzung (digitaler) Medien"
+                        },
+                        "dsp-mat_9_5_5": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 27,
+                            "question_text": "Unserer Lehrkraft ist es wichtig, im Unterricht spezielle digitale Geräte oder Programme (z. B. GeoGebra, Cinderella, CAS-Taschenrechner) so einzusetzen, dass wir mathematische Inhalte und Zusammenhänge besser verstehen.",
+                            "subdimension": "Sinnvolle Nutzung (digitaler) Medien"
+                        },
+                        "dsp-mat_9_5_6": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 28,
+                            "question_text": "Unsere Lehrkraft gibt uns immer wieder Hinweise, wie wir im Unterricht spezielle digitale Geräte oder Programme (z. B. GeoGebra, Cinderella, CAS-Taschenrechner) sinnvoll einsetzen können, um mathematische Aufgaben zu lösen.",
+                            "subdimension": "Sinnvolle Nutzung (digitaler) Medien"
+                        },
+                        "dsp-mat_9_5_7": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 29,
+                            "question_text": "Wir verwenden im Unterricht für einfache Rechen- und Zeichenschritte spezielle digitale Hilfsmittel (z. B. GeoGebra, Cinderella, CAS-Taschenrechner). So können wir uns mit mathematischen Inhalten und Zusammenhängen selbst genauer beschäftigen.",
+                            "subdimension": "Sinnvolle Nutzung (digitaler) Medien"
+                        }
+                    }
+                },
+                "Musik": {
+                    "pool": {
+                        "dsp-mus_9_1_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 1,
+                            "question_text": "Im Unterricht lerne ich fremde Kulturen und Lebenswelten kennen.",
+                            "subdimension": "Fremdheitserfahrung"
+                        },
+                        "dsp-mus_9_1_2": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 2,
+                            "question_text": "Der Unterricht lässt mich (bekannte) Dinge oftmals anders sehen.",
+                            "subdimension": "Fremdheitserfahrung"
+                        },
+                        "dsp-mus_9_1_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 3,
+                            "question_text": "Im Unterricht gibt es häufig Gelegenheiten, den Blickwinkel anderer Personen einzunehmen.",
+                            "subdimension": "Fremdheitserfahrung"
+                        },
+                        "dsp-mus_9_1_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 4,
+                            "question_text": "Unsere Lehrkraft ermutigt uns, selbstständig Gemeinsamkeiten und Unterschiede zwischen unserer und fremden Kulturen und Lebenswelten zu finden.",
+                            "subdimension": "Fremdheitserfahrung"
+                        },
+                        "dsp-mus_9_1_5": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 5,
+                            "question_text": "Im Unterricht hören wir Musikrichtungen, die mir bisher fremd waren.",
+                            "subdimension": "Fremdheitserfahrung"
+                        },
+                        "dsp-mus_9_2_1": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 6,
+                            "question_text": "Wenn wir mit Instrumenten musizieren, klingt es gut, auch wenn es nicht wie das Original klingt.",
+                            "subdimension": "Musizieren und sinnvoller Einsatz von musik. Instrumentarium"
+                        },
+                        "dsp-mus_9_2_2": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 7,
+                            "question_text": "Wenn wir mit Instrumenten musizieren, gibt es immer etwas, was ich gut spielen kann.",
+                            "subdimension": "Musizieren und sinnvoller Einsatz von musik. Instrumentarium"
+                        },
+                        "dsp-mus_9_2_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 8,
+                            "question_text": "Das Singen oder Musizieren im Unterricht hilft mir, Musiktheorie (z. B. Lesen von Noten, Bilden einer Tonleiter) besser zu verstehen.",
+                            "subdimension": "Musizieren und sinnvoller Einsatz von musik. Instrumentarium"
+                        },
+                        "dsp-mus_9_2_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 9,
+                            "question_text": "Im Unterricht erfinden wir manchmal auch Musik.",
+                            "subdimension": "Musizieren und sinnvoller Einsatz von musik. Instrumentarium"
+                        },
+                        "dsp-mus_9_3_1": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 10,
+                            "question_text": "Unsere Lehrkraft lässt mich selbst entscheiden, ob ich beim Musizieren in der Klasse etwas alleine vorführe.",
+                            "subdimension": "Bewahrung der Würde/ Umgang mit Fehlern"
+                        },
+                        "dsp-mus_9_3_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": true,
+                            "index": 11,
+                            "question_text": "Ich muss im Unterricht etwas vormachen, obwohl mir das peinlich ist.",
+                            "subdimension": "Bewahrung der Würde/ Umgang mit Fehlern"
+                        },
+                        "dsp-mus_9_3_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": true,
+                            "index": 12,
+                            "question_text": "Wir müssen im Unterricht einzeln vorsingen / vormusizieren.",
+                            "subdimension": "Bewahrung der Würde/ Umgang mit Fehlern"
+                        },
+                        "dsp-mus_9_4_1": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 13,
+                            "question_text": "Beim Musizieren in der Klasse haben wir Regeln, wie mit den Instrumenten umgegangen wird.",
+                            "subdimension": "Raum- und Materialmanagement"
+                        },
+                        "dsp-mus_9_4_2": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 14,
+                            "question_text": "Unsere Lehrkraft kann uns gut zeigen, wie wir die Musikinstrumente verwenden sollen.",
+                            "subdimension": "Raum- und Materialmanagement"
+                        },
+                        "dsp-mus_9_4_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 15,
+                            "question_text": "Wenn wir mit Instrumenten gemeinsam musizieren, hat unsere Lehrkraft diese schon vorbereitet.",
+                            "subdimension": "Raum- und Materialmanagement"
+                        },
+                        "dsp-mus_9_4_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 16,
+                            "question_text": "Unsere Lehrkraft weiß genau, wie Musikinstrumente eingesetzt werden können.",
+                            "subdimension": "Raum- und Materialmanagement"
+                        },
+                        "dsp-mus_9_4_5": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 17,
+                            "question_text": "Wenn wir gemeinsam mit Instrumenten musizieren, muss unsere Lehrkraft die Instrumente nicht lange suchen.",
+                            "subdimension": "Raum- und Materialmanagement"
+                        },
+                        "dsp-mus_9_5_1": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 18,
+                            "question_text": "Im Unterricht üben wir, wie wir uns zu einer bestimmten Musik bewegen können.",
+                            "subdimension": "Kognitiv-motorische Aktivierung"
+                        },
+                        "dsp-mus_9_5_2": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 19,
+                            "question_text": "Unsere Lehrkraft gibt uns regelmäßig Gelegenheiten, Bewegungen zur Musik oder das Spielen auf Instrumenten gut üben zu können.",
+                            "subdimension": "Kognitiv-motorische Aktivierung"
+                        },
+                        "dsp-mus_9_5_3": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 20,
+                            "question_text": "Im Unterricht machen wir auch mit unserem Körper Musik (z. B. durch Klatschen, Stampfen, Schnipsen, Ã–).",
+                            "subdimension": "Kognitiv-motorische Aktivierung"
+                        },
+                        "dsp-mus_9_5_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 21,
+                            "question_text": "Im Unterricht dürfen wir uns eigenständig zu einer bestimmten Musik bewegen.",
+                            "subdimension": "Kognitiv-motorische Aktivierung"
+                        },
+                        "dsp-mus_9_5_5": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 22,
+                            "question_text": "Im Unterricht machen wir auch immer wieder mit einfachen Gegenständen Musik (z. B. Stifte, Becher, Ã–).",
+                            "subdimension": "Kognitiv-motorische Aktivierung"
+                        },
+                        "dsp-mus_9_6_1": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 23,
+                            "question_text": "Musik, die ich selbst gerne höre oder mache, kommt auch im Unterricht vor.",
+                            "subdimension": "Auswahl und Berücksichtigung bedeutsamer Inhalte bzw. Lerngegenstände, um die existente musikalische Vielfalt aufzuzeigen"
+                        },
+                        "dsp-mus_9_6_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": true,
+                            "index": 24,
+                            "question_text": "Im Unterricht hören wir hauptsächlich klassische Musik.",
+                            "subdimension": "Auswahl und Berücksichtigung bedeutsamer Inhalte bzw. Lerngegenstände, um die existente musikalische Vielfalt aufzuzeigen"
+                        },
+                        "dsp-mus_9_6_3": {
+                            "nwfg_study_exclusive": true,
+                            "recode": true,
+                            "index": 25,
+                            "question_text": "Im Unterricht hören wir hauptsächlich Popmusik.",
+                            "subdimension": "Auswahl und Berücksichtigung bedeutsamer Inhalte bzw. Lerngegenstände, um die existente musikalische Vielfalt aufzuzeigen"
+                        },
+                        "dsp-mus_9_6_4": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 26,
+                            "question_text": "Im Unterricht hören wir sowohl klassische als auch Popmusik.",
+                            "subdimension": "Auswahl und Berücksichtigung bedeutsamer Inhalte bzw. Lerngegenstände, um die existente musikalische Vielfalt aufzuzeigen"
+                        },
+                        "dsp-mus_9_7_1": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 27,
+                            "question_text": "Im Unterricht habe ich oft die Gelegenheit, Instrumente auszuprobieren.",
+                            "subdimension": "Aktive Beteiligung"
+                        },
+                        "dsp-mus_9_7_2": {
+                            "nwfg_study_exclusive": true,
+                            "recode": false,
+                            "index": 28,
+                            "question_text": "Im Unterricht habe ich oft die Gelegenheit, gemeinsam mit der Klasse zu singen.",
+                            "subdimension": "Aktive Beteiligung"
+                        },
+                        "dsp-mus_9_7_3": {
+                            "nwfg_study_exclusive": false,
+                            "recode": false,
+                            "index": 29,
+                            "question_text": "Unsere Lehrkraft achtet darauf, dass beim Klassenmusizieren jeder auf eine bestimmte Art mitmachen kann.",
+                            "subdimension": "Aktive Beteiligung"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="en">
+  <head>
+    {% include 'evaluation_tool/components/header-base.html' %}
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/card-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/logo-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/main-title-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/footer-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/flexible-card-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/student-auth-style.css' %}" />
+  </head>
+
+  <body>
+    <main class="flex-page">
+      <div style="pointer-events: none">{% include 'evaluation_tool/components/logo-header.html' %}</div>
+      {% if messages %} {% for message in messages|slice:":1" %}
+      <div class="message-container">
+        <img class="message-icon" src="{% static 'icons/error.svg' %}" alt="Error Icon" />
+        <p class="message">{{message}}</p>
+      </div>
+      {% endfor %} {% endif %}
+      <a class="main-back-button" href="{% url 'start-evaluation-page' class_evaluation_id %}"
+        ><img class="main-back-button-icon" src="{% static 'icons/long-arrow-back-button.svg' %}" alt="Back Icon" /><span class="main-back-button-text">Zurück zur Startseite</span></a
+      >
+      <div class="main-card">
+        <div class="auth-title">
+          <p class="auth-title-text"></p>
+          <p class="auth-title-description">(Auf <b>ein</b> Bild klicken zum Auswählen)</p>
+        </div>
+        <div class="auth-img-selector">
+          <div class="auth-img-selector-item">
+            <img class="auth-img-selector-item-img" alt="selector image" />
+            <div class="auth-img-selector-check-footer" style="display: none">
+              <span class="auth-img-selector-footer-text">ausgewählt</span><img class="auth-img-selector-check-icon" src="{% static 'icons/check-circle.svg' %}" alt="check icon" />
+            </div>
+          </div>
+          <div class="auth-img-selector-item">
+            <img class="auth-img-selector-item-img" alt="selector image" />
+            <div class="auth-img-selector-check-footer">
+              <span class="auth-img-selector-footer-text">ausgewählt</span><img class="auth-img-selector-check-icon" src="{% static 'icons/check-circle.svg' %}" alt="check icon" />
+            </div>
+          </div>
+          <div class="auth-img-selector-item">
+            <img class="auth-img-selector-item-img" alt="selector image" />
+            <div class="auth-img-selector-check-footer">
+              <span class="auth-img-selector-footer-text">ausgewählt</span><img class="auth-img-selector-check-icon" src="{% static 'icons/check-circle.svg' %}" alt="check icon" />
+            </div>
+          </div>
+          <div class="auth-img-selector-item">
+            <img class="auth-img-selector-item-img" alt="selector image" />
+            <div class="auth-img-selector-check-footer">
+              <span class="auth-img-selector-footer-text">ausgewählt</span><img class="auth-img-selector-check-icon" src="{% static 'icons/check-circle.svg' %}" alt="check icon" />
+            </div>
+          </div>
+          <div class="auth-img-selector-item">
+            <img class="auth-img-selector-item-img" alt="selector image" />
+            <div class="auth-img-selector-check-footer">
+              <span class="auth-img-selector-footer-text">ausgewählt</span><img class="auth-img-selector-check-icon" src="{% static 'icons/check-circle.svg' %}" alt="check icon" />
+            </div>
+          </div>
+          <div class="auth-img-selector-item">
+            <img class="auth-img-selector-item-img" alt="selector image" />
+            <div class="auth-img-selector-check-footer">
+              <span class="auth-img-selector-footer-text">ausgewählt</span><img class="auth-img-selector-check-icon" src="{% static 'icons/check-circle.svg' %}" alt="check icon" />
+            </div>
+          </div>
+        </div>
+        <div class="auth-image-selector-counter-selection-containter">
+          <div class="auth-image-selector-counter-selection-card">
+            <span class="auth-image-selector-counter-selection-text"></span><img class="auth-img-selector-check-icon" src="{% static 'icons/image-square-fill.svg' %}" alt="image square icon" />
+          </div>
+        </div>
+        <form action="" method="POST" hidden>
+          {% csrf_token %}
+          <input class="pattern-form-input" type="text" name="acronym" placeholder="Muster eingeben..." value="" />
+          <button class="pattern-form-button" type="submit">Mit neuem Muster teilnehmen</button>
+        </form>
+        <p class="error-text-pattern-form">{{error_text}}</p>
+      </div>
+      <style>
+        .auth-past-card-header, .image-selector-actions-button-back, .image-selector-actions-button-continue {
+            background-color: {{subject_color}};
+        }
+        .phrase-text {
+          color: {{subject_color}};
+        }
+      </style>
+      <div class="image-selector-actions">
+        <div class="color-button image-selector-actions-button-back">Zurück</div>
+        <div class="color-button image-selector-actions-button-continue">Weiter</div>
+        <div class="color-button image-selector-actions-button-start">Starten</div>
+      </div>
+    </main>
+    <script>
+      var currentTopic = 0;
+      var selectedImages = { fabelwesen: null, verkehrsmittel: null, urlaub: null, haustiere: null, sportart: null };
+      var topicTitle = {
+        fabelwesen: "1. Welches Fabelwesen beschreibt dich im Kindergartenalter am besten?",
+        verkehrsmittel: "2. Wie hast du in der Grundschule den größten Teil deines Schulwegs zurückgelegt?",
+        urlaub: "3. Wie hast du deinen Urlaub in der Kindheit meistens verbracht?<br>Wenn du dich nicht entscheiden kannst: Wo würdest du ihn gerne verbringen?",
+        haustiere: "4. Welches dieser Haustiere hattest du als erstes?<br>Wenn du kein Haustier hattest, welches hättest du gerne?",
+        sportart: "5. Welche dieser Sportarten machst du am liebsten?<br>Oder welche würdest du gerne ausprobieren?",
+      };
+      var topicNames = Object.keys(selectedImages);
+      var classEvaluationId = "{{class_evaluation_id}}";
+
+      // register elements
+      let continueButton = document.querySelector(".image-selector-actions-button-continue");
+      let backButton = document.querySelector(".image-selector-actions-button-back");
+      let startButton = document.querySelector(".image-selector-actions-button-start");
+      let allImages = document.querySelectorAll(".auth-img-selector-item-img");
+      let allImagesFooter = document.querySelectorAll(".auth-img-selector-check-footer");
+      let allSelectorItems = document.querySelectorAll(".auth-img-selector-item");
+
+      function getNumberOfSelections() {
+        let numberOfSelections = 0;
+        for (let index = 0; index < topicNames.length; index++) {
+          if (selectedImages[topicNames[index]] !== null) {
+            numberOfSelections += 1;
+          }
+        }
+        return numberOfSelections;
+      }
+
+      function updateState() {
+        // update current image card selection
+        for (let index = 0; index < allImages.length; index++) {
+          let imgPath = "/static/img/auth/" + topicNames[currentTopic] + "/" + topicNames[currentTopic] + "-" + (index + 1) + ".jpg";
+          allImages[index].setAttribute("src", imgPath);
+          if (selectedImages[topicNames[currentTopic]] === index) {
+            allImagesFooter[index].style.display = "flex";
+          } else {
+            allImagesFooter[index].style.display = "none";
+          }
+        }
+
+        // update question text
+        document.querySelector(".auth-title-text").innerHTML = topicTitle[topicNames[currentTopic]];
+
+        // update available buttons: the "next" button should not be displayed on the last page and the "back" button should not be displayed on the first page.
+        if (currentTopic === 4) {
+          continueButton.style.display = "none";
+          startButton.style.display = "flex";
+        } else {
+          continueButton.style.display = "flex";
+          startButton.style.display = "none";
+        }
+
+        if (currentTopic === 0) {
+          backButton.style.display = "none";
+        } else {
+          backButton.style.display = "flex";
+        }
+
+        // deactivate continue button
+        if (selectedImages[topicNames[currentTopic]] === null) {
+          continueButton.style.opacity = "50%";
+          continueButton.style.cursor = "not-allowed";
+        } else {
+          continueButton.style.opacity = "100%";
+          continueButton.style.cursor = "pointer";
+        }
+
+        // deactivate start button
+        if (selectedImages[topicNames[currentTopic]] === null) {
+          startButton.style.opacity = "50%";
+          startButton.style.cursor = "not-allowed";
+        } else {
+          startButton.style.opacity = "100%";
+          startButton.style.cursor = "pointer";
+        }
+
+        // update counter: update the counter that counts how many topics have already been selected.
+        document.querySelector(".auth-image-selector-counter-selection-text").innerHTML = getNumberOfSelections() + "/5 Bilder ausgewählt";
+      }
+
+      // add button listeners for image cards
+      for (let index = 0; index < allSelectorItems.length; index++) {
+        allSelectorItems[index].addEventListener("click", () => {
+          selectedImages[topicNames[currentTopic]] = index;
+          updateState();
+          scrollToBottomSmoothly();
+        });
+      }
+
+      // add button listeners for back/continue buttons
+      continueButton.addEventListener("click", () => {
+        if (selectedImages[topicNames[currentTopic]] !== null) {
+          currentTopic += 1;
+          updateState();
+          scrollToTopSmoothly();
+        }
+      });
+
+      function scrollToBottomSmoothly() {
+        const bottomPosition = document.documentElement.scrollHeight;
+        const options = {
+          top: bottomPosition,
+          behavior: "smooth",
+        };
+        window.scrollTo(options);
+      }
+
+      function scrollToTopSmoothly() {
+        const options = {
+          top: 0,
+          behavior: "smooth",
+        };
+        window.scrollTo(options);
+      }
+
+      backButton.addEventListener("click", () => {
+        currentTopic -= 1;
+        updateState();
+        scrollToTopSmoothly();
+      });
+
+      startButton.addEventListener("click", () => {
+        // To-do: Prüfen, ob für alle fünf Themen ein Bild ausgewählt wurde + evtl "weiter nur erlauben, wenn auch ein bild ausgewählt wurde"
+        // erst in local storage speichern, wenn vom backend validiert
+        let inputPattern = "";
+        for (let index = 0; index < topicNames.length; index++) {
+          inputPattern += selectedImages[topicNames[index]] + 1;
+        }
+        document.querySelector(".pattern-form-input").value = inputPattern;
+        document.querySelector(".pattern-form-button").click();
+      });
+
+      updateState();
+    </script>
+    {% include 'evaluation_tool/components/default-footer.html' %}
+  </body>
+</html>

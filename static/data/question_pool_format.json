@@ -1,0 +1,32 @@
+{
+  "unspecific_dimensions": {
+    "<dimension_index:integer>": {
+      "dimension_name": "<dimension_name:string>",
+      "pool": {
+        "<question_code:string>": {
+          "nwfg_study_exclusive": "<nwfg_study_exclusive:boolean",
+          "index": "<index:integer>",
+          "question_text": "<question_text:string>",
+          "subdimension": "<subdimension:string>"
+        }
+      }
+    }
+  },
+  "specific_dimension": {
+    "<dimension_index:integer>": {
+      "dimension_name": "<dimension_name:string>",
+      "subjects": {
+        "<subject_name:string>": {
+          "pool": {
+            "<question_code:string>": {
+              "nwfg_study_exclusive": "<nwfg_study_exclusive:boolean",
+              "index": "<index:integer>",
+              "question_text": "<question_text:string>",
+              "subdimension": "<subdimension:string>"
+            }
+          }
+        }
+      }
+    }
+  }
+}

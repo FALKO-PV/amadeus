@@ -1,0 +1,174 @@
+<!DOCTYPE html> {% load static %}
+<html lang="en">
+  <head>
+    {% include 'evaluation_tool/components/header-base.html' %}
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/card-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/logo-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/main-title-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/start-evaluation-page-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/footer-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/cookie-consent.css' %}" />
+  </head>
+
+  <body>
+    <main>
+      <div style="pointer-events: none">{% include 'evaluation_tool/components/logo-header.html' %}</div>
+      {% if is_nwfg_evaluation and first_part_started %}
+      <div>
+        <div class="main-card questionnaire-hint-card">
+          <div class="questionnaire-icon-background"><img class="questionnaire-icon" src="{% static 'icons/question-icon.svg' %}" alt="question icon" /></div>
+          <div>
+            <p class="questionnaire-title">Hintergrundfragebogen</p>
+            <p class="questionnaire-text">
+              Mit diesem Gerät wurde bereits ein Bildmuster erstellt. <a class="questionnaire-link" target="_blank" href="">Hier</a> gelangst du noch einmal zu deinem Fragebogen.
+            </p>
+          </div>
+        </div>
+        <script>
+          var classEvaluationId = "{{class_evaluation_id}}";
+          let pattern = localStorage.getItem(classEvaluationId + "_pattern");
+          if (pattern) {
+            console.log("class id:", classEvaluationId);
+            console.log("pattern:", pattern);
+            let url = `https://limesurvey.eds-ur.de/index.php?r=survey/index&sid=981993&lang=de&NWFGCode={{nwfg_code}}&Schuelercode=` + pattern + `&Fach={{subject_code}}`;
+            document.querySelector(".questionnaire-link").href = url;
+          } else {
+            document.querySelector(".questionnaire-hint-card").style.display = "none"
+          }
+        </script>
+      </div>
+      {% endif %}
+      <div class="main-card">
+        <div class="evaluation-intro">
+          <div class="top-items-evaluation-intro">
+            <div>
+              {% if teacher_name != "" %}
+              <p class="meta-title">Lehrkraft</p>
+              <p class="meta-text teacher-name">{{teacher_name}}</p>
+              {% endif %}
+            </div>
+            {% if is_nwfg_evaluation and first_part_started %}
+            <div>
+              <div class="current-evaluation-info-card">
+                <p class="current-evaluation-info-card-title">{{erhebungszeitpunkt}}-{{befragungsrunde}}</p>
+                <p class="current-evaluation-info-card-description">Befragungsrunde</p>
+              </div>
+            </div>
+            {% endif %}
+          </div>
+
+          <style>
+            .current-evaluation-info-card {
+                background-color: {{subject_color}};
+            }
+          </style>
+
+          {% if not is_nwfg_evaluation %}
+          <div>
+            <p class="meta-title">Verfügbar bis</p>
+            <p class="meta-text evaluation-end">{{evaluation_end}}</p>
+          </div>
+          {% endif %}
+
+          <div class="subject-badge subject">{{subject}}</div>
+
+          {% if is_nwfg_evaluation and not first_part_started %}
+          <p class="intro-description">
+            <b>Herzlich willkommen zu AMADEUS!</b>
+            <br class="break-small" />
+            Wir freuen uns, dass du im Schuljahr 2023/2024 an der Studie FALKO-PV teilnimmst. In deren Verlauf werden wir dich bitten, einige Fragebögen auszufüllen. Um diese leichter bearbeiten zu
+            können, haben wir AMADEUS entwickelt. Das ist eine App, die du über dein Smartphone bedienen kannst. Zur Anmeldung bei AMADEUS benötigst du ein persönliches Bildmuster.
+            <br />
+            Dein persönliches Muster besteht aus fünf Bildern, die du selbst wählen kannst. Bitte merke dir diese Bilder gut. Damit du dir deine Bilder besser merken kannst, bilden diese einen
+            lustigen Merksatz. Schreibe diesen am besten sofort auf.
+            <br class="break-small" />
+            Viel Spaß bei der Auswahl deiner Bilder!
+            <br class="break-small" />
+            Deine Forschungsgruppe FALKO- PV
+          </p>
+          {% else %}
+          <p class="intro-description">
+            <b>Herzlich willkommen zu AMADEUS!</b>
+            <br class="break-small" />
+            Jetzt ist deine Meinung zum Unterricht deiner Lehrkraft gefragt, die diesen Link mit dir geteilt hat. Beantworte die folgenden Fragen einfach so, wie du selbst den Unterricht deiner
+            Lehrkraft erlebt hast. Dabei gibt es keine richtigen oder falschen Antworten.
+            <br />
+            Alle deine Antworten werden anonym gespeichert. Das heißt, dass deine Lehrkraft, deine Mitschüler:innen oder deine Eltern <i>nicht</i> herausfinden können, was du geantwortet hast. Du
+            kannst also ganz ehrlich sein.
+            <br class="break-small" />
+            Wir bedanken uns bei dir herzlich für deine Teilnahme!
+            <br class="break-small" />
+            Deine Forschungsgruppe FALKO-PV
+          </p>
+          {% endif %} {% if is_nwfg_evaluation and first_part_started %}
+          <form class="study-buttons" action="" method="POST">
+            {% csrf_token %}
+            <input class="start-button-with-nwfg" type="submit" name="action" value="Evaluation starten" style="background-color: {{subject_color}}" />
+          </form>
+          {% elif is_nwfg_evaluation %}
+          <p class="questionnaire-hint">Mit diesem Gerät wurde bereits ein Bildmuster erstellt. Ein weiteres Bildmuster erstellen?</p>
+          <form class="study-buttons two-options-questionnaire" action="" method="POST">
+            {% csrf_token %}
+            <input class="start-button-with-nwfg" type="submit" name="action" value="Ja, weiteres Muster erstellen" style="background-color: {{subject_color}}" />
+            <a class="to-questionnaire-button" target="_blank" style="background-color: {{subject_color}};" href="">Nein, zum Hintergrundfragebogen</a>
+          </form>
+          <script>
+            var classEvaluationId = "{{class_evaluation_id}}";
+            const storedPattern = localStorage.getItem(classEvaluationId + "_pattern");
+            if (!storedPattern) {
+              document.querySelector(".to-questionnaire-button").style.display = "none";
+              document.querySelector(".start-button-with-nwfg").value = "Mit Muster Registrieren";
+              document.querySelector(".questionnaire-hint").style.display = "none";
+            } else {
+              const url = `https://limesurvey.eds-ur.de/index.php?r=survey/index&sid=981993&lang=de&NWFGCode={{nwfg_code}}&Schuelercode=` + storedPattern + `&Fach={{subject_code}}`;
+              console.log(url);
+              document.querySelector(".to-questionnaire-button").href = url;
+            }
+            console.log("class id:", classEvaluationId);
+            console.log("pattern:", storedPattern);
+          </script>
+          {% else %}
+          <form class="study-buttons" action="" method="POST">
+            {% csrf_token %}
+            <input class="start-button-without-nwfg" type="submit" name="action" value="Evaluation starten" style="background-color: {{subject_color}}" />
+          </form>
+          {% endif %}
+        </div>
+      </div>
+      <button class="ajax-test-button" style="margin-top: 20px" hidden>Test Request</button>
+      <script type="text/javascript">
+        window.CSRF_TOKEN = "{{ csrf_token }}";
+      </script>
+
+      {% if is_nwfg_evaluation %}
+      <script src="{% static 'scripts/cookie-consent.js' %}" data-cfasync="false"></script>
+      <script>
+        window.cookieconsent.initialise({
+          palette: {
+            popup: {
+              background: "#505160",
+            },
+            button: {
+              background: "#292f61",
+            },
+          },
+          position: "bottom-left",
+          showLink: false,
+          theme: "classic",
+          "font-family": "Atkinson Hyperlegible",
+          type: "opt-out",
+          content: {
+            allow: "Akzeptieren",
+            deny: "Ablehnen",
+            message:
+              "Wir verwenden Cookies und vergleichbare Funktionen zur Verarbeitung von Endgeräteinformationen, zum Speichern Ihrer Anmeldedaten, für eine sichere Anmeldung, zur Erhebung statistischer Daten und zur Optimierung der Website-Funktionen. Ihre Einwilligung ist freiwillig und für die Nutzung der App nicht erforderlich.",
+          },
+        });
+      </script>
+      {% endif %}
+    </main>
+    {% include 'evaluation_tool/components/default-footer.html' %}
+    <script src="{% static 'scripts/change_subject_badge_color.js' %}"></script>
+  </body>
+</html>

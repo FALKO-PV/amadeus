@@ -1,0 +1,61 @@
+
+
+.falkopv-description {
+  margin-top: 40px;
+  text-align: justify;
+  margin-bottom: 0px;
+}
+
+.show-more-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 15px;
+  background-color: #c1e0ff7c;
+  width: max-content;
+  padding: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+}
+
+.show-more-text {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0px;
+  margin-left: 10px;
+}
+
+.show-more-icon {
+  width: 18px;
+}
+
+#more {
+  display: none;
+}
+
+.break-small {
+  display: block;
+  content: "";
+  margin-top: 10px;
+}
+
+.break-big {
+  display: block;
+  content: "";
+  margin-top: 20px;
+}
+
+.falko-link {
+  color: #292f61;
+  font-style: italic;
+}
+
+h1 {
+  font-size: 16px;
+}
+
+.back-button {
+  margin-top: 40px;
+}

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="en">
+  <head>
+    {% include 'evaluation_tool/components/header-base.html' %}
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/card-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/logo-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/falko-description-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/main-title-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/create-evaluation-form-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/create-evaluation-button-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/footer-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/cookie-consent.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/documentation-style.css' %}" />
+  </head>
+
+  <body>
+    <main>
+      {% include 'evaluation_tool/components/logo-header.html' %}
+      <a class="back-button" href="{% url 'start_page' %}">
+        <img class="arrow-back-left" src="{% static 'icons/arrow-fat-left-fill.svg' %}" alt="arrow left" />
+        <span>Zurück zur Startseite</span>
+      </a>
+      <div class="main-card main-card-sub-page">
+        <div class="left">
+          <h2>FAQs zu AMADEUS</h2>
+
+          <div>
+            <p>
+              Hier finden Sie Antworten auf verschiedene Fragen, die sich Nutzer:innen bei der Verwendung von AMADEUS gelegentlich stellen.<br />
+              &nbsp; &nbsp;
+            </p>
+            <div class="accordion-list">
+              <h4>Vorbereitung, Durchführung und Ergebnisse der Evaluation</h4>
+              <div class="section-item section-item-accordion">
+                <span>Wozu kann AMADEUS eingesetzt werden?</span>
+                <div class="section-list-item-button"><img class="arrow-icon" src="{% static 'icons/long-accordion-arrow-blue.svg' %}" alt="Pfeil" /></div>
+              </div>
+              <div class="accordion-content">
+                <div>
+                  <p>AMADEUS ist eine Web-App zur Evaluation der Qualität des eigenen Unterrichts aus der Perspektive von Schüler:innen. Folgende verschiedene Einsatzmöglichkeiten sind denkbar:</p>
+                  <ul>
+                    <li><span class="eigennamen">einmalige/summative Evaluation einer Unterrichtssequenz</span> als punktuelles Feedback,</li>
+                    <li>Evaluation <span class="eigennamen">neu erprobter Unterrichtsmaterialien / -methoden / -techniken</span> (z. B. auch im Prä-/Post-Vergleich),</li>
+                    <li>
+                      <span class="eigennamen">regelmäßige Evaluation</span> Ihres Unterrichts zum eigenen schuljahresbegleitenden Monitoring und zur Weiterentwicklung sowie Steigerung der Qualität
+                      Ihres Unterrichts,
+                    </li>
+                    <li>
+                      <span class="eigennamen">formative Evaluation</span> Ihres Unterrichts bei Vorbereitung auf eine (Lehr-)Prüfung oder Beurteilung,<br />
+                      (Weisen Sie Ihre Schüler:innen in diesem Fall bitte immer explizit darauf hin, sich auf eine bestimmte Stunde oder einen ganz bestimmten Zeitraum zu beziehen!)
+                    </li>
+                    <li>
+                      <span class="eigennamen">einmalige/summative Evaluation einer bestimmten Unterrichtsstunde</span>,<br />
+                      (Weisen Sie Ihre Schüler:innen in diesem Fall bitte immer explizit darauf hin, sich auf eine bestimmte Stunde oder einen ganz bestimmten Zeitraum zu beziehen!)
+                    </li>
+                    <li>
+                      Evaluation einer bestimmten Unterrichtsstunde zu einem ausgewählten Thema, aber <span class="eigennamen">mit verschiedenen Lerngruppen</span> und möglicherweise unter
+                      <span class="eigennamen">abweichenden didaktischen Ansätzen</span>,<br />
+                      (Weisen Sie Ihre Schüler:innen in diesem Fall bitte immer explizit darauf hin, sich auf eine bestimmte Stunde oder einen ganz bestimmten Zeitraum zu beziehen!)
+                    </li>
+                    <li>
+                      <span class="eigennamen">Schwerpunktsetzung auf generischen Merkmalen </span>von Unterrichtsqualität (z. B. kognitive Aktivierung, Klassenführung) oder sogar einem ganz
+                      bestimmten Merkmal wie Unterstützung des Übens,
+                    </li>
+                    <li><span class="eigennamen">Schwerpunktsetzung auf fachspezifischen Merkmalen</span> von Unterrichtsqualität,</li>
+                    <li>
+                      <span class="eigennamen">Schwerpunktsetzung auf einem Ihrer unterrichteten Fächer </span>oder einer <span class="eigennamen">bestimmten Klassen- bzw. Jahrgangsstufe</span>,
+                    </li>
+                    <li>
+                      <span class="eigennamen">individueller Feedbackbogen</span> als Grundlage der eigenen Unterrichtsreflexion (Was läuft bereits gut? Was könnte ich besser machen? Wie erfahren die
+                      Schüler:innen meinen Unterricht?),
+                    </li>
+                    <li>
+                      <span class="eigennamen">Gelegenheit für Schüler:innen</span>, durch gute Rückmeldung selbst Einfluss auf den Unterricht zu nehmen, Anregungen zu liefern und selbst Verantwortung
+                      für den Unterricht zu übernehmen,
+                    </li>
+                    <li>individueller Feedbackbogen als Grundlage für ein <span class="eigennamen">Entwicklungsgespräch, eine (Leistungs-)Beurteilung oder gar Bewerbung</span>,</li>
+                    <li><span class="eigennamen">Nachzeichnen des eigenen Entwicklungsverlaufs</span> durch die Dokumentationsmöglichkeiten mittels der Rückmeldungen im PDF- und CSV-Format.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="section-item section-item-accordion">
+                <span>Wie lange dauert eine Evaluation mit AMADEUS?</span>
+                <div class="section-list-item-button"><img class="arrow-icon" src="{% static 'icons/long-accordion-arrow-blue.svg' %}" alt="Pfeil" /></div>
+              </div>
+              <div class="accordion-content">
+                <div>
+                  <p>Die Vorbereitung einer Evaluation durch Sie als Lehrkraft erfordert <span class="eigennamen">ungefähr 3 Minuten</span>.</p>
+                  <p>
+                    Die vollständige Durchführung der Evaluation dauert je nach Alterstufe und Vertrautheit der Schüler:innen mit der Nutzung digitaler Medien zwischen
+                    <span class="eigennamen">10 und 15 Minuten</span>.
+                  </p>
+                </div>
+              </div>
+              <div class="section-item section-item-accordion">
+                <span>Welche technischen Voraussetzungen sind erforderlich?</span>
+                <div class="section-list-item-button"><img class="arrow-icon" src="{% static 'icons/long-accordion-arrow-blue.svg' %}" alt="Pfeil" /></div>
+              </div>
+              <div class="accordion-content">
+                <div>
+                  <p><strong>Was ist für mich als Lehrkraft erforderlich?</strong></p>
+                  <p>
+                    Um eine Unterrichtsevaluation mittels AMADEUS zu starten, benötigen Sie als Lehrkraft ein <span class="eigennamen">internetfähiges Endgerät</span> und eine
+                    <span class="eigennamen">gültige E-Mail-Adresse</span>.&nbsp;
+                  </p>
+                  <p>
+                    Sobald Sie Ihre Daten eingegeben haben, wird Ihnen ein QR-Code und ein Link angezeigt, den Sie auch per E-Mail erhalten. Teilen Sie diesen QR-Code bzw. Link bitte mit Ihren
+                    Schüler:innen, welche die Evaluation durchführen sollen. Sie können den QR-Code oder Link versenden, per Beamer, Dokumentenkamera oder Tageslichtprojektor an die Wand projizieren,
+                    direkt von Ihrem Gerät abscannen lassen oder ausdrucken und in Papierform austeilen - wie es Ihnen beliebt.
+                  </p>
+                  <p><strong>Was ist für meine Schüler:innen erforderlich?</strong></p>
+                  <p>
+                    Zur Durchführung der Evaluation benötigen <span class="eigennamen">alle</span> Ihre Schüler:innen ein&nbsp;<span class="eigennamen">eigenes Endgerät</span> (z. B. Notebook, Tablet,
+                    Smartphone etc.) <span class="eigennamen">mit Internetzugang</span>.
+                  </p>
+                  <p>
+                    Bitte stellen Sie sicher, dass jede:r Schüler:in die Gelegenheit hat, selbstständig und durch andere unbeeinflusst an der Evaluation teilzunehmen. Nur so erhalten Sie ein
+                    zuverlässiges und sicheres Ergebnis.
+                  </p>
+                </div>
+              </div>
+              <div class="section-item section-item-accordion">
+                <span>Was kostet die Unterrichtsevaluation mittels AMADEUS?</span>
+                <div class="section-list-item-button"><img class="arrow-icon" src="{% static 'icons/long-accordion-arrow-blue.svg' %}" alt="Pfeil" /></div>
+              </div>
+              <div class="accordion-content">
+                <div>
+                  <p>Die Unterrichtsevaluation mittels AMADEUS ist und bleibt <span class="eigennamen">kostenlos</span>.</p>
+                  <p>
+                    Die Evaluationapp wurde im Rahmen der Nachwuchsforschungsgruppe FALKO-PV konzipiert und wird während deren Laufzeit kontinuierlich weiterentwickelt. Da FALKO-PV&nbsp;im
+                    Rahmenprogramm Empirische Bildungsforschung für fünf Jahre (2021-2026) aus Mitteln des Bundesministeriums für Bildung und Forschung (BMBF) unter dem Förderkennzeichen 01JG2103 -
+                    und damit aus öffentlichen Mitteln - gefördert wird, sehen wir es als unsere Aufgabe und Pflicht an, unsere Forschungsergebnisse der Unterrichtspraxis und Öffentlichkeit
+                    <span class="eigennamen">unentgeltlich</span> zur Verfügung zu stellen.
+                  </p>
+                </div>
+              </div>
+              <div class="section-item section-item-accordion">
+                <span>Für welche Zielgruppe wurde AMADEUS entwickelt?</span>
+                <div class="section-list-item-button"><img class="arrow-icon" src="{% static 'icons/long-accordion-arrow-blue.svg' %}" alt="Pfeil" /></div>
+              </div>
+              <div class="accordion-content">
+                <div>
+                  <p>
+                    AMADEUS wurde zur Evaluation des Unterrichts <span class="eigennamen">ab der Sekundarstufe I,&nbsp;</span>d. h., für
+                    <span class="eigennamen">alle Lehrkräfte an Sekundarschulen</span> entwickelt und ist dort grundsätzlich
+                    <span class="eigennamen">in allen Fächern und Jahrgangsstufen einsetzbar</span>.
+                  </p>
+                  <p>
+                    <span class="eigennamen">Fachunabhängige Merkmale</span> qualitätsvollen Unterrichts wie kognitive Aktivierung oder Klassenführung lassen sich in allen Disziplinen über die
+                    Auswahloption&nbsp;<span class="eigennamen">allgemeine Unterrichtsevaluation</span>&nbsp;evaluieren. Falls Sie bei der Evaluation Ihres Unterrichts auch
+                    <span class="eigennamen">fachspezifische Merkmale</span> von Unterrichtsqualität berücksichtigen möchten, wählen Sie vorab bitte eines der folgenden Fächer aus:
+                    <span class="eigennamen">Deutsch, Englisch, Evangelische Religion, Latein, Mathematik und Musik</span>. Ihre Evaluation wird dann auch Fragen zu spezifischen Aspekten guten
+                    Unterrichts bezüglich dieses Fachs enthalten.&nbsp;
+                  </p>
+                  <p>
+                    Da nur diese sechs Fächer in der Forschungsgruppe FALKO-PV vertreten sind, ist das Angebot an <span class="eigennamen">fachspezifischen Beurteilungskriterien</span> aktuell darauf
+                    beschränkt. Eine sukzessive Ergänzung weiterer Unterrichtsfächer ist vorgesehen.
+                  </p>
+                </div>
+              </div>
+              <div class="section-item section-item-accordion">
+                <span>Gibt es Nutzungseinschränkungen?</span>
+                <div class="section-list-item-button"><img class="arrow-icon" src="{% static 'icons/long-accordion-arrow-blue.svg' %}" alt="Pfeil" /></div>
+              </div>
+              <div class="accordion-content">
+                <div>
+                  <p>
+                    Die Evaluation wurde mit Schüler:innen <span class="eigennamen">verschiedener Jahrgangsstufen der Sekundarstufe</span> getestet. Dabei wurden unter anderem&nbsp;die
+                    <span class="eigennamen">Lesbarkeitsindizes</span> der enthaltenen Fragestellungen&nbsp;mittels Textanalysesoftware und in sog. kognitiven Interviews auch deren
+                    (korrektes/intendiertes) <span class="eigennamen">inhaltliches Verständnis</span> überprüft. Diesbezüglich sind <span class="eigennamen">keine</span> Nutzungseinschränkungen zu
+                    nennen.
+                  </p>
+                  <p>
+                    Bei Einsatz der Web-App <span class="eigennamen">innerhalb des ersten halben Jahres des Fremdsprachenerwerbs wurden in Englisch und Latein</span> allerdings gewisse Limitationen
+                    hinsichtlich der Aussagekraft einiger fachspezifischer Merkmale erkennbar. Dies ist darin begründet, dass diese Merkmale im frühen Anfangsunterricht kaum vertreten sind und erst
+                    eingeführt werden müssen. Entsprechende Ergebnisse sollten unter diesem Vorbehalt interpretiert werden.
+                  </p>
+                  <p>
+                    Die umfangreichste empirische Evidenz zum Einsatz von AMADEUS liegt derzeit im Kontext <span class="eigennamen">gymnasialen Unterrichts</span> vor, da an dieser Schulart alle
+                    fokussierten Fächer vertreten sind (z. B. Latein). Über Erfahrungswerte zur Verwendung von AMADEUS an weiteren Schularten sind wir jederzeit sehr dankbar.
+                  </p>
+                </div>
+              </div>
+              <div class="section-item section-item-accordion">
+                <span>Welche Fragen werden zu meinem Unterricht gestellt?</span>
+                <div class="section-list-item-button"><img class="arrow-icon" src="{% static 'icons/long-accordion-arrow-blue.svg' %}" alt="Pfeil" /></div>
+              </div>
+              <div class="accordion-content">
+                <div>
+                  <p>
+                    Bei jeder Durchführung von AMADEUS erhalten alle Ihre Schüler:innen eine zufällige Liste von <span class="eigennamen">43 Aussagen zu fachübergreifenden Merkmalen</span> und
+                    zwischen <span class="eigennamen">neun und zwölf Aussagen zu fachspezifischen Merkmalen</span> qualitätsvollen Unterrichts, wenn ein bestimmtes Fach zur Evaluation ausgewählt wird.
+                    Diese Items beurteilen sie auf einer <span class="eigennamen">fünfstufigen Skala</span> von 1 (Trifft nicht zu) bis 5 (Trifft zu) in Hinblick auf Ihren Unterricht.
+                  </p>
+                  <p>Beispiele für Aussagen, die Ihre Schüler:innen einschätzen sollen, sind unter anderem:</p>
+                  <ul>
+                    <li><span class="eigennamen">Unsere Lehrkraft drückt sich im Unterricht klar und verständlich aus.</span></li>
+                    <li><span class="eigennamen">Unsere Lehrkraft ermuntert mich, eigene Lösungswege zu probieren.</span></li>
+                    <li><span class="eigennamen">Mit Fehlern geht unsere Lehrkraft so um, dass wir daraus etwas lernen können.</span></li>
+                    <li><span class="eigennamen">Nach Fehlern erfahren wir nicht nur, dass etwas falsch ist, sondern auch warum.</span></li>
+                    <li><span class="eigennamen">Unsere Lehrkraft weiß, bei welchen Aufgaben ich Schwierigkeiten habe.</span></li>
+                    <li><span class="eigennamen">Unsere Lehrkraft nimmt sich Zeit, wenn ich etwas mit ihr besprechen möchte.</span></li>
+                    <li><span class="eigennamen">Unsere Lehrkraft hat die Klasse im Griff.&nbsp;</span></li>
+                    <li><span class="eigennamen">Unsere Lehrkraft fördert unseren kreativen Umgang mit Themen des Unterrichts.</span></li>
+                    <li><span class="eigennamen">Unsere Lehrkraft kann uns gut zeigen, wie wir die Musikinstrumente verwenden sollen.</span> (fachspez. Musik)</li>
+                  </ul>
+                  <p>
+                    Haben Sie eine Evaluation erstellt und durchgeführt, so können Sie auf Ihrer Statusseite den vollständigen Datensatz als Excel-Datei herunterladen.
+                      Darin sehen Sie den vollständigen Wortlaut eines jeden Items.
+                  </p>
+                </div>
+              </div>
+              <div class="section-item section-item-accordion">
+                <span>Können Schüler:innen die Evaluation später fortsetzen?</span>
+                <div class="section-list-item-button"><img class="arrow-icon" src="{% static 'icons/long-accordion-arrow-blue.svg' %}" alt="Pfeil" /></div>
+              </div>
+              <div class="accordion-content">
+                <div>
+                  <p>
+                    Ja, eine <span class="eigennamen">unterbrochene Evaluation kann jederzeit fortgesetzt werden</span>, solange der Verfügbarkeitszeitraum noch nicht abgelaufen ist. Sie
+                    können&nbsp;<span class="eigennamen">direkt an der Stelle fortfahren, an der Sie aufgehört haben</span>. Bereits eingegebene Antworten bleiben unter Ihrem
+                    <span class="eigennamen">individuellen Zugriffslink</span> erhalten. Beachten Sie hierzu jedoch folgende Hinweise:<br />
+                    &nbsp; &nbsp;
+                  </p>
+                  <ul>
+                    <li>
+                      Die Evaluation soll an einem&nbsp;<span class="eigennamen">persönlichen und demselben Endgerät</span><strong> </strong>(z. B. Smartphone, Tablet etc.) fortgesetzt
+                      werden:&nbsp;Lassen Sie das Browserfenster einfach geöffnet. Sie können <span class="eigennamen">zu einem späteren Zeitpunkt unmittelbar an der Stelle</span> weiterarbeiten, an
+                      der Sie aufgehört haben.<br />
+                      (Alternativ können Sie auch über den Browserverlauf zu einer bereits begonnenen Evaluation zurückkehren.)<br />
+                      &nbsp; &nbsp;&nbsp;
+                    </li>
+                    <li>
+                      Die Evaluation soll an einem <span class="eigennamen">anderen oder fremden Endgerät </span>(z. B. schuleigene Tablets etc.) fortgesetzt werden: Damit Sie
+                      <span class="eigennamen">zu einem späteren Zeitpunkt unmittelbar an der Stelle </span>weiterarbeiten können, an der Sie aufgehört haben, speichern Sie bitte&nbsp;die Adresszeile
+                      Ihres&nbsp;Webbrowsers. Dies ist Ihr <span class="eigennamen">persönlicher Zugangslink</span>&nbsp;zu Ihren Eingaben. Sie können diesen beispielsweise ganz einfach kopieren und
+                      auf ein anderes Gerät übertragen, wie nachstehend dargestellt wird:
+                    </li>
+                  </ul>
+                  <div class="app-example"><img src="{% static 'docs/browser_link_copy.png' %}" /></div>
+                  <p style="margin-left: 40px"></p>
+                  <p style="margin-left: 40px">
+                    Falls Sie oder Ihre Schüler:innen zur Evaluation fremde Geräte (z. B. schuleigene Tablets) benutzen, sollten die&nbsp;individuellen Bewertungen möglichst beendet und das
+                    Evaluationsfenster geschlossen werden, damit kein:e&nbsp;Dritte:r nachträglich unvollständige Eingaben verändern kann.
+                  </p>
+                </div>
+              </div>
+              <div class="section-item section-item-accordion">
+                <span>Können die evaluierenden Schüler:innen ehrlich antworten?</span>
+                <div class="section-list-item-button"><img class="arrow-icon" src="{% static 'icons/long-accordion-arrow-blue.svg' %}" alt="Pfeil" /></div>
+              </div>
+              <div class="accordion-content">
+                <div>
+                  <p>
+                    Von den Evaluierenden (z. B. Schüler:innen) werden <span class="eigennamen">keine personenbezogenen Daten</span> erhoben. Damit bleiben diese absolut anonym und können auf alle
+                    gestellten Fragen unbefangen und aufrichtig antworten. Ihre Einschätzungen sind für niemanden nachvollziehbar.
+                  </p>
+                </div>
+              </div>
+              <div class="section-item section-item-accordion">
+                <span>Was geschieht mit unvollständigen Evaluationsteilnahmen?</span>
+                <div class="section-list-item-button"><img class="arrow-icon" src="{% static 'icons/long-accordion-arrow-blue.svg' %}" alt="Pfeil" /></div>
+              </div>
+              <div class="accordion-content">
+                <div>
+                  <p>
+                    Jede Teilnahme an Ihrer Evaluation, bei der <span class="eigennamen">mindestens 25 % aller Aussagen</span> eingeschätzt wurden, wird in der Auswertung und in der Rückmeldung der
+                    Evaluationsergebnisse berücksichtigt. Denn durch die <span class="eigennamen">zufällige Reihenfolge der Aussagen</span> in der Evaluation ist es sehr wahrscheinlich, dass ein:e
+                    Schüler:in dann zu jedem Merkmal von Unterrichtsqualität bereits mindestens eine Aussage eingeschätzt hat. Dadurch können Sie insgesamt auf Klassenebene auch eine
+                    <span class="eigennamen">vollständige, zuverlässige Rückmeldung erhalten</span>, wenn die Evaluation (von allen oder einzelnen Schüler:innen) nicht abgeschlossen werden konnte (z.
+                    B. weil die dafür vorgesehene Zeit am Ende der Unterrichtsstunde zu knapp bemessen war).
+                  </p>
+                  <p>
+                    Da Ihr Ergebnis aber natürlich umso aussagekräftiger ist, je mehr Schüler:innen sich an einer Evaluation beteiligen und diese abschließen können, sollten Sie darauf achten, ihnen
+                    hierfür ausreichend Zeit zur Verfügung zu stellen (vgl. FAQ <span class="eigennamen">"Wie lange dauert eine Evaluation mit AMADEUS?"</span>). Außerdem haben Sie die Möglichkeit,
+                    Schüler:innen die Evaluation auch zu einem späteren Zeitpunkt oder zuhause fertigstellen zu lassen (vgl. FAQ
+                    <span class="eigennamen">"Können Schüler:innen die Evaluation später fortsetzen?</span><span class="eigennamen">"</span>).&nbsp;
+                  </p>
+                </div>
+              </div>
+              <div class="section-item section-item-accordion">
+                <span>Wie erhalte ich meine Evaluationsergebnisse?</span>
+                <div class="section-list-item-button"><img class="arrow-icon" src="{% static 'icons/long-accordion-arrow-blue.svg' %}" alt="Pfeil" /></div>
+              </div>
+              <div class="accordion-content">
+                <div>
+                  <p>
+                    Auf die Ergebnisse Ihrer Unterrichtsevaluation können Sie über Ihre <span class="eigennamen">persönliche Statusseite </span>zugreifen. Der Link wird Ihnen automatisch zugeschickt,
+                    wenn Sie die Evaluation starten.&nbsp;
+                  </p>
+                  <p>
+                    Auf Ihrer Statusseite können Sie die Ergebnisse in einer Vorschau direkt einsehen, nach Abschluss der Evaluation ein <span class="eigennamen">PDF-Dokument</span> mit Ihren
+                    Ergebnissen erstellen oder den vollständigen Datensatz als <span class="eigennamen">Excel-Datei</span> herunterladen.
+                  </p>
+                    <p>
+                        <b>Beachten Sie:</b> bei der Darstellung der vergebenen Antworten (5, 4, etc.) in der Excel-Datei handelt es sich um
+                        <em>recodierte Items.</em> D.h., dass bei Items wie z.B. "Ich habe das Gefühl, unsere Lehrkraft möchte, dass ich dasselbe denke oder dasselbe gut finde wie sie."
+                        eine hohe Wertung (z.B. 5 - Trifft zu) eine negative Auswirkung hat und umgekehrt. "Recodiert" heißt dann in diesem Fall: aus einer "1" wird eine "5", aus einer "2" eine "4" usw.
+                        Das bedeutet für Ihre Analyse der Auswertung: hohe Ergebnisse sind immer positiv für Sie.
+                    </p>
+                </div>
+              </div>
+              <div class="section-item section-item-accordion">
+                <span>Wie sind die Evaluationsergebnisse zu interpretieren?</span>
+                <div class="section-list-item-button"><img class="arrow-icon" src="{% static 'icons/long-accordion-arrow-blue.svg' %}" alt="Pfeil" /></div>
+              </div>
+              <div class="accordion-content">
+                <div>
+                  <p>
+                    Die Evaluation mittels AMADEUS soll Ihnen <span class="eigennamen">erste Anhaltspunkte</span> geben, was in Ihrem Unterricht besonders gut läuft, wo Ihre Stärken und wo Ihre
+                    Schwächen liegen und woran Sie vielleicht noch etwas arbeiten können, um die Qualität Ihres Unterrichts zu verbessern.<br />
+                    Aufgrund der verwendeten Bewertungsskala von 1 (Trifft nicht zu) bis 5 (Trifft zu) ist bei durchschnittlicher Merkmalsausprägung
+                    <span class="eigennamen">theoretisch ein Mittelwert von 3,0 </span>zu erwarten. Liegt Ihr Mittelwert darüber oder darunter, ist Ihr Ergebnis besser oder schlechter als theoretisch
+                    zu erwarten. Je weiter er von 3,0 entfernt ist, desto ausgeprägter ist ein Merkmal (in positivem wie negativem Sinn) in Ihrem Unterricht. Dabei können eher niedrige Mittelwerte
+                    (&lt; 2,0) Anlass zur<span class="eigennamen"> individuellen Reflexion</span> über Ihren Unterricht und ggf. dazu bieten, über
+                    <span class="eigennamen">geeignete Veränderungen</span> oder <span class="eigennamen">angemessene Maßnahmen</span> nachzudenken, um den Unterricht in Bezug auf die jeweiligen
+                    Merkmale zu verbessern. Tendenziell hohe Mittelwerte (&gt; 4,0) deuten an, was in Ihrem Unterricht bereits <span class="eigennamen">besonders gut funktioniert</span>.<br />
+                    Bei der Betrachtung Ihrer Ergebnisse sollten Sie aber nicht nur auf Ihren Mittelwert achten. Ist zum Beispiel die <span class="eigennamen">Streuung der Antworten</span> Ihrer
+                    Schüler:innen sehr hoch (erkennbar an der Standardabweichung und der Säulenhöhe im Diagramm), mag das darauf hindeuten, dass Ihre Schüler:innen Ihren Unterricht sehr
+                    unterschiedlich wahrnehmen. Im Extremfall geben besonders viele Ihrer Schüler:innen entweder niedrige (z. B. 1) oder hohe Bewertungen (z. B. 5) – in der Statistik spricht man dann
+                    von einer „mehrgipfligen Verteilung“. Je nach Ausprägung dieser zwei Pole (an der Säulenhöhe und den angegebenen Prozentzahlen erkennbar), könnte es in diesem Fall sein, dass sich
+                    ein bestimmter Teil Ihrer Schüler:innen beispielsweise von den Lernangeboten zwar gut angesprochen fühlt, ein anderer (beträchtlicher) Teil damit aber gar nicht zurechtkommt. Ihr
+                    Unterricht läuft also Gefahr, diese Schüler:innengruppe mittel- bis langfristig zu verlieren. Dies kann möglichweise ein Indikator dafür sein, stärker auf ein
+                    <span class="eigennamen">differenziertes bzw. individualisiertes Unterrichtsangebot</span> zu achten.
+                  </p>
+                  <p>
+                    Nicht unerwähnt in Bezug auf die Ergebnisse sollen aber auch<span class="eigennamen"> zwei Limitationen</span> bleiben:<br />
+                    Zum einen ist darüber, inwiefern sich die theoretisch anzunehmenden Mittelwerte bei dieser Skala auch empirisch einstellen, derzeit noch wenig bekannt. Hierfür ist eine
+                    <span class="eigennamen">Normierung der Evaluation</span> notwendig, an der wir aktuell arbeiten. Liegt diese vor, können wir Ihnen zusätzlich mitteilen, wie sich Ihr Ergebnis im
+                    Vergleich zu anderen Lehrkräften einordnen lässt. Das heißt beispielsweise, ob ihr Ergebnis besser oder schlechter ist als das Resultat von 70 % der anderen Lehrkräfte, die AMADEUS
+                    Zur Unterrichtsevaluation in einem bestimmten Fach nutzen.<br />
+                    Zum anderen stellt die <span class="eigennamen">Perspektive von Schüler:innen</span> natürlich <span class="eigennamen">nur eine</span> Sicht auf Unterricht dar. Auch wenn deren
+                    Fähigkeit, die Qualität von Unterricht zu beurteilen, im Allgemeinen unterschätzt wird – wie mittlerweile zahlreiche Forschungsergebnisse unterstreichen –, variiert die
+                    Zuverlässigkeit und Gültigkeit Ihrer Urteile in Bezug auf die verschiedenen Merkmale. Nutzen Sie also z. B. auch Gelegenheiten zu
+                    <span class="eigennamen">kollegialer Unterrichtshospitation</span> oder <span class="eigennamen">universitäre Angebote der Information, Beratung und Begleitung</span>, um ein
+                    ganzheitliches Bild über Ihren Unterricht zu erhalten.
+                  </p>
+                </div>
+              </div>
+              <h4>Hilfe, Rückmeldung und Kontakt</h4>
+              <div class="section-item section-item-accordion">
+                <span>An wen kann ich mich wenden, wenn etwas nicht funktioniert?</span>
+                <div class="section-list-item-button"><img class="arrow-icon" src="{% static 'icons/long-accordion-arrow-blue.svg' %}" alt="Pfeil" /></div>
+              </div>
+              <div class="accordion-content">
+                <div>
+                  <p>Bei allen Fragen, Unklarheiten oder Anmerkungen bezüglich der Web-App AMADEUS wenden Sie sich bitte per E-Mail an falko-pv@ur.de.</p>
+                  <p>Wir werden Ihr Anliegen unverzüglich bearbeiten und beantworten.</p>
+                </div>
+              </div>
+              <div class="section-item section-item-accordion">
+                <span>An wen kann ich Feedback zu AMADEUS übermitteln?</span>
+                <div class="section-list-item-button"><img class="arrow-icon" src="{% static 'icons/long-accordion-arrow-blue.svg' %}" alt="Pfeil" /></div>
+              </div>
+              <div class="accordion-content">
+                <div>
+                  <p>
+                    Ihre Rückmeldungen sind für uns besonders wichtig und wertvoll, um AMADEUS schrittweise zu verbessern und weiterzuentwickeln.&nbsp;Wir freuen uns deshalb jederzeit über
+                    Anmerkungen, Anregungen und kritisches Feedback. Sie können dieses einfach per E-Mail an falko-pv@ur.de senden.
+                  </p>
+                </div>
+              </div>
+              <div class="section-item section-item-accordion">
+                <span>Wer ist für AMADEUS verantwortlich?</span>
+                <div class="section-list-item-button"><img class="arrow-icon" src="{% static 'icons/long-accordion-arrow-blue.svg' %}" alt="Pfeil" /></div>
+              </div>
+              <div class="accordion-content">
+                <div>
+                  <p>
+                    Für alle inhaltlichen und technischen Elemente der Web-App AMADEUS ist die BMBF-Nachwuchsforschungsgruppe FALKO-PV (Fachspezifische Lehrkraftkompetenzen – Prädiktive Validierung),
+                    vertreten durch Dr. Alfred Lindl, verantwortlich. Kontaktmöglichkeiten zur Forschungsgruppe finden Sie
+                    <a href="https://www.uni-regensburg.de/forschung/falko/falkpo-pv-startseite/aktuelles/index.html" target="_blank" class="external in-text-link">hier</a>.
+                  </p>
+                </div>
+              </div>
+              <div class="section-item section-item-accordion">
+                <span>Wer darf AMADEUS nutzen?</span>
+                <div class="section-list-item-button"><img class="arrow-icon" src="{% static 'icons/long-accordion-arrow-blue.svg' %}" alt="Pfeil" /></div>
+              </div>
+              <div class="accordion-content">
+                <div>
+                  <p>
+                    AMADEUS wird von der Forschungsgruppe FALKO-PV an der Universität Regensburg <span class="eigennamen">allen Interessierten als kostenlose Evaluationsapp</span> mit einem Fokus auf
+                    schulischen Unterricht&nbsp;bereitgestellt. In einem erweiterten Rahmen kann und darf sie für Evaluationszwecke in Bildungsinstitutionen, <span class="eigennamen">nicht</span> aber
+                    kommerziell oder für wissenschaftliche Interessen Dritter verwendet werden.
+                  </p>
+                  <p>
+                    Die Webapp einschließlich aller ihrer Elemente ist <span class="eigennamen">urheberrechtlich geschützt</span>. Jede Verwertung außerhalb der engen Grenzen des Urheberrechtsgesetzes
+                    ist unzulässig und strafbar.
+                  </p>
+                </div>
+              </div>
+              <h4>Aspekte des Datenschutzes</h4>
+              <div class="section-item section-item-accordion">
+                <span>Ist AMADEUS DSGVO konform?</span>
+                <div class="section-list-item-button"><img class="arrow-icon" src="{% static 'icons/long-accordion-arrow-blue.svg' %}" alt="Pfeil" /></div>
+              </div>
+              <div class="accordion-content">
+                <div>
+                  <p>
+                    AMADEUS entspricht - soweit zutreffend - allen Bestimmungen der Europäischen Datenschutz-Grundverordnung (DSGVO). Dies wurde in Zusammenarbeit und in Absprache mit der
+                    Datenschutzbeauftragten der Universität Regenburg sorgfältig geprüft. <span class="eigennamen">Die Verwendung von AMADEUS ist somit datenschutzrechtlich unbedenklich</span>.
+                  </p>
+                </div>
+              </div>
+              <div class="section-item section-item-accordion">
+                <span>Wer ist verantwortlich für die Verarbeitung der Daten?</span>
+                <div class="section-list-item-button"><img class="arrow-icon" src="{% static 'icons/long-accordion-arrow-blue.svg' %}" alt="Pfeil" /></div>
+              </div>
+              <div class="accordion-content">
+                <div>
+                  <p>
+                    <span class="eigennamen">Verantwortlich</span>&nbsp;für die Verarbeitung personenbezogener Daten ist die&nbsp;Universität Regensburg,&nbsp;vertreten durch den Präsidenten
+                    (Universität Regensburg, 93053 Regensburg, kontakt@ur.de).
+                  </p>
+                  <p>
+                    Die&nbsp;<span class="eigennamen">ausführende Institution</span>&nbsp;ist die Nachwuchsforschungsgruppe FALKO-PV, vertreten durch Dr. Alfred Lindl (Sedanstr. 1, 93055
+                    Regensburg,&nbsp;alfred.lindl@ur.de).
+                  </p>
+                </div>
+              </div>
+              <div class="section-item section-item-accordion">
+                <span>Auf welcher Rechtsgrundlage werden die Daten verarbeitet?</span>
+                <div class="section-list-item-button"><img class="arrow-icon" src="{% static 'icons/long-accordion-arrow-blue.svg' %}" alt="Pfeil" /></div>
+              </div>
+              <div class="accordion-content">
+                <div>
+                  <p>
+                    Rechtsgrundlage für die Verarbeitung personenbezogener Daten bei der Nutzung der Web-App AMADEUS ist Ihre
+                    <span class="eigennamen">Einwilligung gemäß Art. 6 Abs. 1 Satz 1 lit. a) </span>der Europäischen Datenschutz-Grundverordnung (DSGVO).
+                  </p>
+                </div>
+              </div>
+              <div class="section-item section-item-accordion">
+                <span>Welche personenbezogenen Daten werden erhoben?</span>
+                <div class="section-list-item-button"><img class="arrow-icon" src="{% static 'icons/long-accordion-arrow-blue.svg' %}" alt="Pfeil" /></div>
+              </div>
+              <div class="accordion-content">
+                <div>
+                  <p>
+                    Zur der Nutzung der Web-App AMADEUS ist von Ihnen lediglich eine einzige personenbezogene Angabe zwingend erforderlich: <span class="eigennamen">Ihre E-Mailadresse</span>. Dies
+                    dient ausschließlich dem technischen Zweck, Ihnen Ihr (personalisiertes) Evaluationsergebnis zugänglich zu machen. Anschließend wird sie unwiderruflich aus der Datenbank entfernt.
+                  </p>
+                  <p>
+                    Die Auswahl eines Unterrichtsfachs und die Angabe Ihres Names ist jeweils <span class="eigennamen">optional</span>; die Nennung eines Unterrichtsfachs beeinflusst aber die
+                    Fragenauswahl und kann damit die Evaluation <span class="eigennamen">besser auf Ihren Unterricht im jeweiligen Fach abstimmen</span>.
+                  </p>
+                  <p>Von den Evaluierenden (z. B. Schüler:innen) werden <span class="eigennamen">keine </span>personenbezogenen Daten erhoben. Diese bleiben absolut anonym.</p>
+                </div>
+              </div>
+              <div class="section-item section-item-accordion">
+                <span>Wer kann meine Daten personenbezogen einsehen?</span>
+                <div class="section-list-item-button"><img class="arrow-icon" src="{% static 'icons/long-accordion-arrow-blue.svg' %}" alt="Pfeil" /></div>
+              </div>
+              <div class="accordion-content">
+                <div>
+                  <p>
+                    Personenbezogene Daten (E-Mail-Adresse bzw. evtl. Name und Fach, wenn Sie diese angeben) können <span class="eigennamen">nur</span> die wissenschaftlichen Mitarbeiter:innen von
+                    FALKO-PV einsehen. Sobald Sie aber Ihre Evaluation löschen, was über Ihre (personalisierte) Statusseite <span class="eigennamen">jederzeit möglich</span> ist, werden alle Ihre
+                    personenbezogenen Daten <span class="eigennamen">unwiderruflich gelöscht</span>.
+                  </p>
+                  <p>
+                    Von Ihren Schüler:innen werden <span class="eigennamen">keine</span> personenbezogenen Daten erfasst. Die Erhebung ist <span class="eigennamen">vollständig anonym</span>.&nbsp;
+                  </p>
+                </div>
+              </div>
+              <div class="section-item section-item-accordion">
+                <span>Welche Rechte haben Sie bezüglich personenbezogener Daten?</span>
+                <div class="section-list-item-button"><img class="arrow-icon" src="{% static 'icons/long-accordion-arrow-blue.svg' %}" alt="Pfeil" /></div>
+              </div>
+              <div class="accordion-content">
+                <div>
+                  <p>Als Nutzer:in haben Sie folgende Rechte gegenüber dem Verantwortlichen:</p>
+                  <ul>
+                    <li><span class="eigennamen">Auskunft</span> über die Verarbeitung und eine Kopie ihrer personenbezogenen Daten gem. Art. 15 DSGVO,</li>
+                    <li><span class="eigennamen">Berichtigung</span> Ihrer personenbezogenen Daten gem. Art. 16 DSGVO,</li>
+                    <li><span class="eigennamen">Löschung </span>Ihrer personenbezogenen Daten gem. Art. 17 DSGVO,</li>
+                    <li>
+                      <span class="eigennamen">Einschränkung</span> der Verarbeitung und <span class="eigennamen">Widerspruch</span> gegen die Verarbeitung Ihrer personenbezogenen Daten gem. Art. 18
+                      und 21 DSGVO,
+                    </li>
+                    <li>
+                      <span class="eigennamen">Bereitstellung einer Kopie</span> Ihrer personenbezogenen Daten in einem strukturierten, gängigen und maschinenlesbaren Format, welche Sie zu einem
+                      anderen Verantwortlichen übermitteln können gem. Art. 20&nbsp;DSGVO,
+                    </li>
+                    <li>
+                      <span class="eigennamen">Widerrufsrecht</span> Ihrer Einwilligung, das jedoch nicht die Rechtmäßigkeit der Verarbeitung Ihrer Daten vor dem Zeitpunkt des Widerrufs berührt,
+                    </li>
+                    <li>
+                      <span class="eigennamen">Beschwerderecht</span> bei der Aufsichtsbehörde; die zuständige Aufsichtsbehörde ist der Bayerische Landesbeauftragte&nbsp;für den Datenschutz, Postfach
+                      221219, 80502 München, poststelle@datenschutz-bayern.de.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="section-item section-item-accordion">
+                <span>Wie lange werden die Daten gespeichert?</span>
+                <div class="section-list-item-button"><img class="arrow-icon" src="{% static 'icons/long-accordion-arrow-blue.svg' %}" alt="Pfeil" /></div>
+              </div>
+              <div class="accordion-content">
+                <div>
+                  <p>
+                    Sie haben auf Ihrer persönlichen Statusseite jederzeit die Möglichkeit, Ihre Daten über die Funktion „Evaluation löschen“ mit
+                    <span class="eigennamen">sofortiger Wirkung zu löschen</span>. Andernfalls werden Ihre personenbezogenen Daten nach Übersendung Ihres (personalisierten) Evaluationsergebnisses,
+                    spätestens jedoch <span class="eigennamen">zum Ende der Projektlaufzeit </span>von FALKO-PV (31.05.2026) gelöscht.
+                  </p>
+                </div>
+              </div>
+
+              <h4>Teilnahme an der Hauptstudie</h4>
+              <div class="section-item section-item-accordion">
+                <span>Was ist ein NWFG-Code?</span>
+                <div class="section-list-item-button"><img class="arrow-icon" src="{% static 'icons/long-accordion-arrow-blue.svg' %}" alt="Pfeil" /></div>
+              </div>
+              <div class="accordion-content">
+                <div>
+                  <p>
+                    Einen NWFG-Code erhalten Sie, wenn Sie an der <span class="eigennamen">Hauptstudie von FALKO-PV</span> teilnehmen. Durch diesen Code werden Ihre Daten getrackt und können dadurch
+                    mit weiteren Untersuchungsinstrumenten verknüpft werden.&nbsp;
+                  </p>
+                  <p>Sie möchten an der Haupterhebung von FALKO-PV teilnehmen? Dann schreiben Sie uns gerne eine unverbindliche E-Mail an falko-pv@ur.de.</p>
+                </div>
+              </div>
+              <div class="section-item section-item-accordion">
+                <span>Ich habe meinen NWFG-Code verloren. Was nun?</span>
+                <div class="section-list-item-button"><img class="arrow-icon" src="{% static 'icons/long-accordion-arrow-blue.svg' %}" alt="Pfeil" /></div>
+              </div>
+              <div class="accordion-content">
+                <div>
+                  <p>
+                    Der Verlust Ihres NWFG-Codes stellt in der Regel <span class="eigennamen">kein Problem</span> dar. Bitte wenden Sie sich umgehend an Ihre:n Ansprechpartner:in oder ein Mitglied der
+                    Forschungsgruppe FALKO-PV. Wir können Ihnen unkompliziert weiterhelfen.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="{% static 'scripts/accordion.js' %}"></script>
+    {% include 'evaluation_tool/components/home-footer.html' %}
+  </body>
+</html>

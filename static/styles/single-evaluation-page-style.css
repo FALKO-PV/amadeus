@@ -1,0 +1,189 @@
+.main-card {
+  padding: 15px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  margin-top: 0px;
+}
+
+.intro-text {
+  margin-top: 40px;
+}
+
+.answer-counter-text {
+  color: red;
+}
+
+.evaluation-progress-bar-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 15px);
+  justify-content: center;
+  gap: 10px;
+  grid-column-gap: 5px;
+  margin-top: 20px;
+  margin-right: -10px;
+}
+
+.evaluation-progress-bar-text {
+  font-weight: 800;
+  font-style: italic;
+  font-size: 14px;
+  text-align: center;
+}
+
+.question-title {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.question input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  box-shadow: 0 0px 8px 0 rgba(0,0,0,0.1);
+  float: right;
+  width: 22px;
+  height: 22px;
+  margin-left: -50px;
+  margin-right: 15px;
+  margin-top: 14px;
+  padding: 2px;
+  background-clip: content-box;
+  background-color: #f7f7f7;
+  border-radius: 50%;
+}
+
+label:hover, .question input[type="radio"]:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+label {
+  height: 36px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 6px;
+  padding-left: 15px;
+  font-family: "Atkinson Hyperlegible";
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.circle-white {
+  background-color: white;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  color: white;
+}
+
+.actions-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.back-button {
+  width: 140px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Atkinson Hyperlegible";
+  box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.13);
+}
+
+.next-button {
+  width: 140px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Atkinson Hyperlegible";
+  box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.13);
+}
+
+.submit-button {
+  width: 140px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Atkinson Hyperlegible";
+  background-color: white;
+  color: black;
+  box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.13);
+}
+
+.next-button:hover,
+.back-button:hover,
+.submit-button:disabled {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+
+.submit-button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.next-button:disabled,
+.back-button:disabled,
+.submit-button:disabled {
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+  cursor: not-allowed;
+}
+
+.submit-finished-screen {
+  margin-top: 40px;
+}
+
+.submit-screen {
+  margin-top: 40px;
+}
+
+.submit-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.submit-page-button {
+  width: 140px;
+  height: 50px;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Atkinson Hyperlegible";
+  background-color: #292F61;
+  box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.13);
+}
+
+.submit-page-button:hover {
+  background-color: #292f61db;
+}

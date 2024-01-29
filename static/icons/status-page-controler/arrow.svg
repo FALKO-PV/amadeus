@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <clipPath id="clip-Zeichenfläche_1">
+      <rect width="30" height="30"/>
+    </clipPath>
+  </defs>
+  <g id="Zeichenfläche_1" data-name="Zeichenfläche – 1" clip-path="url(#clip-Zeichenfläche_1)">
+    <g id="Komponente_22_2" data-name="Komponente 22 – 2" transform="translate(2.896 17.204) rotate(-45)">
+      <line id="Linie_25" data-name="Linie 25" x2="20.234" transform="translate(0 7)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+      <line id="Linie_26" data-name="Linie 26" x2="7" y2="7" transform="translate(13.234)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+      <line id="Linie_27" data-name="Linie 27" y1="7" x2="7" transform="translate(13.234 7)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

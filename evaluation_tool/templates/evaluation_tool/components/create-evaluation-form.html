@@ -1,0 +1,80 @@
+{% load static %}
+<form id="create-evaluation-form" class="create-evaluation-form" action="" method="POST">
+    <!--onsubmit='return false'-->
+    {% csrf_token %}
+    <p class="create-evaluation-form-title">Neue Unterrichtsevaluation</p>
+    <!--<div class="checkbox-container">
+        <input type="checkbox" id="checkbox-nwfg-study" class="checkbox-nwfg-study" id="scales" name="is_for_nwfg_study" {% if is_for_nwfg_study %} checked="checked" {% endif %}/><label for="checkbox-nwfg-study" ><p class="checkbox-text checkbox-text-long">Ja, ich nehme an der Haupterhebung von FALKO-PV teil.</p></label>
+    </div>
+    <div class="nwfg-code-container">
+        <label for="nwfg_code" class="required-field">NWFG-Code</label>
+        <input class="nwfg-code-input" type="text" name="nwfg_code" placeholder="NWFG-Code eingeben..." value="{{nwfg_code}}">
+    </div>-->
+    <label for="email" class="required-field">E-Mail-Adresse</label>
+    <input type="email" name="email" placeholder="E-Mail-Adresse eingeben..." value="{{email}}">
+    <label for="teacher_name">Name</label>
+    <input type="text" name="teacher_name" placeholder="Name eingeben..." value="{{teacher_name}}">
+    <label for="subject" class="required-field">Unterrichtsfach</label>
+    <div class="subject-selector">
+        <div class="subject-card">
+            <img class="subject-card-icon" src="{% static 'icons/subjects/AllgemeineLehrevaluation.svg' %}"
+                alt="Icon des Schulfachs">
+        </div>
+        <select class="dropdown" name="subject" onchange="change_subject_card_color()" id="select-subject">
+            <option value="Allgemeine Lehrevaluation">Allgemeine Lehrevaluation</option>
+            <option value="Deutsch">Deutsch</option>
+            <option value="Englisch">Englisch</option>
+            <option value="Evangelische Religion">Evangelische Religon</option>
+            <option value="Latein">Latein</option>
+            <option value="Mathematik">Mathematik</option>
+            <option value="Musik">Musik</option>
+        </select>
+    </div>
+    <div class="time-selection-container">
+        <label for="checkbox-24-hours" class="required-field">Verfügbarkeit</label>
+        <div class="checkbox-container">
+            <input type="checkbox" id="confirm" class="checkbox-24-hours" name="start_evaluation_immediately" {% if start_evaluation_immediately %} checked="checked" {% endif %}/><label for="confirm" ><p class="checkbox-text">Evaluation sofort starten (24 Stunden verfügbar)</p></label>
+        </div>
+        <div class="date-picker" hidden>
+            <div class="date-picker-start">
+                <p class="date-picker-text">Evaluation verfügbar ab</p>
+                <input type="datetime-local" class="evaluation-start-input" name="evaluation_start">
+            </div>
+            <div class="date-picker-end">
+                <p class="date-picker-text">Evaluation verfügbar bis</p>
+                <input type="datetime-local" class="evaluation-end-input" name="evaluation_end">
+            </div>
+        </div>
+    </div>
+
+    <label for="context-of-use" class="required-field">Nutzungskontext</label>
+    <span class="context-of-use-description">Diese Evaluation lege ich im Rahmen ...</span>
+    <div class="context-of-use-selector">
+      <select class="dropdown" name="context_of_use" id="select-context-of-use">
+        <option value="Bitte wählen Sie aus." disabled selected>Bitte wählen Sie aus.</option>
+        <option value="US"> ... meiner Unterrichtstätigkeit an Schulen an.</option>
+        <option value="UA"> ... meiner außerschulischen Unterrichtstätigkeit an.</option>
+        <option value="P"> ... eines Praktikums während meines Lehramtsstudiums an.</option>
+        <option value="T"> ... von Ansichts- und Testzwecken an.</option>
+        <option value="S"> ... eines anderen Kontexts an.</option>
+      </select>
+    </div>
+    
+    <label for="captcha" class="required-field">CAPTCHA Sicherheitsprüfung</label>
+    <div class="captcha-container">
+        {{form.captcha}}
+    </div>
+    <label for="allow_data_processing" class="required-field">Einwilligungserklärung zur Datenverarbeitung</label>
+    <div class="checkbox-container-data-processing">
+        <input type="checkbox" id="checkbox-allow-data-processing" class="checkbox-allow-data-processing" id="scales" name="allow_data_processing"/><label for="checkbox-allow-data-processing" ><p class="checkbox-text checkbox-text-data-processing">Mit der Nutzung der Web-App AMADEUS erkläre mich mit der Verarbeitung meiner oben angegebenen personenbezogenen Daten einverstanden. Die zugehörigen Informationen und Datenschutzhinweise habe ich gelesen.</p></label>
+    </div>
+    <p class="red-star-explanation">* Erforderliche Angaben</p>
+    <style>
+        [type="checkbox"] + label::before {
+            background-image: url('{% static 'icons/checkbox/unchecked.png' %}');
+        }
+        [type="checkbox"]:checked+label::before {
+            background-image: url('{% static 'icons/checkbox/checked.png' %}');
+        }
+    </style>
+</form>

@@ -1,0 +1,243 @@
+.create-evaluation-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.create-evaluation-form-title {
+  font-size: 20px;
+  margin: 0px;
+  margin-bottom: 10px;
+}
+
+.required-field:after {
+  content: " *";
+  color: red;
+}
+
+.subject-selector {
+  display: flex;
+  flex-direction: row;
+}
+
+.nwfg-code-container {
+  display: none;
+  flex-direction: column;
+}
+
+.subject-card {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background-color: #fff;
+  background-image: radial-gradient(at top left, #dbdbdb, transparent), radial-gradient(at top right, #333333, transparent), radial-gradient(at bottom left, #7a7a7a, transparent);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.subject-card-icon {
+  height: 25px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"] {
+  height: 35px;
+  border: 0px;
+  background-color: #f5f5f5;
+  border-radius: 6px;
+  padding-left: 12px;
+  font-family: "Atkinson Hyperlegible";
+  font-size: 14px;
+}
+
+.dropdown {
+  height: 40px;
+  border: 0px;
+  background-color: #f5f5f5;
+  border-radius: 6px;
+  padding-left: 10px;
+  font-family: "Atkinson Hyperlegible";
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='gray' height='30' viewBox='0 0 24 24' width='30' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 98%;
+  background-position-y: 5px;
+  font-size: 14px;
+  color: gray;
+  width: 250px;
+  outline-style: none;
+}
+
+.time-selection-container {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="datetime-local"]:focus,
+.dropdown {
+  outline: none;
+}
+
+input[type="datetime-local"] {
+  border: 0px;
+  font-size: 14px;
+  font-family: "Atkinson Hyperlegible";
+  color: gray;
+  font-weight: 500;
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+input[name="captcha_1"] {
+  margin-left: 10px;
+  height: 35px;
+}
+
+.date-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.date-picker-start,
+.date-picker-end {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+@media only screen and (min-width: 500px) {
+  .date-picker {
+    flex-direction: row;
+  }
+}
+
+.captcha-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+input[name="captcha"] {
+  margin-right: 10px;
+  height: 40px;
+}
+
+.captcha-img {
+  height: 40px;
+}
+
+.red-star-explanation {
+  color: red;
+  margin-bottom: 0px;
+  font-size: 12px;
+  align-self: flex-end;
+}
+
+.nwfg_code_description {
+  margin: 0px;
+  font-size: 14px;
+  margin-bottom: 15px;
+  text-align: justify;
+  hyphens: auto;
+}
+
+.create-evaluation-error-text {
+  color: red;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.checkbox-container {
+  margin-bottom: 10px;
+  display: inline;
+}
+
+[type="checkbox"] + label {
+  position: absolute;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+[type="checkbox"] {
+  position: relative;
+  left: 15px;
+  z-index: 0;
+  -webkit-appearance: none;
+}
+[type="checkbox"] + label::before {
+  width: 40px;
+  height: 32px;
+  display: block;
+  content: "";
+  float: left;
+  margin-right: 5px;
+  z-index: 5;
+  position: relative;
+  margin-left: -10px;
+}
+[type="checkbox"]:checked + label::before {
+}
+
+.checkbox-text {
+  margin-top: 8px;
+  display: flex;
+  vertical-align: middle;
+  font-size: 14px;
+  font-weight: 400;
+  margin-right: 40px;
+}
+
+@media only screen and (max-width: 410px) {
+  .checkbox-text {
+    margin-top: 0px;
+  }
+}
+
+.checkbox-text-data-processing {
+  max-width: 400px;
+  margin-top: 0px;
+}
+
+.checkbox-container-data-processing {
+  margin-bottom: 50px;
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 650px) {
+  .checkbox-container-data-processing {
+    margin-bottom: 70px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .checkbox-container-data-processing {
+    margin-bottom: 100px;
+  }
+}
+
+.context-of-use-description {
+  margin: 10px 0px;
+}
+
+#select-context-of-use {
+  min-width: 300px;
+  max-width: 360px;
+  width: 100%;
+}

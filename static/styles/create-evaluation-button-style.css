@@ -1,0 +1,31 @@
+.create-evaluation-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 20px;
+}
+
+.create-evaluation-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #292F61;
+  box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.13);
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+.create-evaluation-button:hover {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+
+.create-evaluation-button-text {
+  color: white;
+  font-weight: 700;
+  font-family: "Atkinson Hyperlegible";
+  font-size: 16px;
+}

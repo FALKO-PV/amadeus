@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html lang="en">
+  <head>
+    {% include 'evaluation_tool/components/header-base.html' %}
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/card-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/logo-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/falko-description-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/main-title-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/create-evaluation-form-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/create-evaluation-button-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/footer-style.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/cookie-consent.css' %}" />
+    <link rel="stylesheet" href="{% static 'styles/documentation-style.css' %}" />
+  </head>
+
+  <body>
+    <main>
+      <div class="main-card img-card">
+        <div class="card-img-section">
+          <div></div>
+          <div class="card-img-container">
+            <img class="card-img ci-1" width="100%" src="{% static 'img/how-to-use-amadeus/htu-amadeus-1.png' %}" />
+            <img class="card-img ci-2" width="100%" src="{% static 'img/how-to-use-amadeus/htu-amadeus-2.png' %}" />
+            <img class="card-img ci-3" width="100%" src="{% static 'img/how-to-use-amadeus/htu-amadeus-3.png' %}" />
+          </div>
+          <div class="card-img-elements">
+            <p class="card-img-title">1. Evaluation erstellen</p>
+            <div class="card-img-controler-container">
+              <div class="card-img-controler">
+                <div class="circle-img-selector"><span>1</span></div>
+                <div class="circle-img-selector"><span>2</span></div>
+                <div class="circle-img-selector"><span>3</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-bar">
+          <img class="logo" src="{% static 'img/amadeus_logo.png' %}" alt="Logo der Forschungsgruppe FALKO-PV" />
+          <a class="button gradient-button" href="{% url 'create_evaluation_page' %}">
+            <span>Evaluation hier starten</span>
+            <img class="arrow-icon" src="{% static 'icons/long-arrow-white-right.svg' %}" alt="Pfeil" />
+          </a>
+        </div>
+      </div>
+      <div class="intro-section">
+        <h1 class="start">Unterrichtsevaluation mit AMADEUS&nbsp;&ndash; zuverlässig, datenschutzkonform und kostenlos</h1>
+        <p>
+          Mithilfe von AMADEUS (<b>A</b>nonym nutzbare <b>M</b>obile <b>A</b>pp zur <b>d</b>igitalen <b>E</b>valuation des <b>U</b>nterrichts durch <b>S</b>chüler:innen) können Sie als Lehrkraft die Qualität Ihres Unterrichts einfach, schnell und zuverlässig durch Ihre Schüler:innen evaluieren lassen. Die Anwendung wird von der
+          <a class="falko-link" target="_blank" href="https://www.falko-pv.de">Forschungsgruppe FALKO-PV</a> an der Universität Regensburg bereitgestellt und fortlaufend wissenschaftlich begleitet.
+          Die Nutzung der Evaluationsapp ist datenschutzkonform und absolut kostenlos.
+        </p>
+        <div class="section-list">
+          <div class="section-item section-item-accordion">
+            <span>Warum Unterrichtsevaluationen mit AMADEUS? - acht gute Gründe</span>
+            <div class="section-list-item-button"><img class="arrow-icon" src="{% static 'icons/long-accordion-arrow-blue.svg' %}" alt="Pfeil" /></div>
+          </div>
+          <div class="accordion-content">
+            <ul>
+              <li>Sie wollen Ihren&nbsp;Unterricht evaluieren, um dessen Qualität zu verbessern?</li>
+              <li>Sie möchten mehr über Ihre Stärken und Schwächen erfahren, um sich weiterzuentwickeln?</li>
+              <li>Ihnen sind dabei nicht nur überfachliche Kriterien (z. B. kognitive Aktivierung, Klassenführung), sondern auch fachspezifische Aspekte&nbsp;wichtig?</li>
+              <li>
+                Sie möchten sich darauf verlassen können, dass Ihr Evaluationsinstrument stets den aktuellsten&nbsp;wissenschaftlichen Standards entspricht und auf fundierten Forschungsbefunden
+                basiert?
+              </li>
+              <li>Sie wollen mit jeder Nutzung einen kleinen Beitrag zur Optimierung des Evaluationsinstruments und zur Erforschung von Unterrichtsprozessen leisten?</li>
+              <li>
+                Sie suchen eine unkomplizierte Mögllichkeit, Evaluationen Ihres Unterrichts mit geringem&nbsp;Zeitaufwand bei Vorbereitung und Durchführung sowie ohne Zusatzprogramme
+                vorzunehmen?&nbsp;
+              </li>
+              <li>Sie möchten dafür kein kostenpflichtiges Abo und&nbsp;keine&nbsp;aufwendige Registrierung abschließen?</li>
+              <li>Anonymität wie auch&nbsp;Sicherheit Ihrer Daten sowie der Ihrer Schülerinnen und Schüler sind&nbsp;Ihnen ein großes&nbsp;Anliegen?</li>
+            </ul>
+          </div>
+          <div class="section-item section-item-accordion">
+            <span>Wie nutze ich AMADEUS?</span>
+            <div class="section-list-item-button"><img class="arrow-icon" src="{% static 'icons/long-accordion-arrow-blue.svg' %}" alt="Pfeil" /></div>
+          </div>
+          <div class="accordion-content">{% include 'evaluation_tool/components/usage-tutorial.html' %}</div>
+        </div>
+        <div class="section-title">Weitere Informationen zu AMADEUS und FALKO-PV</div>
+        <p>
+          Weiterführende Informationen zum wissenschaftlichen Hintergrund, zu Nutzungsmöglichkeiten und zur Interpretation der Ergebnisse der Evaluationsapp finden Sie in Ihrem persönlichen Evaluationsbericht, den Sie auf Ihrer Statusseite herunterladen können, unter den <a class="falko-link" target="_blank" href="{% url 'faq_page' %}">FAQs</a> oder auf unserer
+          <a class="falko-link" target="_blank" href="https://www.uni-regensburg.de/forschung/falko/falkpo-pv-startseite/unterrichtsevaluation/index.html">Projekthomepage</a>. Dort erhalten Sie auch
+          zusätzliche Informationen zum Forschungsvorhaben von FALKO-PV und dazu, wie Sie dieses bei Interesse unterstützen können.
+        </p>
+        <div class="section-list">
+          <a href="{% url 'modelling_info_page' %}" class="section-item">
+            <span>Wie wird Unterrichtsqualität in AMADEUS modelliert?</span>
+            <div class="section-list-item-button"><img class="arrow-icon" src="{% static 'icons/long-arrow-blue-right.svg' %}" alt="Pfeil" /></div>
+          </a>
+          <a href="{% url 'evaluation_info_page' %}" class="section-item">
+            <span>Wie wird Unterrichtsqualität in AMADEUS evaluiert?</span>
+            <div class="section-list-item-button"><img class="arrow-icon" src="{% static 'icons/long-arrow-blue-right.svg' %}" alt="Pfeil" /></div>
+          </a>
+          <a href="{% url 'faq_page' %}" class="section-item">
+            <span>FAQs zu AMADEUS</span>
+            <div class="section-list-item-button"><img class="arrow-icon" src="{% static 'icons/long-arrow-blue-right.svg' %}" alt="Pfeil" /></div>
+          </a>
+        </div>
+      </div>
+      <!-- <div class="button-section">
+        <a class="button gradient-button" href="{% url 'create_evaluation_page' %}">
+          <span>Evaluation hier starten</span>
+          <img class="arrow-icon" src="{% static 'icons/long-arrow-white-right.svg' %}" alt="Pfeil" />
+        </a>
+      </div> -->
+    </main>
+    <script src="{% static 'scripts/accordion.js' %}"></script>
+    <script src="{% static 'scripts/image-gallery.js' %}"></script>
+    <script type="text/javascript"></script>
+    {% include 'evaluation_tool/components/home-footer.html' %}
+  </body>
+</html>

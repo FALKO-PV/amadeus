@@ -1,4 +1,4 @@
-# FALKO-PV Education Quality Evaluation
+# Unterrichtsevaluation mit AMADEUS – zuverlässig, datenschutzkonform und kostenlos
 
 ![image](docs/header.png)
 

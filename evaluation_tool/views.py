@@ -8,7 +8,7 @@ from evaluation_tool.models import ClassEvaluation, Item, NWFGEvaluation, NWFGEv
     NWFGSingleEvaluation, SingleEvaluation, NWFGEvaluationAcronym
 from .scripts.validate_email import validate_email
 from django.shortcuts import render, redirect
-from django.http import HttpResponse, FileResponse, HttpResponseBadRequest, HttpResponseNotAllowed
+from django.http import HttpResponse, FileResponse
 from .forms import ItemsForm, NewEvaluationForm, DownloadForm
 from .scripts.get_subject_color import get_subject_color
 from .scripts.time_range_is_valid import time_range_is_valid
@@ -18,14 +18,13 @@ from evaluation_tool.scripts.data_analysis import DataAnalyzer
 from evaluation_tool.scripts.pdf_writer import PdfWriter
 from evaluation_tool.scripts.data_exporter import ExcelExporter, create_excel_export, full_data_export
 from six.moves.urllib.parse import urlparse
-from django.http import HttpResponse, JsonResponse
+from django.http import HttpResponse
 from django.contrib.admin.views.decorators import staff_member_required
 from django.db.models import Q
 from django.db import transaction
 from dotenv import load_dotenv
 import json
 import datetime
-import csv
 import io
 import logging
 import time
@@ -35,6 +34,9 @@ logger = logging.getLogger('main')
 
 # load environment variables
 load_dotenv("../.env")
+
+def get_start_page(request):
+    return render(request, 'evaluation_tool/pages/start-page.html')
 
 
 def show_error_page(request, hint_text):
@@ -48,102 +50,6 @@ def page_not_found_view_404(request, exception):
     relative_path = urlparse(request.build_absolute_uri()).path
     logger.error("404 not found! " + relative_path)
     return show_error_page(request, "Unbekannter Pfad " + relative_path)
-
-
-def get_start_page(request):
-    return render(request, 'evaluation_tool/pages/start-page.html')
-
-
-def get_tutorial_page(request):
-    return render(request, 'evaluation_tool/pages/docs/tutorial-page.html')
-
-
-def get_modelling_info_page(request):
-    return render(request, 'evaluation_tool/pages/docs/modelling-info-page.html')
-
-
-def get_evaluation_info_page(request):
-    return render(request, 'evaluation_tool/pages/docs/evaluation-info-page.html')
-
-
-def get_faq_page(request):
-    return render(request, 'evaluation_tool/pages/docs/faq-page.html')
-
-def create_evaluation(request):
-    print(request)
-
-
-from django.views.decorators.csrf import csrf_exempt
-@csrf_exempt
-def create_evaluation_api(request, nwfg_code):
-    """
-    This method processes POST requests to create a new evaluation using the provided NWFG code.
-    The NWFG code is validated against a specific pattern, and the request body is expected to contain
-    the required fields 'email' and 'teacher_name'. If the request is valid, a new evaluation is created
-    and a JSON response is returned with the evaluation details. If the request method is not POST,
-    an HttpResponseNotAllowed is returned.
-    :param request: Django request object
-    :param nwfg_code: NWFG code for the evaluation
-    :return: JsonResponse with evaluation details, HttpResponseBadRequest or HttpResponseNotAllowed
-    """
-
-    if request.method != "POST":
-        return HttpResponseNotAllowed(["POST"], "POST is the only available HTTP method.")
-    
-    nwfg_pattern = r"^(ENG|GER|LAT|MAT|MUS|REL)\d{12}$"
-    
-    if not re.match(nwfg_pattern, nwfg_code):
-        return HttpResponseBadRequest("nwfg_code is not in the correct format.")
-
-    # check if nwfg code already exists
-    try:
-        existing_evaluation = NWFGEvaluation.objects.get(nwfg_code=nwfg_code)
-        return HttpResponseBadRequest("Evaluation with given NWFG-Code is already in use.")
-    except:
-        pass
-
-    request_body = json.loads(request.body.decode("utf-8"))
-
-    if "email" not in request_body:
-       return HttpResponseBadRequest("Email is missing in the request body.")
-
-    if "teacher_name" not in request_body:
-       return HttpResponseBadRequest("Teacher name is missing in the request body.")
-
-    # validate email
-    email = request_body["email"]
-
-    # validate teacher name
-    teacher_name = request_body["teacher_name"]
-    teacher_name_is_valid = len(teacher_name) <= 200
-
-    if not(teacher_name_is_valid):
-        return HttpResponseBadRequest("Teacher is not provided.")
-
-    # validate subject
-    subject_mapping = {
-      "ENG": "Englisch",
-      "GER": "Deutsch",
-      "LAT": "Latein",
-      "MAT": "Mathematik",
-      "MUS": "Musik",
-      "REL": "Evangelische Religion"
-    }
-    subject = subject_mapping[nwfg_code[:3]]
-
-    nwfg_evaluation = NWFGEvaluation.objects.create(
-           nwfg_code=nwfg_code,
-           teacher_name=teacher_name,
-           email=email,
-           subject=subject
-    )
-        
-    response_data = {
-       "evaluation_id": nwfg_evaluation.nwfg_evaluation_id,
-       "status_code": nwfg_evaluation.status_url_token
-    }
-        
-    return JsonResponse(response_data)   
 
 
 def get_create_evaluation_page(request):

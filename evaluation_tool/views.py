@@ -602,89 +602,57 @@ def get_evaluation_form_page(request, evaluation_id, single_evaluation_id):
 
 def get_evaluation_form_page_submit(request, evaluation_id, single_evaluation_id):
     """
-    This method is used to display the page for submitting an evaluation. 
+    This method is used to display the page for submitting an evaluation.
 
     :param request: django specific
     :param evaluation_id: UUID
     :param single_evaluation_id: UUID
     :return: render object
     """
-    # Items heraussuchen, Items sortieren, Seite festlegen (default = 1), Fragen für bestimmte Seite geben
     context = {}
 
-    # Die Evaluation Page ist nicht verfügbar, wenn:
-    # ClassEvaluation completed oder vorbei / SingleEvaluation completed
-    # NWFGEvaluation completed / NWFGEvaluationPart der Single Evaluation completed / SingleEvaluation completed
-    try:
-        class_evaluation = ClassEvaluation.objects.get(
-            class_evaluation_id=evaluation_id)
+    evaluation = get_evaluation(evaluation_id)
+
+    if evaluation is None:
+        logger.warning(f"Ungültige Evaluations ID aufgerufen! {evaluation_id}")
+        return show_error_page(request, "Diese Evaluation gibt es nicht.")
+
+    is_nwfg = isinstance(evaluation, NWFGEvaluation)
+
+    if is_nwfg:
+        single_evaluation = NWFGSingleEvaluation.objects.get(
+            nwfg_single_evaluation_id=single_evaluation_id)
+    else:
         single_evaluation = SingleEvaluation.objects.get(
             single_evaluation_id=single_evaluation_id)
 
-        context["subject_color"] = get_subject_color(class_evaluation.subject)
+    context["subject_color"] = get_subject_color(evaluation.subject)
 
-        evaluation_completed = class_evaluation.completed
-        single_evaluation_completed = single_evaluation.completed
-
-        evaluation_end_reached = class_evaluation.evaluation_end < datetime.datetime.now()
-
-        if str(single_evaluation.class_evaluation.class_evaluation_id) != evaluation_id:
-            logger.warning(f"Ungültige Evaluations ID aufgerufen! {evaluation_id}")
-            return show_error_page(request, "Diese Evaluation gibt es nicht.")
-
-        if evaluation_completed or evaluation_end_reached or class_evaluation.deleted:
-            logger.warning(f"Nicht mehr verfügbare Evaluation aufgerufen! {class_evaluation.pk}")
-            return show_error_page(request, "Diese Evaluation ist nicht mehr verfügbar.")
-
-        is_nwfg = False
-
-    except ObjectDoesNotExist:
-        try:
-            class_evaluation = NWFGEvaluation.objects.get(
-                nwfg_evaluation_id=evaluation_id)
-            single_evaluation = NWFGSingleEvaluation.objects.get(
-                nwfg_single_evaluation_id=single_evaluation_id)
-
-            context["subject_color"] = get_subject_color(
-                class_evaluation.subject)
-
-            evaluation_completed = class_evaluation.completed
-            single_evaluation_completed = single_evaluation.completed
-            evaluation_part_completed = single_evaluation.nwfg_evaluation_part.completed
-
-            is_nwfg = True
-
-            if str(single_evaluation.nwfg_evaluation_part.nwfg_evaluation.nwfg_evaluation_id) != evaluation_id:
-                logger.warning(f"Ungültige Evaluations ID aufgerufen! {evaluation_id}")
-                return show_error_page(request, "Diese Evaluation gibt es nicht.")
-
-            if evaluation_completed or evaluation_part_completed:
-                logger.warning(f"Nicht mehr verfügbare Evaluation aufgerufen! {class_evaluation.pk}")
-                return show_error_page(request, "Diese Evaluation ist nicht mehr verfügbar.")
-
-        except ObjectDoesNotExist:
-            logger.warning(f"Ungültige Evaluations ID aufgerufen! {evaluation_id}")
-            return show_error_page(request, "Diese Evaluation gibt es nicht.")
+    evaluation_completed = evaluation.completed
+    single_evaluation_completed = single_evaluation.completed
 
     if is_nwfg:
-        context["is_nwfg_evaluation"] = True
+        evaluation_part_completed = single_evaluation.nwfg_evaluation_part.completed
+    else:
+        evaluation_end_reached = evaluation.evaluation_end < datetime.datetime.now()
+
+    if evaluation_completed or (is_nwfg and evaluation_part_completed) or evaluation_end_reached or evaluation.deleted:
+        logger.warning(f"Nicht mehr verfügbare Evaluation aufgerufen! {evaluation.pk}")
+        return show_error_page(request, "Diese Evaluation ist nicht mehr verfügbar.")
+
+    if is_nwfg:
         questions = NWFGItem.objects.filter(
             nwfg_single_evaluation=single_evaluation)
         answered_questions = NWFGItem.objects.filter(
             nwfg_single_evaluation=single_evaluation,
             selected_likert_item__isnull=False
         )
-        context["single_evaluation_id"] = single_evaluation_id
-        context["class_evaluation_id"] = evaluation_id
     else:
-        context["is_nwfg_evaluation"] = False
         questions = Item.objects.filter(single_evaluation=single_evaluation)
         answered_questions = Item.objects.filter(
             single_evaluation=single_evaluation,
             selected_likert_item__isnull=False
         )
-        context["single_evaluation_id"] = single_evaluation_id
-        context["class_evaluation_id"] = evaluation_id
 
     context["single_evaluation_completed"] = single_evaluation_completed
 
@@ -711,8 +679,11 @@ def get_evaluation_form_page_submit(request, evaluation_id, single_evaluation_id
                 single_evaluation_id=single_evaluation.pk
             )
 
-    return render(request, 'evaluation_tool/pages/submit-evaluation-page.html', context)
+    context["is_nwfg_evaluation"] = is_nwfg
+    context["single_evaluation_id"] = single_evaluation_id
+    context["class_evaluation_id"] = evaluation_id
 
+    return render(request, 'evaluation_tool/pages/submit-evaluation-page.html', context)
 
 def get_status_page(request, evaluation_id, status_code):
     """

@@ -344,6 +344,7 @@ def get_start_evaluation(request, evaluation_id):
             else:
                 return redirect(evaluation_id + '/new-auth')
 
+
 def get_all_question_data() -> dict:
     """
     This function returns a dictionary that stores the corresponding information for each question code (key).
@@ -351,20 +352,21 @@ def get_all_question_data() -> dict:
     :return: dictionary
     """
     with open("static/data/question_pool.json") as file:
-        question_pool = json.loads(file.read())
+        question_pool = json.load(file)
 
-    question_data = dict()
+    question_data = {}
 
-    for dimension in question_pool["unspecific_dimensions"].keys():
-        question_data.update(
-            question_pool["unspecific_dimensions"][dimension]["pool"]
-        )
-    for specific_dimension in ["8", "9"]:
-        for subject in question_pool["specific_dimension"][specific_dimension]["subjects"].keys():
-            question_data.update(
-                question_pool["specific_dimension"][specific_dimension]["subjects"][subject]["pool"]
-            )
+    for dimension in question_pool.get("unspecific_dimensions", {}):
+        question_data.update(question_pool["unspecific_dimensions"][dimension].get("pool", {}))
+
+    specific_dimensions = question_pool.get("specific_dimension", {})
+    for dimension in specific_dimensions:
+        subjects = specific_dimensions.get(dimension, {}).get("subjects", {})
+        for subject in subjects:
+            question_data.update(subjects[subject].get("pool", {}))
+
     return question_data
+
 
 
 def get_question_data(is_nwfg: bool = False, single_evaluation=None):

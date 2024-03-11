@@ -411,89 +411,52 @@ def get_question_data(is_nwfg: bool = False, single_evaluation=None):
 
 def get_evaluation_form_page(request, evaluation_id, single_evaluation_id):
     """
-    This method is used to display the single questions to a student. Five questions are always displayed. 
-    Once a student has answered these (Likert) questions, she/he can answer the next ones by clicking on "Next". 
+    This method is used to display the single questions to a student. Five questions are always displayed.
+    Once a student has answered these (Likert) questions, she/he can answer the next ones by clicking on "Next".
     Each time "Next" is clicked, the student's answers to the questions are persisted by a POST request.
-    
+
     :param request: django specific
     :param evaluation_id: UUID
     :param single_evaluation_id: UUID
     :return: render object
     """
-    # Items heraussuchen, Items sortieren, Seite festlegen (default = 1), Fragen für bestimmte Seite geben
     context = {}
 
-    # Die Evaluation Page ist nicht verfügbar, wenn:
-    # ClassEvaluation completed oder vorbei / SingleEvaluation completed
-    # NWFGEvaluation completed / NWFGEvaluationPart der Single Evaluation completed / SingleEvaluation completed
-    try:
-        class_evaluation = ClassEvaluation.objects.get(
-            class_evaluation_id=evaluation_id
-        )
+    evaluation = get_evaluation(evaluation_id)
+
+    if evaluation is None:
+        logger.warning(f"Ungültige Evaluations ID aufgerufen! {evaluation_id}")
+        return show_error_page(request, "Diese Evaluation gibt es nicht.")
+
+    is_nwfg = isinstance(evaluation, NWFGEvaluation)
+
+    if is_nwfg:
+        single_evaluation = NWFGSingleEvaluation.objects.get(
+            nwfg_single_evaluation_id=single_evaluation_id)
+    else:
         single_evaluation = SingleEvaluation.objects.get(
-            single_evaluation_id=single_evaluation_id
+            single_evaluation_id=single_evaluation_id)
+
+    context["subject_color"] = get_subject_color(evaluation.subject)
+
+    evaluation_completed = evaluation.completed
+    single_evaluation_completed = single_evaluation.completed
+
+    if is_nwfg:
+        evaluation_part_completed = single_evaluation.nwfg_evaluation_part.completed
+    else:
+        evaluation_end_reached = evaluation.evaluation_end < datetime.datetime.now()
+
+    if evaluation_completed or (is_nwfg and evaluation_part_completed) or evaluation_end_reached or evaluation.deleted:
+        logger.warning(f"Nicht mehr verfügbare Evaluation aufgerufen! {evaluation.pk}")
+        return show_error_page(request, "Diese Evaluation ist nicht mehr verfügbar.")
+
+    if single_evaluation_completed:
+        return redirect(
+            "evaluation-form-page-submit",
+            evaluation_id=evaluation_id,
+            single_evaluation_id=single_evaluation.pk
         )
-
-        context["subject_color"] = get_subject_color(class_evaluation.subject)
-
-        evaluation_completed = class_evaluation.completed
-        single_evaluation_completed = single_evaluation.completed
-
-        evaluation_end_reached = class_evaluation.evaluation_end < datetime.datetime.now()
-
-        if str(single_evaluation.class_evaluation.class_evaluation_id) != evaluation_id:
-            logger.warning(f"Ungültige Evaluations ID aufgerufen! {evaluation_id}")
-            return show_error_page(request, "Diese Evaluation gibt es nicht.")
-
-        if evaluation_completed or evaluation_end_reached or class_evaluation.deleted:
-            logger.warning(f"Nicht mehr verfügbare Evaluation aufgerufen! {class_evaluation.pk}")
-            return show_error_page(request, "Diese Evaluation ist nicht mehr verfügbar.")
-
-        # once a student has submitted a single evaluation, it is no longer possible to continue editing the
-        # multiple choice answers. therefore, the page with the multiple choice questions should no longer be
-        # accessible and the student will be redirected to the submit page, which will now only display a message
-        # stating that the evaluation has been completed.
-        if single_evaluation_completed:
-            return redirect(
-                "evaluation-form-page-submit",
-                evaluation_id=evaluation_id,
-                single_evaluation_id=single_evaluation.pk
-            )
-        is_nwfg = False
-
-    except ObjectDoesNotExist:
-        try:
-            class_evaluation = NWFGEvaluation.objects.get(
-                nwfg_evaluation_id=evaluation_id)
-            single_evaluation = NWFGSingleEvaluation.objects.get(
-                nwfg_single_evaluation_id=single_evaluation_id)
-
-            context["subject_color"] = get_subject_color(
-                class_evaluation.subject)
-
-            evaluation_completed = class_evaluation.completed
-            single_evaluation_completed = single_evaluation.completed
-            evaluation_part_completed = single_evaluation.nwfg_evaluation_part.completed
-
-            is_nwfg = True
-
-            if str(single_evaluation.nwfg_evaluation_part.nwfg_evaluation.nwfg_evaluation_id) != evaluation_id:
-                logger.warning(f"Ungültige Evaluations ID aufgerufen! {evaluation_id}")
-                return show_error_page(request, "Diese Evaluation gibt es nicht.")
-
-            if evaluation_completed or evaluation_part_completed:
-                logger.warning(f"Nicht mehr verfügbare Evaluation aufgerufen! {class_evaluation.pk}")
-                return show_error_page(request, "Diese Evaluation ist nicht mehr verfügbar.")
-
-            if single_evaluation_completed:
-                return redirect(
-                    "evaluation-form-page-submit",
-                    evaluation_id=evaluation_id,
-                    single_evaluation_id=single_evaluation.pk
-                )
-        except ObjectDoesNotExist:
-            logger.warning(f"Ungültige Evaluations ID aufgerufen! {evaluation_id}")
-            return show_error_page(request, "Diese Evaluation gibt es nicht.")
 
     # get the question codes of the questions in the given evaluation
     # / the data for all questions / number of answered questions

@@ -229,38 +229,35 @@ def get_datenschutzhinweise_page(request):
 def get_impressum_page(request):
     return render(request, 'evaluation_tool/pages/impressum.html')
 
+def get_evaluation(evaluation_id):
+    try:
+        return ClassEvaluation.objects.get(class_evaluation_id=evaluation_id)
+    except ObjectDoesNotExist:
+        try:
+            return NWFGEvaluation.objects.get(nwfg_evaluation_id=evaluation_id)
+        except ObjectDoesNotExist:
+            return None
 
 def get_share_page(request, evaluation_id):
     """
-    This method is used to show the QR code to students so that they can participate in an evaluation. 
-    The QR code is transferred to the client as an SVG string. The evaluation_id (primary key) of the evaluation is part of the URL. 
+    This method is used to show the QR code to students so that they can participate in an evaluation.
+    The QR code is transferred to the client as an SVG string. The evaluation_id (primary key) of the evaluation is part of the URL.
     The QR code should then be displayed for participating in the evaluation with this evaluation_id.
 
     :param request: django specific
     :param evaluation_id: UUID of evaluation
-    :return: redner object, HttpResponse at error
+    :return: render object, HttpResponse at error
     """
     if request.method == "GET":
-        try:
-            class_evaluation = ClassEvaluation.objects.get(class_evaluation_id=evaluation_id)
-            evaluation_completed = class_evaluation.completed
-            evaluation_end_reached = class_evaluation.evaluation_end < datetime.datetime.now()
+        evaluation = get_evaluation(evaluation_id)
 
-            if evaluation_completed or evaluation_end_reached or class_evaluation.deleted:
-                logger.warning(f"Nicht mehr verfügbare Evaluation aufgerufen! {class_evaluation.pk}")
-                return show_error_page(request, "Diese Evaluation ist nicht mehr verfügbar.")
+        if evaluation is None:
+            logger.warning(f"Ungültige Evaluations ID aufgerufen! {evaluation_id}")
+            return show_error_page(request, "Diese Evaluation gibt es nicht.")
 
-        except ObjectDoesNotExist:
-            try:
-                class_evaluation = NWFGEvaluation.objects.get(nwfg_evaluation_id=evaluation_id)
-                evaluation_completed = class_evaluation.completed
-                if evaluation_completed:
-                    logger.warning(f"Nicht mehr verfügbare Evaluation aufgerufen! {class_evaluation.pk}")
-                    return show_error_page(request, "Diese Evaluation ist nicht mehr verfügbar.")
-
-            except ObjectDoesNotExist:
-                logger.warning(f"Ungültige Evaluations ID aufgerufen! {evaluation_id}")
-                return show_error_page(request, "Diese Evaluation gibt es nicht.")
+        if evaluation.completed or (hasattr(evaluation, 'evaluation_end') and evaluation.evaluation_end < datetime.datetime.now()) or evaluation.deleted:
+            logger.warning(f"Nicht mehr verfügbare Evaluation aufgerufen! {evaluation.pk}")
+            return show_error_page(request, "Diese Evaluation ist nicht mehr verfügbar.")
 
         qr_code_url = os.getenv("WEBSITE_URL") + "evaluation/" + evaluation_id
         qr_code_svg_string = create_qr_code_as_svg_string(qr_code_url)
@@ -269,7 +266,7 @@ def get_share_page(request, evaluation_id):
             "qr_code_svg_string": qr_code_svg_string,
             "share_url": qr_code_url,
             "class_evaluation_id": evaluation_id,
-            "subject_color": get_subject_color(class_evaluation.subject)
+            "subject_color": get_subject_color(getattr(evaluation, 'subject', None))
         }
 
         return render(request, 'evaluation_tool/pages/share-page.html', context)

@@ -274,8 +274,8 @@ def get_share_page(request, evaluation_id):
 
 def get_start_evaluation(request, evaluation_id):
     """
-    This method is used to process requests on the evaluation participation page. 
-    So this is the page a student will get to if she/he has scanned the QR code. 
+    This method is used to process requests on the evaluation participation page.
+    So this is the page a student will get to if she/he has scanned the QR code.
     For evaluations with NWFG code, there is the possibility to participate with a new acronym or with an acronym that has already been used in a previous "Befragungsrunde".
 
     :param request: django specific
@@ -283,56 +283,45 @@ def get_start_evaluation(request, evaluation_id):
     :return: render object or redirect, HttpResponse at Error
     """
     context = {}
-    try:
-        class_evaluation = ClassEvaluation.objects.get(class_evaluation_id=evaluation_id)
-        is_nwfg_evaluation = False
-        context["is_nwfg_evaluation"] = False
-        context["subject_color"] = get_subject_color(class_evaluation.subject)
+    evaluation = get_evaluation(evaluation_id)
 
-        evaluation_completed = class_evaluation.completed
-        evaluation_end_reached = class_evaluation.evaluation_end < datetime.datetime.now()
+    if evaluation is None:
+        logger.warning(f"Ungültige Evaluations ID aufgerufen! {evaluation_id}")
+        return show_error_page(request, "Diese Evaluation gibt es nicht.")
 
-        if evaluation_completed or evaluation_end_reached or class_evaluation.deleted:
-            logger.warning(f"Nicht mehr verfügbare Evaluation aufgerufen! {class_evaluation.pk}")
-            return show_error_page(request, "Diese Evaluation ist nicht mehr verfügbar.")
+    is_nwfg_evaluation = isinstance(evaluation, NWFGEvaluation)
+    context["is_nwfg_evaluation"] = is_nwfg_evaluation
+    context["subject_color"] = get_subject_color(getattr(evaluation, 'subject', None))
 
-    except ObjectDoesNotExist:
-        try:
-            class_evaluation = NWFGEvaluation.objects.get(nwfg_evaluation_id=evaluation_id)
-            is_nwfg_evaluation = True
-            context["is_nwfg_evaluation"] = True
-            context["subject_color"] = get_subject_color(class_evaluation.subject)
-            context["class_evaluation_id"] = evaluation_id
-            context["subject_code"] = class_evaluation.nwfg_code[:3]
-            context["nwfg_code"] = class_evaluation.nwfg_code
+    evaluation_completed = evaluation.completed
+    evaluation_end_reached = getattr(evaluation, 'evaluation_end', None) and evaluation.evaluation_end < datetime.datetime.now()
 
-            # in the queryset, the Befragungsrunden are sorted in ascending order
-            # based on the database models (meta settings).
-            # the current Befragungsrunde round is therefore the last element in the queryset.
-            evaluation_parts = NWFGEvaluationPart.objects.filter(nwfg_evaluation=class_evaluation)
-            current_part = evaluation_parts.last()
-            context.update({
-                'befragungsrunde': current_part.befragungsrunde if current_part else None,
-                'erhebungszeitpunkt': current_part.erhebungszeitpunkt if current_part else None,
-                'first_part_started': bool(evaluation_parts),
-            })
+    if evaluation_completed or evaluation_end_reached or getattr(evaluation, 'deleted', False):
+        logger.warning(f"Nicht mehr verfügbare Evaluation aufgerufen! {evaluation.pk}")
+        return show_error_page(request, "Diese Evaluation ist nicht mehr verfügbar.")
 
-            evaluation_completed = class_evaluation.completed
+    if is_nwfg_evaluation:
+        context["class_evaluation_id"] = evaluation_id
+        context["subject_code"] = evaluation.nwfg_code[:3]
+        context["nwfg_code"] = evaluation.nwfg_code
 
-            if evaluation_completed:
-                logger.warning(f"Nicht mehr verfügbare Evaluation aufgerufen! {class_evaluation.pk}")
-                return show_error_page(request, "Diese Evaluation gibt es nicht.")
-
-        except ObjectDoesNotExist:
-            logger.warning(f"Ungültige Evaluations ID aufgerufen! {evaluation_id}")
-            return show_error_page(request, "Diese Evaluation gibt es nicht.")
+        # in the queryset, the Befragungsrunden are sorted in ascending order
+        # based on the database models (meta settings).
+        # the current Befragungsrunde round is therefore the last element in the queryset.
+        evaluation_parts = NWFGEvaluationPart.objects.filter(nwfg_evaluation=evaluation)
+        current_part = evaluation_parts.last()
+        context.update({
+            'befragungsrunde': current_part.befragungsrunde if current_part else None,
+            'erhebungszeitpunkt': current_part.erhebungszeitpunkt if current_part else None,
+            'first_part_started': bool(evaluation_parts),
+        })
 
     if request.method == "GET":
-        context["subject"] = class_evaluation.subject
-        context["teacher_name"] = class_evaluation.teacher_name
+        context["subject"] = evaluation.subject
+        context["teacher_name"] = evaluation.teacher_name
 
         if not is_nwfg_evaluation:
-            context["evaluation_end"] = class_evaluation.evaluation_end.strftime(
+            context["evaluation_end"] = evaluation.evaluation_end.strftime(
                 '%d.%m.%Y - %H:%M')
 
         return render(request, 'evaluation_tool/pages/start-evaluation-page.html', context)
@@ -340,9 +329,9 @@ def get_start_evaluation(request, evaluation_id):
     if request.method == "POST":
 
         if not is_nwfg_evaluation:
-            single_evaluation = SingleEvaluation.objects.create(class_evaluation=class_evaluation)
+            single_evaluation = SingleEvaluation.objects.create(class_evaluation=evaluation)
             create_items_for_new_single_evaluation(
-                is_nwfg=False, single_evaluation=single_evaluation, class_evaluation=class_evaluation
+                is_nwfg=False, single_evaluation=single_evaluation, class_evaluation=evaluation
             )
             return redirect(
                 "evaluation-form-page",
@@ -354,7 +343,6 @@ def get_start_evaluation(request, evaluation_id):
                 return redirect(evaluation_id + '/auth')
             else:
                 return redirect(evaluation_id + '/new-auth')
-
 
 def get_all_question_data() -> dict:
     """

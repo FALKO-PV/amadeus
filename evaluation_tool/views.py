@@ -1,35 +1,32 @@
-import os
-from evaluation_tool.scripts.email_handler import send_mail_finished_class_evaluation, \
-    send_mail_finished_nwfg_evaluation, send_mail_new_class_evaluation, send_mail_new_nwfg_evaluation, \
-    send_mail_new_nwfg_evaluation_round
-from evaluation_tool.scripts.pool_creation import create_items_for_new_single_evaluation
-from .scripts.create_qr_code_as_svg_string import create_qr_code_as_svg_string
-from evaluation_tool.models import ClassEvaluation, Item, NWFGEvaluation, NWFGEvaluationPart, NWFGItem, \
-    NWFGSingleEvaluation, SingleEvaluation, NWFGEvaluationAcronym
-from .scripts.validate_email import validate_email
+import os, json, datetime, logging, re, io, time
+from six.moves.urllib.parse import urlparse
+from dotenv import load_dotenv
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, FileResponse
+from django.contrib import messages
+from django.core.exceptions import ObjectDoesNotExist
+from django.contrib.admin.views.decorators import staff_member_required
+from django.db.models import Q
+from django.db import transaction
+from evaluation_tool.models import (
+    ClassEvaluation, Item, NWFGEvaluation, NWFGEvaluationPart, NWFGItem,
+    NWFGSingleEvaluation, SingleEvaluation, NWFGEvaluationAcronym
+)
+from evaluation_tool.scripts.email_handler import (
+    send_mail_finished_class_evaluation, send_mail_finished_nwfg_evaluation,
+    send_mail_new_class_evaluation, send_mail_new_nwfg_evaluation
+)
+from evaluation_tool.scripts.pool_creation import create_items_for_new_single_evaluation
+from evaluation_tool.scripts.create_qr_code_as_svg_string import create_qr_code_as_svg_string
 from .forms import ItemsForm, NewEvaluationForm, DownloadForm
 from .scripts.get_subject_color import get_subject_color
 from .scripts.time_range_is_valid import time_range_is_valid
-from django.contrib import messages
-from django.core.exceptions import ObjectDoesNotExist
+from .scripts.validate_email import validate_email
 from evaluation_tool.scripts.data_analysis import DataAnalyzer
 from evaluation_tool.scripts.pdf_writer import PdfWriter
 from evaluation_tool.scripts.data_exporter import ExcelExporter, create_excel_export, full_data_export
-from six.moves.urllib.parse import urlparse
-from django.http import HttpResponse
-from django.contrib.admin.views.decorators import staff_member_required
 from evaluation_tool.subjects import subject_mapping
-from django.db.models import Q
-from django.db import transaction
-from dotenv import load_dotenv
-import json
-import datetime
-import io
-import logging
-import time
-import re
+
 
 logger = logging.getLogger('main')
 

@@ -2,6 +2,7 @@ from django.http import HttpResponseBadRequest, HttpResponseNotAllowed
 from evaluation_tool.models import NWFGEvaluation
 from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
+from evaluation_tool.subjects import subject_mapping
 import json
 import re
 
@@ -51,15 +52,6 @@ def create_evaluation_api(request, nwfg_code):
     if not (teacher_name_is_valid):
         return HttpResponseBadRequest("Teacher is not provided.")
 
-    # validate subject
-    subject_mapping = {
-        "ENG": "Englisch",
-        "GER": "Deutsch",
-        "LAT": "Latein",
-        "MAT": "Mathematik",
-        "MUS": "Musik",
-        "REL": "Evangelische Religion"
-    }
     subject = subject_mapping[nwfg_code[:3]]
 
     nwfg_evaluation = NWFGEvaluation.objects.create(

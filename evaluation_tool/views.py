@@ -20,6 +20,7 @@ from evaluation_tool.scripts.data_exporter import ExcelExporter, create_excel_ex
 from six.moves.urllib.parse import urlparse
 from django.http import HttpResponse
 from django.contrib.admin.views.decorators import staff_member_required
+from evaluation_tool.subjects import subject_mapping
 from django.db.models import Q
 from django.db import transaction
 from dotenv import load_dotenv
@@ -63,14 +64,6 @@ def get_create_evaluation_page(request):
 
     if request.method == "POST":
         nwfg_pattern = r"^(ENG|GER|LAT|MAT|MUS|REL)\d{12}$"
-        subject_mapping = {
-          "ENG": "Englisch",
-          "GER": "Deutsch",
-          "LAT": "Latein",
-          "MAT": "Mathematik",
-          "MUS": "Musik",
-          "REL": "Evangelische Religion"
-        }
 
         form = NewEvaluationForm(request.POST)
         error_text = ""
@@ -104,9 +97,9 @@ def get_create_evaluation_page(request):
 
         # Validate subject
         subject = form["subject"].value()
-        if (subject == "Allgemeine Lehrevaluation" and not is_for_nwfg_study) or subject == "Deutsch" or \
-                subject == "Englisch" or subject == "Evangelische Religion" or subject == "Latein" or \
-                subject == "Mathematik" or subject == "Musik":
+        valid_subjects = ["Allgemeine Lehrevaluation"] + list(subject_mapping.values())
+
+        if (subject == "Allgemeine Lehrevaluation" and not is_for_nwfg_study) or subject in valid_subjects:
             valid_subject = True
             context["subject"] = subject
         else:

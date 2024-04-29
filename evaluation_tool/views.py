@@ -785,17 +785,20 @@ def get_status_page(request, evaluation_id, status_code):
         context["current_befragungsrunde"] = evaluation_parts.reverse()[0].befragungsrunde
         context["current_part_status"] = "completed"
 
+        N_BEFRAGUNGSRUNDEN = 2
+        N_ERHEBUNGSZEITPUNKTE = 3
+
         context["is_last_evaluation"] = True if (
-                context["current_erhebungszeitpunkt"] == 3 and context["current_befragungsrunde"] == 2
+                context["current_erhebungszeitpunkt"] == N_ERHEBUNGSZEITPUNKTE and context["current_befragungsrunde"] == N_BEFRAGUNGSRUNDEN
         ) else False
 
         if not (context["is_last_evaluation"]):
             context["next_erhebungszeitpunkt"] = context["current_erhebungszeitpunkt"] if (
-                    context["current_befragungsrunde"] < 2
+                    context["current_befragungsrunde"] < N_BEFRAGUNGSRUNDEN
             ) else context["current_erhebungszeitpunkt"] + 1
 
             context["next_befragungsrunde"] = context["current_befragungsrunde"] + 1 if (
-                    context["current_befragungsrunde"] < 2
+                    context["current_befragungsrunde"] < N_BEFRAGUNGSRUNDEN
             ) else 1
 
         context["share_url"] = os.getenv("WEBSITE_URL") + "evaluation/" + \
@@ -859,7 +862,7 @@ def get_status_page(request, evaluation_id, status_code):
                 current_part.save()
 
                 # If the second Befragungsrunde of a Erhebungszeitpunkt gets stopped, a mail should also be sent.
-                if current_part.befragungsrunde == 2 and current_part.erhebungszeitpunkt == 3:
+                if current_part.befragungsrunde == N_BEFRAGUNGSRUNDEN and current_part.erhebungszeitpunkt == N_ERHEBUNGSZEITPUNKTE:
                     send_mail_finished_nwfg_evaluation(class_evaluation=class_evaluation.pk, to_email_address=class_evaluation.email, status_code=class_evaluation.status_url_token)
 
                 # if the current Befragunsrunde is the last of the nine
@@ -892,7 +895,7 @@ def get_status_page(request, evaluation_id, status_code):
                     current_part.evaluation_stopped_timestamp = datetime.datetime.now()
                     current_part.save()
 
-                    #if current_part.befragungsrunde == 2:
+                    #if current_part.befragungsrunde == N_BEFRAGUNGSRUNDEN:
                         #send_mail_finished_nwfg_evaluation(class_evaluation=class_evaluation.pk, to_email_address=class_evaluation.email, status_code=class_evaluation.status_url_token)
 
                 # create new Befragungsrunde (=nwfg_evaluation_part)

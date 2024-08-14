@@ -253,6 +253,7 @@ def get_new_auth_student_page(request, evaluation_id):
             # We would like to provide the template with the information whether the acronym has been newly selected or not (register vs. login process)
             context["acronym_registration"] = True
             context["input_acronym"] = input_acronym
+            context["school_type"] = class_evaluation.school_type
 
             return render(request, 'evaluation_tool/pages/show-pattern-page.html', context)
 

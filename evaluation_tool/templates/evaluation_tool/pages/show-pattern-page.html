@@ -45,7 +45,13 @@
           <p class="description">Abschließend bitten wir dich, einige Fragen zu dir selbst und deiner schulischen Situation zu beantworten. Hierzu wirst du zu einem Fragebogen weitergeleitet.</p>
           {% if acronym_registration %}
           <div class="container-demographic-button">
-            <a class="demographic-button" target="_blank" href="https://limesurvey.eds-ur.de/index.php?r=survey/index&sid=981993&lang=de&NWFGCode={{nwfg_code}}&Schuelercode={{input_acronym}}&Fach={{ nwfg_code|slice:":3" }}">Hintergrundfragebogen ausfüllen</a>
+            {% if school_type == "RE" %}
+                <!-- TODO: enter valid URL for Realschule Limesurvey! -->
+                <a class="demographic-button" target="_blank" href="https://limesurvey.eds-ur.de/index.php?r=survey/index&sid=981993&lang=de&NWFGCode={{nwfg_code}}&Schuelercode={{input_acronym}}&Fach={{ nwfg_code|slice:":3" }}">Hintergrundfragebogen ausfüllen</a>
+            {% endif %}
+              {% if school_type == "GYM" %}
+                  <a class="demographic-button" target="_blank" href="https://limesurvey.eds-ur.de/index.php?r=survey/index&sid=981993&lang=de&NWFGCode={{nwfg_code}}&Schuelercode={{input_acronym}}&Fach={{ nwfg_code|slice:":3" }}">Hintergrundfragebogen ausfüllen</a>
+              {% endif %}
           </div>
           {% endif %}
         </div>

@@ -140,6 +140,11 @@ class Item(models.Model):
 
 class NWFGEvaluation(models.Model):
 
+    SCHOOL_TYPE = {
+        "GYM": "Gymnasium",
+        "RE": "Realschule",
+    }
+
     class Meta:
         verbose_name = 'NWFGEvaluation'
         verbose_name_plural = 'NWFGEvaluations'
@@ -173,7 +178,12 @@ class NWFGEvaluation(models.Model):
         max_length=200
     )
     email = models.EmailField(blank=False)
-
+    school_type = models.CharField(
+        max_length=6,
+        default=SCHOOL_TYPE['RE'],
+        blank=False,
+        choices=SCHOOL_TYPE,
+    )
     subject = models.CharField(
         blank=False,
         max_length=21,

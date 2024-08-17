@@ -28,9 +28,12 @@ def create_evaluation_api(request, nwfg_code):
         return HttpResponseBadRequest("nwfg_code is not in the correct format.")
 
     # check if nwfg code already exists
-    existing_evaluation = NWFGEvaluation.objects.get(nwfg_code=nwfg_code)
-    if existing_evaluation:
-        return HttpResponseBadRequest("Evaluation with given NWFG-Code is already in use.")
+    try:
+        existing_evaluation = NWFGEvaluation.objects.get(nwfg_code=nwfg_code)
+        if existing_evaluation:
+            return HttpResponseBadRequest("Evaluation with given NWFG-Code is already in use.")
+    except NWFGEvaluation.DoesNotExist:
+        pass
 
     request_body = json.loads(request.body.decode("utf-8"))
 

@@ -123,10 +123,10 @@ class DataExporter:
                 if it.selected_likert_item:
                     observation.append(it.selected_likert_item)
                 else:
-                    observation.append(np.NaN)
+                    observation.append(np.nan)
 
             except ObjectDoesNotExist:
-                observation.append(np.NaN)
+                observation.append(np.nan)
 
         return observation
 
@@ -183,10 +183,10 @@ class ExcelExporter(DataExporter):
                 if it.selected_likert_item:
                     observation.append(it.selected_likert_item)
                 else:
-                    observation.append(np.NaN)
+                    observation.append(np.nan)
 
             except ObjectDoesNotExist:
-                observation.append(np.NaN)
+                observation.append(np.nan)
 
         return observation
 

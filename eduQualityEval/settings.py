@@ -30,7 +30,7 @@ SECRET_KEY = os.getenv('AMADEUS_SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['0.0.0.0', "127.0.0.1", "192.168.178.87", "192.168.178.90",
-                 "161.97.174.133", "testamadeus.falko-pv.de"]
+                 "161.97.174.133", "testamadeus.falko-pv.de", "localhost"]
 
 # Application definition
 

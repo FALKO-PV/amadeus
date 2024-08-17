@@ -30,8 +30,9 @@ def create_evaluation_api(request, nwfg_code):
     # check if nwfg code already exists
     try:
         existing_evaluation = NWFGEvaluation.objects.get(nwfg_code=nwfg_code)
-        return HttpResponseBadRequest("Evaluation with given NWFG-Code is already in use.")
-    except:
+        if existing_evaluation:
+            return HttpResponseBadRequest("Evaluation with given NWFG-Code is already in use.")
+    except NWFGEvaluation.DoesNotExist:
         pass
 
     request_body = json.loads(request.body.decode("utf-8"))
@@ -42,6 +43,9 @@ def create_evaluation_api(request, nwfg_code):
     if "teacher_name" not in request_body:
         return HttpResponseBadRequest("Teacher name is missing in the request body.")
 
+    if "school_type" not in request_body:
+        return HttpResponseBadRequest("School type is missing in the request body.")
+
     # validate email
     email = request_body["email"]
 
@@ -49,7 +53,9 @@ def create_evaluation_api(request, nwfg_code):
     teacher_name = request_body["teacher_name"]
     teacher_name_is_valid = len(teacher_name) <= 200
 
-    if not (teacher_name_is_valid):
+    school_type = request_body["school_type"]
+
+    if not teacher_name_is_valid:
         return HttpResponseBadRequest("Teacher is not provided.")
 
     subject = subject_mapping[nwfg_code[:3]]
@@ -58,7 +64,8 @@ def create_evaluation_api(request, nwfg_code):
         nwfg_code=nwfg_code,
         teacher_name=teacher_name,
         email=email,
-        subject=subject
+        subject=subject,
+        school_type=school_type
     )
 
     response_data = {

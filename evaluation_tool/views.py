@@ -434,10 +434,12 @@ def get_evaluation_form_page(request, evaluation_id, single_evaluation_id):
 
     if is_nwfg:
         evaluation_part_completed = single_evaluation.nwfg_evaluation_part.completed
+        evaluation_end_reached = False
     else:
         evaluation_end_reached = evaluation.evaluation_end < datetime.datetime.now()
+        evaluation_part_completed = False
 
-    if evaluation_completed or (is_nwfg and evaluation_part_completed) or evaluation_end_reached or evaluation.deleted:
+    if evaluation_completed or (is_nwfg and evaluation_part_completed) or evaluation_end_reached:
         logger.warning(f"Nicht mehr verfügbare Evaluation aufgerufen! {evaluation.pk}")
         return show_error_page(request, "Diese Evaluation ist nicht mehr verfügbar.")
 

@@ -245,7 +245,7 @@ def get_share_page(request, evaluation_id):
             logger.warning(f"Ungültige Evaluations ID aufgerufen! {evaluation_id}")
             return show_error_page(request, "Diese Evaluation gibt es nicht.")
 
-        if evaluation.completed or (hasattr(evaluation, 'evaluation_end') and evaluation.evaluation_end < datetime.datetime.now()) or evaluation.deleted:
+        if evaluation.completed or (hasattr(evaluation, 'evaluation_end') and evaluation.evaluation_end < datetime.datetime.now()):
             logger.warning(f"Nicht mehr verfügbare Evaluation aufgerufen! {evaluation.pk}")
             return show_error_page(request, "Diese Evaluation ist nicht mehr verfügbar.")
 

@@ -625,7 +625,9 @@ def get_evaluation_form_page_submit(request, evaluation_id, single_evaluation_id
 
     if is_nwfg:
         evaluation_part_completed = single_evaluation.nwfg_evaluation_part.completed
+        evaluation_end_reached = False
     else:
+        evaluation_part_completed = False
         evaluation_end_reached = evaluation.evaluation_end < datetime.datetime.now()
 
     if evaluation_completed or (is_nwfg and evaluation_part_completed) or evaluation_end_reached or evaluation.deleted:

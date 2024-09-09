@@ -193,6 +193,10 @@ class DataAnalyzer:
         return dims
 
 
+def get_stats_per_part_per_dim(self):
+    pass
+
+
 def create_dim_barplot(datadict, key, fig_width, fig_height):
     x_axis = np.array([
         "Trifft \nnicht zu\n(1).",

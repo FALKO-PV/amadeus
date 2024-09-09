@@ -61,7 +61,7 @@ python manage.py runserver
 ### Datenbank Migrationen
 
 Migrationen anwenden
-python manage.py makemigrations
+`python manage.py makemigrations evaluation_tool`
 
 Migrationen hinzufügen
 `python manage.py migrate`

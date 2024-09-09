@@ -14,6 +14,8 @@ COPY . /app
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
+RUN python manage.py makemigrations evaluation_tool
+
 # Expose port 8000 for the Django app to run on
 EXPOSE 8000
 

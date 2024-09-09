@@ -891,39 +891,58 @@ def get_status_page(request, evaluation_id, status_code):
                 logger.error(f"Ungewöhnlicher Fehler nach Stoppen der NWFG Evaluation {evaluation_id}")
 
             if action == "next_evaluation" and not (context["is_last_evaluation"]):
+                
+                at_least_one_student_or_previous_module_stopped = True
+                
+                for i in range(6):
+                    d = context["evaluation_data"][i]
+                    if d["status"] == "started":
+                        if d["evaluations_completed"] < 1:
+                            at_least_one_student_or_previous_module_stopped = False
+                
+                if at_least_one_student_or_previous_module_stopped:
+                    
+        
 
-                if not current_part.completed:
-                    # If the next Befragungsrunde gets started,
-                    # the one that has been active until now is marked as completed.
-                    current_part.completed = True
-                    current_part.evaluation_stopped_timestamp = datetime.datetime.now()
-                    current_part.save()
+                    if not current_part.completed:
+                        # If the next Befragungsrunde gets started,
+                        # the one that has been active until now is marked as completed.
+                        current_part.completed = True
+                        current_part.evaluation_stopped_timestamp = datetime.datetime.now()
+                        current_part.save()
 
-                    #if current_part.befragungsrunde == N_BEFRAGUNGSRUNDEN:
-                        #send_mail_finished_nwfg_evaluation(class_evaluation=class_evaluation.pk, to_email_address=class_evaluation.email, status_code=class_evaluation.status_url_token)
+                        #if current_part.befragungsrunde == N_BEFRAGUNGSRUNDEN:
+                           #send_mail_finished_nwfg_evaluation(class_evaluation=class_evaluation.pk, to_email_address=class_evaluation.email, status_code=class_evaluation.status_url_token)
 
-                # create new Befragungsrunde (=nwfg_evaluation_part)
-                next_nwfg_evaluation_part = NWFGEvaluationPart.objects.create(
-                    erhebungszeitpunkt=context["next_erhebungszeitpunkt"],
-                    befragungsrunde=context["next_befragungsrunde"],
-                    nwfg_evaluation=class_evaluation
-                )
+                    # create new Befragungsrunde (=nwfg_evaluation_part)
+                    next_nwfg_evaluation_part = NWFGEvaluationPart.objects.create(
+                      erhebungszeitpunkt=context["next_erhebungszeitpunkt"],
+                      befragungsrunde=context["next_befragungsrunde"],
+                      nwfg_evaluation=class_evaluation
+                    )
 
-                # send_mail_new_nwfg_evaluation_round(
-                #     class_evaluation=class_evaluation.pk,
-                #     nwfg_evaluation_part=next_nwfg_evaluation_part,
-                #     status_code=class_evaluation.status_url_token,
-                #     subject=class_evaluation.subject,
-                #     to_email_address=class_evaluation.email,
-                # )
+                    # send_mail_new_nwfg_evaluation_round(
+                    #     class_evaluation=class_evaluation.pk,
+                    #     nwfg_evaluation_part=next_nwfg_evaluation_part,
+                    #     status_code=class_evaluation.status_url_token,
+                    #     subject=class_evaluation.subject,
+                    #     to_email_address=class_evaluation.email,
+                    # )
 
-                # Since such changes change pretty much everything, a redirect is used here.
-                logger.info(f"Nächste Runde der NWFG Evaluation {evaluation_id} gestartet.")
-                return redirect(
-                    "status-page",
-                    evaluation_id=evaluation_id,
-                    status_code=status_code
-                )
+                    # Since such changes change pretty much everything, a redirect is used here.
+                    logger.info(f"Nächste Runde der NWFG Evaluation {evaluation_id} gestartet.")
+                    return redirect(
+                        "status-page",
+                        evaluation_id=evaluation_id,
+                        status_code=status_code
+                    )
+                else:
+                    return redirect(
+                        "status-page",
+                        evaluation_id=evaluation_id,
+                        status_code=status_code
+                    )
+
 
     # if not a nwfg evaluation
     else:

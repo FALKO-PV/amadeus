@@ -154,6 +154,7 @@
                     });
                 </script>
                 {% endif %}
+            
                 {% if is_nwfg == False %}
                 <div class="start-end-statistics">
                     <div class="start-end-statistics-card">
@@ -255,6 +256,7 @@
             </button>
             {% endif %}
             {% if is_nwfg and not is_last_evaluation %}
+
             <button class="control-button cb-blue" type="submit" onclick="clickedStartNextEvaluation(event)"
                 name="action" value="next_evaluation">
                 <img class="control-button-img" src="{% static 'icons/status-page-controler/arrow.svg' %}"
@@ -264,7 +266,32 @@
                     <p class="control-button-description">EZ {{next_erhebungszeitpunkt}}, BR {{next_befragungsrunde}}
                     </p>
                 </div>
+                <span class="tooltip">Hinweis: Bislang hat noch kein:e Schüler:in diese Befragungsrunde beendet. Sie können daher noch nicht in die nächste Befragungsrunde wechseln.</span>
             </button>
+            <script type="text/javascript">
+                // Get evaluation data
+                var evaluationData = {{ evaluation_data| safe}};
+
+                const hasStartedAndNotEvaluated = Object.values(evaluationData).some(item => 
+                    item.status === 'started' && item.evaluations_completed < 1
+                );
+
+                var nextButton = document.querySelector("button.control-button[value='next_evaluation']");
+                var tooltip = nextButton.querySelector('.tooltip');
+
+                if (hasStartedAndNotEvaluated) {
+                  nextButton.disabled = true;
+                  nextButton.style.cursor = "not-allowed";
+
+                  nextButton.addEventListener('mouseover', function() {
+                     tooltip.style.display = 'block';
+                  });
+                  nextButton.addEventListener('mouseout', function() {
+                     tooltip.style.display = 'none';
+                  });
+                }
+
+            </script>
             {% endif %}
 
 

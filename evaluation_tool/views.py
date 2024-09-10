@@ -847,7 +847,8 @@ def get_status_page(request, evaluation_id, status_code):
         context["evaluation_data"]["evaluations_started"] = 0
         # get data for stats
         d = DataAnalyzer(evaluation_id, True)
-        stats_data = d.get_stats_per_dim()
+        stats_data = d.get_stats_per_part_per_dim()
+        context["evaluation_parts"] = stats_data.keys()
         context["evaluation_stats_data"] = stats_data
         context["evaluation_stats_data_json"] = json.dumps(stats_data)
         context["num_responses_included"] = context["evaluation_data"][
@@ -984,7 +985,11 @@ def get_status_page(request, evaluation_id, status_code):
 
         # get data for stats
         d = DataAnalyzer(str(class_evaluation.pk), is_nwfg)
-        stats_data = d.get_stats_per_dim()
+        if is_nwfg:
+            stats_data = d.get_stats_per_part_per_dim()
+            context["evaluation_parts"] = stats_data.keys()
+        else:
+            stats_data = d.get_stats_per_dim()
         context["evaluation_stats_data"] = stats_data
         context["evaluation_stats_data_json"] = json.dumps(stats_data)
         context["num_responses_included"] = context["evaluation_data"][

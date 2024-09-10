@@ -144,8 +144,8 @@ class DataAnalyzer:
     def get_excluded_participants(self):
         return self.excluded_participants
 
-    def _create_dataframe(self):
-        df = pd.DataFrame(self._get_data())
+    def _create_dataframe(self, data):
+        df = pd.DataFrame(data)
         df.columns = self.columns
         # get the category number for sorting
         df['cat1'] = df['item'].apply(lambda x: int(x.split("_")[1]))
@@ -160,8 +160,11 @@ class DataAnalyzer:
         df = self._calc_excluded_participants(df, 0.25)
         return df
 
-    def get_stats_per_dim(self):
-        df = self._create_dataframe() if self.data else pd.DataFrame([])
+    def get_stats_per_dim(self, data=None):
+        if data:
+            df = self._create_dataframe(data)
+        else:
+            df = self._create_dataframe(self.data) if self.data else pd.DataFrame([])
         dims = {}
         if self.subject == "Allgemeine Lehrevaluation":
             keys = list(self.dimensions.keys())[:-2]
@@ -192,9 +195,15 @@ class DataAnalyzer:
                         dims[i]["counts"] = counts
         return dims
 
-
-def get_stats_per_part_per_dim(self):
-    pass
+    def get_stats_per_part_per_dim(self):
+        dims_per_part = {}
+        parts = ['1', '2', '3']
+        for part in parts:
+            dims_per_part[part] = self.get_stats_per_dim(
+                # build aggregated dimensions for every evaluation-part
+                data=[p for p in self._get_data() if p[2] == part]
+            )
+        return dims_per_part
 
 
 def create_dim_barplot(datadict, key, fig_width, fig_height):

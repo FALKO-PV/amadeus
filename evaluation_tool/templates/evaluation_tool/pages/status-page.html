@@ -344,7 +344,7 @@
                     </div>
                     {% if is_nwfg %}
                     <select class="selector se-header" id="part-selection">
-                        {% for key in evaluation_stats_data.keys %}
+                        {% for key in evaluation_parts %}
                             <option value="{{ key }}">Befragungszeitraum: {{ key }}</option>
                         {% endfor %}
                     </select>
@@ -361,7 +361,7 @@
                             const partSelection = document.querySelector("#part-selection")
                             let part = partSelection.value
                             if (part === undefined) {
-                                part = 1
+                                part = '1'
                             }
                             const evaluationStats = {{ evaluation_stats_data_json|safe }};
                             for (const [key, val] of Object.entries(evaluationStats[part])) {

@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 
 import os
 from pathlib import Path
+import psycopg2
 from django.utils.encoding import force_str
 from dotenv import load_dotenv
 
@@ -24,13 +25,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv('AMADEUS_SECRET_KEY')
+# be sure, to source the .env file before executing the django app!
+SECRET_KEY = force_str(os.getenv('AMADEUS_SECRET_KEY'))
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['0.0.0.0', "127.0.0.1", "192.168.178.87", "192.168.178.90",
-                 "161.97.174.133", "testamadeus.falko-pv.de", "localhost"]
+
+ALLOWED_HOSTS = ["161.97.174.133", "amadeus.falko-pv.de", "127.0.0.1"]
 
 # Application definition
 
@@ -41,8 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_crontab',
     'evaluation_tool.apps.EvaluationToolConfig',
-    'captcha'
+    'captcha',
 ]
 
 MIDDLEWARE = [
@@ -57,14 +59,55 @@ MIDDLEWARE = [
 
 INTERNAL_IPS = [
     '127.0.0.1', '161.97.174.133', 'testamadeus.falko-pv.de'
-]
+        ]
 
+MAINTENANCE_MODE = None
+MAINTENANCE_MODE_IGNORE_ADMIN_SITE = True
+MAINTENANCE_MODE_IGNORE_SUPERUSER = True
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+
+    'formatters': {
+        'main_formatter': {
+            'format': '{asctime:s} - {levelname} - {threadName} - {filename} - {funcName} - {process:d}'
+                      ' - {message}',
+            'style': '{'
+        },
+    },
+
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+            'formatter': 'main_formatter',
+        },
+        'file': {
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': f'{BASE_DIR}/logs/info.log',
+            'mode': 'a',
+            'encoding': 'utf-8',
+            'formatter': 'main_formatter',
+            'backupCount': 10,
+            'maxBytes': 1024 * 1024 * 5.  # 5 MB
+        }
+    },
+
+    'loggers': {
+        'main': {
+            'handlers': ['file', 'console'],
+            'propagate': True,
+            'level': 'INFO'
+        }
+    },
+}
 ROOT_URLCONF = 'eduQualityEval.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates'],
+        'DIRS': [BASE_DIR / 'templates']
+        ,
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -85,13 +128,18 @@ WSGI_APPLICATION = 'eduQualityEval.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'sPfaefNPz_em9f',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
+        'CONN_MAX_AGE': 0,
+        'CONN_HEALTH_CHECKS': True,
     }
 }
 
-CSRF_TRUSTED_ORIGINS = ["https://161.97.174.133",
-                        "https://testamadeus.falko-pv.de"]
+CSRF_TRUSTED_ORIGINS = ["https://amadeus.falko-pv.de", "https://161.97.174.133"]
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
@@ -131,13 +179,24 @@ USE_TZ = False
 STATIC_URL = 'static/'
 MEDIA_URL = '/images/'
 
-STATIC_ROOT = '/data/testamadeus/staticfiles'
+STATIC_ROOT = '/data/amadeus/staticfiles'
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'static'
+    BASE_DIR / 'static',
 ]
 
 MEDIA_ROOT = BASE_DIR / 'static/images'
+
+# Cronjobs to run checks on finished evaluations etc.
+# how-to can be found here: https://gutsytechster.wordpress.com/2019/06/24/how-to-setup-a-cron-job-in-django
+CRONJOBS = [
+    ('*/2 * * * *', 
+        'evaluation_tool.scripts.cron.send_mail_if_classeval_ended',
+        '>> /var/www/amadeus/cron_log.txt 2>&1'),
+    ('0 2 * * *',
+        'evaluation_tool.scripts.cron.export_full_data_as_csv',
+        '>> /var/www/amadeus/cron_log.txt 2>&1'),
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -148,8 +207,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # be sure to source .env file beforehand!
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 DEFAULT_FROM_EMAIL = "forschungsgruppe@falko-pv.de"
-EMAIL_HOST = os.getenv('AMADEUS_EMAIL_HOST')
-EMAIL_HOST_USER = os.getenv('AMADEUS_EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.getenv('AMADEUS_EMAIL_HOST_PASSWORD')
+EMAIL_HOST = os.getenv("AMADEUS_EMAIL_HOST")
+EMAIL_HOST_USER = os.getenv("AMADEUS_EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = os.getenv("AMADEUS_EMAIL_HOST_PASSWORD")
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+WEBSITE_URL = "https://amadeus.falko-pv.de/"
+
+#CRONTAB_COMMAND_PREFIX = f'AMADEUS_EMAIL_HOST={EMAIL_HOST}\nAMADEUS_EMAIL_HOST_USER={EMAIL_HOST_USER}\nAMADEUS_EMAIL_HOST_PASSWORD={EMAIL_HOST_PASSWORD}\nWEBSITE_URL={WEBSITE_URL}'

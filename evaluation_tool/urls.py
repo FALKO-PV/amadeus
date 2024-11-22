@@ -20,6 +20,7 @@ urlpatterns = [
     path('robots.txt', TemplateView.as_view(template_name="robots.txt", content_type="text/plain")),
     path('sitemap.xml', TemplateView.as_view(template_name="sitemap.xml", content_type="text/plain")),
     path('favicon.ico', RedirectView.as_view(url=staticfiles_storage.url('icons/favicon.ico'))),
+    path('download', views.staff_downloads, name="staff_downloads"),
     path('evaluation/<str:evaluation_id>/share', views.get_share_page, name="share-page"),
     path('evaluation/<str:evaluation_id>', views.get_start_evaluation, name="start-evaluation-page"),
     path('evaluation/<str:evaluation_id>/auth', student_auth_views.get_auth_student_page, name="auth-student-page"),

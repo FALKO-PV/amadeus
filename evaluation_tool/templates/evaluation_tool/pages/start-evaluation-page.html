@@ -31,7 +31,9 @@
           if (pattern) {
             console.log("class id:", classEvaluationId);
             console.log("pattern:", pattern);
-            let url = `https://limesurvey.eds-ur.de/index.php?r=survey/index&sid=981993&lang=de&NWFGCode={{nwfg_code}}&Schuelercode=` + pattern + `&Fach={{subject_code}}`;
+            let url = {{ school_type }} === 'GYM'
+                ? `https://limesurvey.eds-ur.de/index.php?r=survey/index&sid=981993&lang=de&NWFGCode={{nwfg_code}}&Schuelercode=` + pattern + `&Fach={{subject_code}}`
+                : `https://limesurvey.eds-ur.de/index.php?r=survey/index&sid=242045&lang=de&NWFGCode={{nwfg_code}}&Schuelercode=` + pattern + `&Fach={{subject_code}}`;
             document.querySelector(".questionnaire-link").href = url;
           } else {
             document.querySelector(".questionnaire-hint-card").style.display = "none"
@@ -121,7 +123,9 @@
               document.querySelector(".start-button-with-nwfg").value = "Mit Muster Registrieren";
               document.querySelector(".questionnaire-hint").style.display = "none";
             } else {
-              const url = `https://limesurvey.eds-ur.de/index.php?r=survey/index&sid=981993&lang=de&NWFGCode={{nwfg_code}}&Schuelercode=` + storedPattern + `&Fach={{subject_code}}`;
+              const url = {{ school_type }} === 'GYM'
+                 ? `https://limesurvey.eds-ur.de/index.php?r=survey/index&sid=981993&lang=de&NWFGCode={{nwfg_code}}&Schuelercode=` + storedPattern + `&Fach={{subject_code}}`
+                 : `https://limesurvey.eds-ur.de/index.php?r=survey/index&sid=242045&lang=de&NWFGCode={{nwfg_code}}&Schuelercode=` + storedPattern + `&Fach={{subject_code}}`;
               console.log(url);
               document.querySelector(".to-questionnaire-button").href = url;
             }

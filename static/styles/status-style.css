@@ -398,6 +398,21 @@ caption {
   color: black;
 }
 
+.tooltip {
+  display: none;
+  position: absolute;
+  background-color: #292f61;
+  color: #fff;
+  width: 250px;
+  border-radius: 5px;
+  font-size: 14px;
+  z-index: 100;
+  /* Zentrieren des Tooltips */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgb(177, 197, 247);
+}
+
 .control-button:hover {
   cursor: pointer;
 }

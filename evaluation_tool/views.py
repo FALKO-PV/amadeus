@@ -309,7 +309,9 @@ def get_start_evaluation(request, evaluation_id):
     if request.method == "GET":
         context["subject"] = evaluation.subject
         context["teacher_name"] = evaluation.teacher_name
-        context["school_type"] = evaluation.school_type
+
+        if is_nwfg_evaluation:
+            context["school_type"] = evaluation.school_type
 
         if not is_nwfg_evaluation:
             context["evaluation_end"] = evaluation.evaluation_end.strftime(
